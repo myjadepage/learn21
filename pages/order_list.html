@@ -78,6 +78,7 @@
                 </div>
                 <!-- End Topbar -->
             </nav>
+
         </header>
         <!-- End Header -->
 
@@ -111,10 +112,10 @@
                         </li>
                         <li class="active"><a href="#dropdown-order" aria-expanded="true" data-toggle="collapse"><i class="la la-font"></i><span>주문/배송관리</span></a>
                             <ul id="dropdown-order" class="collapse list-unstyled show">
-                                <li><a class="active" href="order_list.html">주문서 조회</a></li>
-                                <li><a href="icons-ionicons.html">주문취소/반품 조회</a></li>
-                                <li><a href="icons-meteocons.html">환불관리</a></li>
-                                <li><a href="icons-meteocons.html">반품연동 조회</a></li>
+                                <li><a class="active easyui-linkbutton" href="#" onclick="addTab('주문서 조회','order_list.html')">주문서 조회</a></li>
+                                <li><a class="easyui-linkbutton" href="#" onclick="addTab('주문취소','order_cancle_list.html')">주문취소/반품 조회</a></li>
+                                <li><a class="easyui-linkbutton" href="order_refund.html">환불관리</a></li>
+                                <li><a class="easyui-linkbutton" href="order_connect.html">반품연동 조회</a></li>
                             </ul>
                         </li>
                         <li><a href="#dropdown-forms" aria-expanded="false" data-toggle="collapse"><i class="la la-list-alt"></i><span>물류관리</span></a>
@@ -161,8 +162,8 @@
 
 
 
-            <div class="content-inner">
-                <div class="container-fluid">
+            <div class="content-inner easyui-tabs" id="tt">
+                <div class="container-fluid right-content">
                     <!-- Begin Page Header-->
                     <div class="row">
                         <div class="page-header">
@@ -186,174 +187,167 @@
                             <!-- 검색영역 시작-->
                             <div class="widget has-shadow">
                                 <div class="widget-body">
-                                    <table id="sorting-table" class="table table-bordered mb-0">
+                                    <table class="table table-bordered" summary="주문서 검색하기">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="40%">
+                                            <col width="10%">
+                                            <col width="40%">
+                                        </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><span class="text-primary">고객</span></th>
+                                                <th scope="row"><span class="text-primary">고객</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                <option>학생ID</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <th><span class="text-primary">학생</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                <option>학생ID</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th><span class="text-primary">주문번호</span></th>
+                                                <th scope="row"><span class="text-primary">주문번호</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                <option>학생ID</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <th><span class="text-primary">회원ID</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
                                                                     <option>학생ID</option>
                                                                     <option>Ketchup</option>
                                                                     <option>Relish</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
+                                                            </select>
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th><span class="text-primary">조회기간</span></th>
+                                                <th scope="row"><span class="text-primary">조회기간</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
                                                                     <option>학생ID</option>
                                                                     <option>Ketchup</option>
                                                                     <option>Relish</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control" id="date" placeholder="날짜선택">
-                                                                    <span class="input-group-addon">
-                                                                        <i class="la la-calendar"></i>
-                                                                    </span> ~
-                                                                    <input type="text" class="form-control" id="date" placeholder="날짜선택">
-                                                                    <span class="input-group-addon">
-                                                                        <i class="la la-calendar"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-
+                                                            </select>
                                                         </div>
-                                                    </form>
-
+                                                        <div class="col col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="date" placeholder="날짜선택">
+                                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                                <span class="input-group-addon">~</span>
+                                                                <input type="text" class="form-control" id="date" placeholder="날짜선택">
+                                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <th><span class="text-primary">결제수단/주문상태</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>결제수단</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
                                                                 </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>주문상태</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th><span class="text-primary">회원구분/학원구분</span></th>
+                                                <th scope="row"><span class="text-primary">회원구분/학원구분</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>회원구분</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
                                                                 </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>학원구분</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <th><span class="text-primary">배송구분/구분</span></th>
                                                 <td>
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group row d-flex align-items-center">
-                                                            <div class="col-sm-4">
-                                                                <select class="selectpicker show-menu-arrow">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>배송구분</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
                                                                 </select>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                                            </div>
-
                                                         </div>
-                                                    </form>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                        <option>구분</option>
+                                                                        <option>Ketchup</option>
+                                                                        <option>Relish</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
 
-                                    <button class="btn btn-primary">검색</button>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary">검색</button>
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -361,78 +355,172 @@
 
                             <!-- 리스트영역 시작 -->
                             <div class="widget has-shadow">
-                                <div class="widget-header bordered no-actions d-flex align-items-center">
-                                    <h4>표시갯수</h4>
+                                <div class="widget-header bordered">
+                                    <div class="row">
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                                            <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                                            <label class="col-sm-4">조회건수 : 20개</label>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
+                                            <button class="btn btn-outline-primary">엑셀다운로드</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="widget-body">
-                                    <div class="table-responsive">
-                                        <table id="export-table" class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>NO</th>
-                                                    <th>주문번호</th>
-                                                    <th>주문자명<br>(수취인명)</th>
-                                                    <th>주문상태</th>
-                                                    <th>주문상품</th>
-                                                    <th>주문총액</th>
-                                                    <th>배송비</th>
-                                                    <th>결제총액</th>
-                                                    <th>결제수단</th>
-                                                    <th>주문일자</th>
-                                                    <th>학원명</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>20201023456</td>
-                                                    <td>홍길동<br>(홍길동)</td>
-                                                    <td>결제완료</td>
-                                                    <td>품목은 길면 2줄로 해서 하시오
-                                                    </td>
-                                                    <td>1,000</td>
-                                                    <td>2,500</td>
-                                                    <td>13,000</td>
-                                                    <td>신용카드</td>
-                                                    <td>20.09.15</td>
-                                                    <td>안양평촌</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>20201023456</td>
-                                                    <td>홍길동<br>(홍길동)</td>
-                                                    <td>결제완료</td>
-                                                    <td>품목은 길면 2줄로 해서 하시오
-                                                    </td>
-                                                    <td>1,000</td>
-                                                    <td>2,500</td>
-                                                    <td>13,000</td>
-                                                    <td>신용카드</td>
-                                                    <td>20.09.15</td>
-                                                    <td>안양평촌</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>20201023456</td>
-                                                    <td>홍길동<br>(홍길동)</td>
-                                                    <td>결제완료</td>
-                                                    <td>품목은 길면 2줄로 해서 하시오
-                                                    </td>
-                                                    <td>1,000</td>
-                                                    <td>2,500</td>
-                                                    <td>13,000</td>
-                                                    <td>신용카드</td>
-                                                    <td>20.09.15</td>
-                                                    <td>안양평촌</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <table id="export-table" class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width=*>
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>주문번호</th>
+                                                <th class="text-center">주문자명<br>(수취인명)</th>
+                                                <th>주문상태</th>
+                                                <th>주문상품</th>
+                                                <th>주문총액</th>
+                                                <th>배송비</th>
+                                                <th>결제총액</th>
+                                                <th>결제수단</th>
+                                                <th>주문일자</th>
+                                                <th>학원명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>777777</td>
+                                                <td>20201023456</td>
+                                                <td class="text-center">홍길동<br>(홍길동)</td>
+                                                <td>결제완료</td>
+                                                <td>품목은 길면 2줄로 해서 하시오
+                                                </td>
+                                                <td>1,000</td>
+                                                <td>2,500</td>
+                                                <td>13,000</td>
+                                                <td>신용카드</td>
+                                                <td>20.09.15</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <!-- 리스트영역 끝 -->
-
-
                         </div>
                     </div>
                 </div>
@@ -456,9 +544,28 @@
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/core.min.js"></script>
     <script src="../vendor/bootstrap-select.min.js"></script>
+    <script src="../vendor/nicescroll.min.js "></script>
+    <script src="../js/learn21.js"></script>
     <script src="../vendor/datatables.min.js"></script>
     <script src="../vendor/dataTables.buttons.min.js"></script>
-    <script src="../js/learn21.js"></script>
+    <!-- <script src="http://www.w3cschool.cc/try/jeasyui/jquery.easyui.min.js"></script> -->
+
+
+    <script>
+        function addTab(title, url) {
+            if ($('#tt').tabs('exists', title)) {
+                $('#tt').tabs('select', title);
+            } else {
+                var content = '<iframe scrolling="auto" frameborder="0"  src="' + url + '" style="width:100%;height:100vh;"></iframe>';
+                $('#tt').tabs('add', {
+                    title: title,
+                    content: content,
+                    closable: true
+                });
+            }
+        }
+    </script>
+
 </body>
 
 </html>
