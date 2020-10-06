@@ -25,8 +25,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../css/learn21.css">
-    <!-- <link rel="stylesheet" href="../vendor/datatables.min.css"> -->
-    <link rel="stylesheet" href="../vendor/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../vendor/datatables.min.css">
     <!-- Tweaks for older IEs-->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -84,23 +83,23 @@
 
                         <li><a href="#dropdown-buy" aria-expanded="false" data-toggle="collapse"><i class="la la-puzzle-piece"></i><span>구매 관리</span></a>
                             <ul id="dropdown-buy" class="collapse list-unstyled">
-                                <li><a href="#" data-src="buy_list.html">구매 발주서</a></li>
-                                <li><a href="#" data-src="buy_list.html">매입 확정</a></li>
-                                <li><a href="#" data-src="buy_list.html">매입 명세서</a></li>
-                                <li><a href="#" data-src="buy_list.html">매입 조회</a></li>
-                                <li><a href="#" data-src="buy_list.html">매입처 원장</a></li>
-                                <li><a href="#" data-src="buy_list.html">미입고 현황</a></li>
+                                <li><a href="#" rel="buy_list" data-src="buy_list.html">구매 발주서</a></li>
+                                <li><a href="#" rel="buy_comfirm" data-src="buy_comfirm.html">매입 확정</a></li>
+                                <li><a href="#" rel="buy_list" data-src="buy_list.html">매입 명세서</a></li>
+                                <li><a href="#" rel="buy_list" data-src="buy_list.html">매입 조회</a></li>
+                                <li><a href="#" rel="buy_list" data-src="buy_list.html">매입처 원장</a></li>
+                                <li><a href="#" rel="buy_list" data-src="buy_list.html">미입고 현황</a></li>
                             </ul>
                         </li>
                         <li><a href="#dropdown-order" aria-expanded="false" data-toggle="collapse"><i class="la la-font"></i><span>주문/배송 관리</span></a>
                             <ul id="dropdown-order" class="collapse list-unstyled">
-                                <li><a href="#" data-src="order_list.html">주문 조회</a></li>
-                                <li><a href="#" data-src="order_cancle_list.html">주문취소/반품 조회</a></li>
-                                <li><a href="#" data-src="order_refund_list.html">환불 관리</a></li>
-                                <li><a href="#" data-src="order_goback_list.html">회수요청 조회</a></li>
-                                <li><a href="#" data-src="order_delivery_list.html">대한통운 반품연동</a></li>
-                                <li><a href="#" data-src="order_num_send.html">에스크로 송장번호 전송</a></li>
-                                <li><a href="#" data-src="order_num_send_list.html">에스크로 송장번호 전송 내역조회</a></li>
+                                <li><a href="#" rel="order_list" data-src="order_list.html">주문 조회</a></li>
+                                <li><a href="#" rel="order_cancle_list" data-src="order_cancle_list.html">주문취소/반품 조회</a></li>
+                                <li><a href="#" rel="" data-src="order_refund_list.html">환불 관리</a></li>
+                                <li><a href="#" rel="" data-src="order_goback_list.html">회수요청 조회</a></li>
+                                <li><a href="#" rel="" data-src="order_delivery_list.html">대한통운 반품연동</a></li>
+                                <li><a href="#" rel="" data-src="order_num_send.html">에스크로 송장번호 전송</a></li>
+                                <li><a href="#" rel="" data-src="order_num_send_list.html">에스크로 송장번호 전송 내역조회</a></li>
                             </ul>
                         </li>
 
@@ -184,6 +183,7 @@
             <!--Sidebar -->
 
             <div class="content-inner">
+                <ul id="tabs" class=" d-flex"></ul>
 
 
                 <div id="content" include-html="content.html"></div>
@@ -208,49 +208,90 @@
 
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/core.min.js"></script>
-    <script src="../vendor/bootstrap-select.min.js"></script>
     <script src="../vendor/nicescroll.min.js "></script>
+
     <script src="../js/learn21.js"></script>
 
+    <script src="../vendor/datatables.min.js"></script>
+    <script src="../vendor/moment.min.js"></script>
+    <script src="../vendor/daterangepicker.js"></script>
 
-    <!-- <script src="../vendor/datatables.min.js"></script>
-    <script src="../vendor/dataTables.buttons.min.js"></script> -->
 
-
+    <!-- addtab pageLoad -->
     <script type="text/javascript">
+        $("#pageMove ul li a").click(function() {
+            addTab($(this));
+        });
+
+        function addTab(link) {
+            if ($("#" + $(link).attr("rel")).length != 0) return;
+            if ($("#tabs li").length > 5) return;
+
+
+            // hide other tabs
+            $("#tabs li").removeClass("current");
+
+            $("#tabs").append("<li class='current'><a class='tab' id='" +
+                $(link).attr("rel") + "' data-src='" + $(link).attr("rel") + ".html' href='#'>" + $(link).html() +
+                "</a><a href='#' class='remove'>x</a></li>");
+
+            $('#tabs a.remove').on('click', function() {
+                var tabid = $(this).parent().find(".tab").attr("id");
+                $(this).parent().remove();
+
+                if ($("#tabs li.current").length == 0 && $("#tabs li").length > 0) {
+                    var firsttab = $("#tabs li:first-child");
+                    firsttab.addClass("current");
+
+                    var firsttabid = $(firsttab).find("a.tab").attr("data-src");
+                    var content, file, xhttp, i;
+
+                    file = firsttabid;
+                    loadPage(file);
+                }
+            });
+        }
+
         $("#content").load("content.html", function() {
             $("ul#pageMove").on('click', 'a[data-src]', function(e) {
                 var content, file, xhttp, i;
                 document.body.addEventListener('click', function(e) {
                     file = e.target.getAttribute('data-src');
-                    if (file) {
-                        content = document.getElementById('rightContent');
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) {
-                                    content.innerHTML = this.responseText;
-                                    var scripts = content.getElementsByTagName('script');
-                                    for (var i = 0; i < scripts.length; i++) {
-                                        eval(scripts[i].text);
-                                    }
-                                }
-                                if (this.status == 404) {
-                                    content.innerHTML = 'Page not found.';
-                                }
-                            }
-                        }
-                        xhttp.open('GET', file, true);
-                        xhttp.send();
-                    }
+                    loadPage(file);
                 });
 
                 $(this).parents('ul').addClass('show');
-                $(this).addClass('active');
+                // $(this).addClass('active');
             })
         });
-    </script>
 
+        function loadPage(file) {
+            if (file) {
+                content = document.getElementById('rightContent');
+                $.ajax({
+                    method: 'GET',
+                    url: file,
+                    error: function() {
+                        content.innerHTML = 'Page not found.';
+                    },
+                    beforeSend: function() {
+                        $("#preloader").show();
+                    },
+                    success: function(res) {
+                        content.innerHTML = res;
+                        var scripts = content.getElementsByTagName('script');
+                        for (var i = 0; i < scripts.length; i++) {
+                            eval(scripts[i].text);
+                        }
+                    },
+                    complete: function(data) {
+                        $(".loader").fadeOut();
+                        $("#preloader").delay(350).fadeOut("slow");
+                    }
+                })
+            }
+        }
+    </script>
 </body>
 
 </html>

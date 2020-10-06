@@ -107,10 +107,10 @@
                                         </div>
                                         <div class="col col-sm-8">
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="date" placeholder="날짜선택">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
                                                 <span class="input-group-addon"><i class="la la-calendar"></i></span>
                                                 <span class="input-group-addon">~</span>
-                                                <input type="text" class="form-control" id="date" placeholder="날짜선택">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
                                                 <span class="input-group-addon"><i class="la la-calendar"></i></span>
                                             </div>
                                         </div>
@@ -193,13 +193,13 @@
                 <div class="widget-header bordered">
                     <div class="row">
                         <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
-                            <select class="form-control col-sm-2">
+                            <!-- <select class="form-control col-sm-2">
                                                 <option>표시갯수</option>
                                                 <option>10개</option>
                                                 <option>20개</option>
                                                 <option>30개</option>
                                             </select>
-                            <label class="col-sm-4">조회건수 : 20개</label>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
                         </div>
                         <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
                             <button class="btn btn-outline-primary">엑셀다운로드</button>
@@ -207,7 +207,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table id="export-table" class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
+                    <table id="sorting-table" class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
                         <colgroup>
                             <col width="5%">
                             <col width="7%">
@@ -239,7 +239,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>777777</td>
+                                <td>7</td>
                                 <td>20201023456</td>
                                 <td class="text-center">홍길동<br>(홍길동)</td>
                                 <td>결제완료</td>
@@ -253,7 +253,7 @@
                                 <td>안양평촌</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>77</td>
                                 <td>20201023456</td>
                                 <td class="text-center">홍길동<br>(홍길동)</td>
                                 <td>결제완료</td>
@@ -267,7 +267,7 @@
                                 <td>안양평촌</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>7777</td>
                                 <td>20201023456</td>
                                 <td class="text-center">홍길동<br>(홍길동)</td>
                                 <td>결제완료</td>
@@ -281,7 +281,7 @@
                                 <td>안양평촌</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>777</td>
                                 <td>20201023456</td>
                                 <td class="text-center">홍길동<br>(홍길동)</td>
                                 <td>결제완료</td>
@@ -360,3 +360,35 @@
     </div>
     <!-- End Page Content -->
 </div>
+<script>
+    $(function() {
+        //single date
+        $('input[name="dates"').daterangepicker({
+            "singleDatePicker": true,
+            "autoUpdateInput": false,
+        });
+        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY-MM-DD'));
+        });
+
+        $('#sorting-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "columnDefs": [{
+                "targets": [3, 5],
+                "orderable": false
+            }],
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

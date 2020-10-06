@@ -2978,17 +2978,64 @@ ul.social-network li {
     color: #5d5386;
 }
 
+.table input[name="dates"] {
+    font-size: .85rem;
+}
+
 
 /*
  * DATATABLES
  */
 
 .dataTables_wrapper.container-fluid {
-    padding: 0 1.07rem;
+    /* padding: 0 1.07rem; */
+    padding: 0;
 }
 
 .dt-buttons {
     float: left;
+}
+
+.dataTables_wrapper .top {
+    position: relative;
+}
+
+.dataTables_length>label {
+    position: absolute;
+    top: -70px;
+    left: 0;
+}
+
+.dataTables_length select.form-control {
+    width: 100px !important;
+    height: calc(2.26rem + 1px);
+}
+
+.dataTables_info {
+    position: absolute;
+    top: -73px;
+    left: 110px;
+    font-size: 0.85rem;
+}
+
+.dataTables_wrapper .dataTables_paginate ul.pagination {
+    justify-content: center !important;
+}
+
+.dataTables_wrapper .dataTables_paginate ul.pagination li {
+    border: 1px solid #ccc;
+    margin-right: 3px;
+}
+
+.dataTables_wrapper .dataTables_paginate ul.pagination li.active {
+    background-color: #5d5386;
+    border-color: #5d5386;
+}
+
+.dataTables_wrapper .dataTables_paginate ul.pagination li.active a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8rem;
 }
 
 
@@ -4066,8 +4113,41 @@ section.forms form small {
 
 
 /*
- * 01. 
+ * 01. ADD TABS PAGE
  */
+
+#tabs {
+    z-index: 9999;
+    position: fixed;
+    top: 30px;
+    left: 270px;
+}
+
+#tabs li {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background-color: #94a4b0;
+}
+
+#tabs li a {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+#tabs li.current {
+    background: #e23f83;
+    background: linear-gradient(to right, #e23f83 0%, #ea5844 100%);
+}
+
+#tabs li a.remove {
+    color: #fff;
+    margin-right: 15px;
+}
 
 
 /*
