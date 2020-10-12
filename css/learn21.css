@@ -3107,6 +3107,14 @@ ul.social-network li {
     border-radius: 4px;
 }
 
+.modal-item {
+    max-width: 1200px;
+}
+
+.modal-item .btn-item {
+    line-height: 4rem;
+}
+
 
 /*
  * FORM

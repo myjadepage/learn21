@@ -199,19 +199,171 @@
                 <!--Footer -->
 
                 <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
-
             </div>
         </div>
         <!-- Content -->
     </div>
 
+
+
+    <!-- ---------------------
+        공통팝업 
+   ------------------------ -->
+    <!-- 1.품목선택 -->
+    <div id="itemModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-item">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">품목 선택</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- 검색영역 시작-->
+
+                            <table class="table table-bordered" summary="품목 검색하기">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width=*>
+                                    <col width="10%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><span class="text-primary">품목대분류</span></th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <select class="form-control">
+                                                                <option>선택</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td rowspan="3" class="text-center">
+                                            <button class="btn btn-primary btn-item">검색</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="text-primary">품목중분류</span></th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <select class="form-control">
+                                                                <option>선택</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="text-primary">품목명</span></th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control" placeholder="검색할 품목명 입력">
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 검색영역 끝-->
+
+                            <table id="buy-sorting-table" class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="7%">
+                                    <col width=*>
+                                    <col width="7%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>발주일자</th>
+                                        <th>일련번호</th>
+                                        <th>거래처</th>
+                                        <th>상태구분</th>
+                                        <th>공급가</th>
+                                        <th>부가세</th>
+                                        <th>합계금액</th>
+                                        <th>작성자</th>
+                                        <th>메모</th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>777777</td>
+                                        <td>20.09.15</td>
+                                        <td>0001</td>
+                                        <td>청담러닝</td>
+                                        <td>입고</td>
+                                        <td>2,500,000</td>
+                                        <td>0</td>
+                                        <td>2,500,000</td>
+                                        <td>강성육</td>
+                                        <td>아이가르텐 추가 주문서_0701</td>
+                                        <td>
+                                            <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                                                <button class="btn btn-sm btn-primary">수정</button>
+                                                <button class="btn btn-sm btn-danger">삭제</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>777777</td>
+                                        <td>20.09.15</td>
+                                        <td>0001</td>
+                                        <td>청담러닝</td>
+                                        <td>입고</td>
+                                        <td>2,500,000</td>
+                                        <td>0</td>
+                                        <td>2,500,000</td>
+                                        <td>강성육</td>
+                                        <td>아이가르텐 추가 주문서_0701</td>
+                                        <td>
+                                            <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                                                <button class="btn btn-sm btn-primary">수정</button>
+                                                <button class="btn btn-sm btn-danger">삭제</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-shadow" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../vendor/jquery.min.js"></script>
+    <script src="../vendor/datatables.min.js"></script>
     <script src="../vendor/core.min.js"></script>
     <script src="../vendor/nicescroll.min.js "></script>
-
     <script src="../js/learn21.js"></script>
 
-    <script src="../vendor/datatables.min.js"></script>
     <script src="../vendor/moment.min.js"></script>
     <script src="../vendor/daterangepicker.js"></script>
 
@@ -287,6 +439,11 @@
                         for (var i = 0; i < scripts.length; i++) {
                             eval(scripts[i].text);
                         }
+
+                        // page로드 후 모달팝업 불러오기
+                        $('button[data-target]', ).on('click', function(e) {
+                            $('.modal').modal('show');
+                        });
                     },
                     complete: function(data) {
                         $(".loader").fadeOut();
