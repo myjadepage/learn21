@@ -45,7 +45,7 @@
     // Dynamic Height
     // ------------------------------------------------------ //	
     $(window).resize(function() {
-        var height = $(this).height() - $(".header").height() + $(".main-footer").height()
+        var height = $(this).height() - $(".header").height() + $(".main-footer").height();
         $('.d-scroll').height(height);
     })
 

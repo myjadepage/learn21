@@ -40,7 +40,6 @@
         </div>
     </div>
 
-
     <div class="page">
 
         <!--Header -->
@@ -48,7 +47,7 @@
             <nav class="navbar fixed-top">
                 <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
                     <div class="navbar-header">
-                        <a href="" class="navbar-brand">
+                        <a href="#" rel="dashboard.html" data-src="dashboard.html" class="navbar-brand">
                             <div class="brand-image brand-big">
                                 <img src="../img/logo.png" alt="logo" class="logo-big">
                             </div>
@@ -64,8 +63,9 @@
                     </div>
 
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
-                        <li class="nav-item d-flex align-items-center"><a href="#">기획장 홍길동</a></li>
-                        <li class="nav-item d-flex align-items-center"><a href="member_update.html">정보수정</a></li>
+                        <li class="nav-item d-flex align-items-center"><a href="#">기획팀 홍길동</a></li>
+                        <li class="nav-item d-flex align-items-center"><a href="#" rel="index" data-src="index.html"><i class="ti ti-home"></i>대시보드</a></li>
+                        <li class="nav-item d-flex align-items-center page_move"><a href="#" rel="member_update" data-src="member_update.html">정보수정</a></li>
                         <li class="nav-item d-flex align-items-center"><a href="logout.html">로그아웃</a></li>
                     </ul>
                 </div>
@@ -80,6 +80,15 @@
                 <nav class="side-navbar box-scroll sidebar-scroll">
 
                     <ul class="list-unstyled" id="pageMove">
+                        <li><a href="#dropdown-base" aria-expanded="false" data-toggle="collapse"><i class="la la-columns"></i><span>기초 관리</span></a>
+                            <ul id="dropdown-base" class="collapse list-unstyled">
+                                <li><a href="base_shop_list.html">가맹점 관리</a></li>
+                                <li><a href="base_manager_list">거래처 관리</a></li>
+                                <li><a href="base_itmes.html">품목 관리</a></li>
+                                <li><a href="base_code_detail.html">코드 상세 관리</a></li>
+                                <li><a href="base_code_group.html">코드 그룹 관리</a></li>
+                            </ul>
+                        </li>
 
                         <li><a href="#dropdown-buy" aria-expanded="false" data-toggle="collapse"><i class="la la-puzzle-piece"></i><span>구매 관리</span></a>
                             <ul id="dropdown-buy" class="collapse list-unstyled">
@@ -91,50 +100,7 @@
                                 <li><a href="#" rel="buy_list" data-src="buy_list.html">미입고 현황</a></li>
                             </ul>
                         </li>
-                        <li><a href="#dropdown-order" aria-expanded="false" data-toggle="collapse"><i class="la la-font"></i><span>주문/배송 관리</span></a>
-                            <ul id="dropdown-order" class="collapse list-unstyled">
-                                <li><a href="#" rel="order_list" data-src="order_list.html">주문 조회</a></li>
-                                <li><a href="#" rel="order_cancle_list" data-src="order_cancle_list.html">주문취소/반품 조회</a></li>
-                                <li><a href="#" rel="" data-src="order_refund_list.html">환불 관리</a></li>
-                                <li><a href="#" rel="" data-src="order_goback_list.html">회수요청 조회</a></li>
-                                <li><a href="#" rel="" data-src="order_delivery_list.html">대한통운 반품연동</a></li>
-                                <li><a href="#" rel="" data-src="order_num_send.html">에스크로 송장번호 전송</a></li>
-                                <li><a href="#" rel="" data-src="order_num_send_list.html">에스크로 송장번호 전송 내역조회</a></li>
-                            </ul>
-                        </li>
 
-                        <div class="sidebar-separator"></div>
-                        <li><a href="#dropdown-goods" aria-expanded="false" data-toggle="collapse"><i class="la la-th-large"></i><span>상품관리</span></a>
-                            <ul id="dropdown-goods" class="collapse list-unstyled">
-                                <li><a href="goods_classify.html">상품 분류 관리</a></li>
-                                <li><a href="goods_manage.html">상품 관리</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#dropdown-custom" aria-expanded="false" data-toggle="collapse"><i class="la la-user"></i><span>상담관리</span></a>
-                            <ul id="dropdown-custom" class="collapse list-unstyled">
-                                <li><a href="qa.html">1:1 상담 관리</a></li>
-                                <li><a href="pages-login-02.html">고객상담 관리</a></li>
-                                <li><a href="pages-register.html">상담유형 등록</a></li>
-                                <li><a href="pages-register.html">상담유형 관리</a></li>
-                                <li><a href="pages-register.html">SMS 관리</a></li>
-                                <li><a href="pages-register.html">SMS 발송 결과</a></li>
-                            </ul>
-                        </li>
-
-                        <div class="sidebar-separator"></div>
-                        <li><a href="#dropdown-delivery" aria-expanded="false" data-toggle="collapse"><i class="la la-list-alt"></i><span>물류관리</span></a>
-                            <ul id="dropdown-delivery" class="collapse list-unstyled">
-                                <li><a href="forms-basic.html">재고 현황</a></li>
-                                <li><a href="forms-wizard.html">품목별 상세 재고</a></li>
-                                <li><a href="forms-select.html">재고자산 조정 관리</a></li>
-                                <li><a href="forms-select.html">송장 관리</a></li>
-                                <li><a href="forms-select.html">출고 관리</a></li>
-                                <li><a href="forms-select.html">택배출교 현황</a></li>
-                                <li><a href="forms-select.html">반품 관리</a></li>
-                                <li><a href="forms-select.html">반품 처리 현황</a></li>
-                                <li><a href="forms-select.html">가맹점 물류이동</a></li>
-                            </ul>
-                        </li>
                         <li><a href="#dropdown-sales" aria-expanded="false" data-toggle="collapse"><i class="la la-share-alt"></i><span>영업 관리</span></a>
                             <ul id="dropdown-sales" class="collapse list-unstyled">
                                 <li><a href="sales_paper.html">매출 명세서</a></li>
@@ -144,30 +110,64 @@
                             </ul>
                         </li>
 
-                        <div class="sidebar-separator"></div>
+                        <li><a href="#dropdown-order" aria-expanded="false" data-toggle="collapse"><i class="la la-font"></i><span>주문/배송 관리</span></a>
+                            <ul id="dropdown-order" class="collapse list-unstyled">
+                                <li><a href="#" rel="order_list" data-src="order_list.html">주문서 조회</a></li>
+                                <li><a href="#" rel="order_cancle_list" data-src="order_cancle_list.html">주문취소/반품 조회</a></li>
+                                <li><a href="#" rel="" data-src="order_refund_list.html">환불 관리</a></li>
+                                <!-- <li><a href="#" rel="" data-src="order_goback_list.html">회수요청 조회</a></li> -->
+                                <li><a href="#" rel="" data-src="order_delivery_back_list.html">반품연동 조회</a></li>
+                                <li><a href="#" rel="" data-src="order_num_send.html">에스크로 송장번호 전송</a></li>
+                                <li><a href="#" rel="" data-src="order_num_send_list.html">에스크로 송장번호 전송 내역조회</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#dropdown-stock" aria-expanded="false" data-toggle="collapse"><i class="la la-list-alt"></i><span>물류관리</span></a>
+                            <ul id="dropdown-stock" class="collapse list-unstyled">
+                                <li><a href="stock_basic.html">재고 현황</a></li>
+                                <li><a href="stock_items.html">품목별 상세 재고</a></li>
+                                <li><a href="stock_manage.html">재고자산 조정 관리</a></li>
+                                <li><a href="stock_select.html">송장 관리</a></li>
+                                <li><a href="stock_output.html">출고 관리</a></li>
+                                <li><a href="stock_select.html">택배출고 현황</a></li>
+                                <li><a href="stock_select.html">반품 관리</a></li>
+                                <li><a href="stock_select.html">반품 처리 현황</a></li>
+                                <li><a href="stock_select.html">가맹점 물류이동</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#dropdown-goods" aria-expanded="false" data-toggle="collapse"><i class="la la-th-large"></i><span>상품관리</span></a>
+                            <ul id="dropdown-goods" class="collapse list-unstyled">
+                                <li><a href="goods_classify.html">상품 분류 관리</a></li>
+                                <li><a href="goods_manage_info.html">상품 정보 관리</a></li>
+                                <li><a href="goods_update_info.html">상품 정보 일괄 변경</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#dropdown-cs" aria-expanded="false" data-toggle="collapse"><i class="la la-user"></i><span>상담관리</span></a>
+                            <ul id="dropdown-cs" class="collapse list-unstyled">
+                                <li><a href="cs_qa.html">1:1 상담 관리</a></li>
+                                <li><a href="cs_manage.html">고객상담 관리</a></li>
+                                <li><a href="cs_sms_manage.html">SMS 관리</a></li>
+                                <li><a href="cs-sms_list.html">SMS 발송 결과</a></li>
+                                <li><a href="cs_category.html">상담유형 등록</a></li>
+                                <li><a href="cs-category_manage.html">상담유형 관리</a></li>
+                            </ul>
+                        </li>
+
                         <li><a href="#dropdown-manage" aria-expanded="false" data-toggle="collapse"><i class="la la-file-text"></i><span>운영 관리</span></a>
                             <ul id="dropdown-manage" class="collapse list-unstyled">
                                 <li><a href="manage_notice_list.html">공지사항 관리</a></li>
                                 <li><a href="manage_faq_list.html">FAQ 관리</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#dropdown-member" aria-expanded="false" data-toggle="collapse"><i class="la la-columns"></i><span>직원 관리</span></a>
                             <ul id="dropdown-member" class="collapse list-unstyled">
                                 <li><a href="member_list.html">직원 조회</a></li>
-                                <li><a href="member_register.html">직원 등록/수정</a></li>
-                                <li><a href="member_permission.html">메뉴 권한 설정</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#dropdown-base" aria-expanded="false" data-toggle="collapse"><i class="la la-columns"></i><span>기초 관리</span></a>
-                            <ul id="dropdown-base" class="collapse list-unstyled">
-                                <li><a href="base_manager_list.html">가맹점 관리</a></li>
-                                <li><a href="base_shop_list">거래처 관리</a></li>
-                                <li><a href="base_itmes.html">품목 관리</a></li>
-                                <li><a href="base_code.html">코드 관리</a></li>
                             </ul>
                         </li>
 
-                        <div class="sidebar-separator"></div>
                         <li><a href="#dropdown-statistics" aria-expanded="false" data-toggle="collapse"><i class="la la-comments"></i><span>통계</span></a>
                             <ul id="dropdown-statistics" class="collapse list-unstyled">
                                 <li><a href="statistics_member.html">회원 분포</a></li>
@@ -185,14 +185,13 @@
             <div class="content-inner">
                 <ul id="tabs" class=" d-flex"></ul>
 
-
                 <div id="content" include-html="content.html"></div>
 
 
                 <!--Footer-->
                 <footer class="main-footer">
                     <div class="row">
-                        <div class="col-sm-12 d-flex align-items-center justify-content-md-start justify-content-center">
+                        <div class="col-sm-12 d-flex align-items-center justify-content-center">
                             <p>copyright (c) learn21 all rights reserved.</p>
                         </div>
                     </div>
@@ -217,7 +216,7 @@
     <script src="../vendor/daterangepicker.js"></script>
 
 
-    <!-- addtab pageLoad -->
+    <!-- addtab / pageLoad -->
     <script type="text/javascript">
         $("#pageMove ul li a").click(function() {
             addTab($(this));
@@ -227,8 +226,6 @@
             if ($("#" + $(link).attr("rel")).length != 0) return;
             if ($("#tabs li").length > 5) return;
 
-
-            // hide other tabs
             $("#tabs li").removeClass("current");
 
             $("#tabs").append("<li class='current'><a class='tab' id='" +
@@ -250,10 +247,17 @@
                     loadPage(file);
                 }
             });
+
+            $("#tabs li").on('click', function() {
+                $("#tabs li").addClass("current");
+                $(this).siblings().removeClass('current');
+            })
         }
 
         $("#content").load("content.html", function() {
-            $("ul#pageMove").on('click', 'a[data-src]', function(e) {
+            loadPage('dashboard.html') // 처음 loadpage
+
+            $("ul#pageMove,  .nav-menu li.page_move").on('click', 'a[data-src]', function(e) {
                 var content, file, xhttp, i;
                 document.body.addEventListener('click', function(e) {
                     file = e.target.getAttribute('data-src');
