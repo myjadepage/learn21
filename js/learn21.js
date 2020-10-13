@@ -190,4 +190,97 @@
     });
 
 
+    // ------------------------------------------------------- //
+    //common Modal datatables
+    // ------------------------------------------------------ //
+    $('#item-table').DataTable({
+        "destroy": true,
+        "dom": 't<"bottom"p>',
+        "columnDefs": [{
+            "targets": [3],
+            "orderable": false
+        }],
+        "searching": false,
+        "filter": false,
+        "info": false,
+        "lengthChange": false,
+        "language": {
+            "paginate": {
+                "previous": "<",
+                "next": ">"
+            },
+            "infoEmpty": "검색 결과가 없습니다.",
+            "sInfoEmpty": "검색 결과가 없습니다.",
+            "emptyTable": "검색 결과가 없습니다."
+        }
+    });
+
+    // $('#item-selected-table').DataTable({
+    //     "destroy": true,
+    //     "dom": 't<"bottom"p>',
+    //     "columnDefs": [{
+    //         "targets": [3],
+    //         "orderable": false
+    //     }],
+    //     "searching": false,
+    //     "filter": false,
+    //     "info": false,
+    //     "lengthChange": false,
+    //     "paginate": false,
+    //     "language": {
+    //         "infoEmpty": "검색 결과가 없습니다.",
+    //         "sInfoEmpty": "검색 결과가 없습니다.",
+    //         "emptyTable": '선택할 품목을 먼저 조회한 후 "+" 버튼을 통해 목록에 담으세요'
+    //     }
+    // });
+
+    $('#vendor-table').DataTable({
+        "destroy": true,
+        "dom": 't<"bottom"p>',
+        "columnDefs": [{
+            "targets": [3],
+            "orderable": false
+        }],
+        "searching": false,
+        "filter": false,
+        "info": false,
+        "lengthChange": false,
+        "language": {
+            "paginate": {
+                "previous": "<",
+                "next": ">"
+            },
+            "infoEmpty": "검색 결과가 없습니다.",
+            "sInfoEmpty": "검색 결과가 없습니다.",
+            "emptyTable": "검색 결과가 없습니다."
+        }
+    });
+
+
+    // ------------------------------------------------------- //
+    //  modal buttone select 
+    // ------------------------------------------------------ //
+    $('#item-table button').on('click', function() {
+
+        let $tr = $(this).parent().parent().parent();
+        $(this).attr('disabled', true);
+        $tr.addClass('bg-selected-item');
+
+        let _td1 = $tr[0].cells[0].innerText;
+        let _td2 = $tr[0].cells[1].innerText;
+        let _td3 = $tr[0].cells[2].innerText;
+
+        let _tr = `<tr><td>${_td1}</td>
+        <td>${_td2}</td>
+        <td>${_td3}</td>
+        <td>
+            <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                <button class="btn btn-sm btn-outline-danger">-</button>
+            </div>
+        </td></tr>`;
+
+        $('#item-selected-table tbody').append(_tr);
+    });
+
+
 })(jQuery);
