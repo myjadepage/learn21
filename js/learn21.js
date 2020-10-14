@@ -189,6 +189,18 @@
 
     });
 
+    // ------------------------------------------------------- //
+    // multi Modal
+    // ------------------------------------------------------ //
+
+    $(document).on('show.bs.modal', '.modal', function(event) {
+        var zIndex = 1040 + (10 * $('.modal:visible').length);
+        $(this).css('z-index', zIndex);
+        setTimeout(function() {
+            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+        }, 0);
+    });
+
 
     // ------------------------------------------------------- //
     //common Modal datatables
@@ -236,14 +248,12 @@
 
     $('#vendor-table').DataTable({
         "destroy": true,
-        "dom": 't<"bottom"p>',
+        "dom": '<"top"i>t<"bottom"p>',
         "columnDefs": [{
             "targets": [3],
             "orderable": false
         }],
         "searching": false,
-        "filter": false,
-        "info": false,
         "lengthChange": false,
         "language": {
             "paginate": {
@@ -252,7 +262,8 @@
             },
             "infoEmpty": "검색 결과가 없습니다.",
             "sInfoEmpty": "검색 결과가 없습니다.",
-            "emptyTable": "검색 결과가 없습니다."
+            "emptyTable": "검색 결과가 없습니다.",
+            "sInfo": "조회건수 : _TOTAL_ 건"
         }
     });
 
@@ -280,6 +291,80 @@
         </td></tr>`;
 
         $('#item-selected-table tbody').append(_tr);
+    });
+
+
+    //------------------------------------------------------- //
+    // spec table row append
+    //------------------------------------------------------- //
+    $('#btnAddRow').click(function() {
+        let count = $(this).parents().find('#spec-table tbody tr').length;
+        $('#spec-table tbody:last').append(`<tr><td>${count}</td>
+        <td>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="">
+                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" value="">
+                </div>
+            </div>
+        </td>
+        <td>13,000</td>
+        <td>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" value="">
+                </div>
+            </div>
+        </td>
+        <td>39,000</td>
+        <td>10</td>
+        <td>10</td>
+        <td>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" placeholder="비고 내용 표기">
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                <button class="btn btn-sm btn-outline-danger">-</button>
+            </div>
+        </td><tr>`);
+    });
+
+    // ------------------------------------------------------- //
+    // 프린트 시 공급자용 공급받는자용 체크박스 
+    // ------------------------------------------------------- //
+
+    $("#chkPrint-1").click(function() {
+        if ($(this).is(":checked")) {
+            $(".supply-print").show();
+        } else {
+            $(".supply-print").hide();
+        }
+    });
+    $("#chkPrint-2").click(function() {
+        if ($(this).is(":checked")) {
+            $(".demand-print").show();
+        } else {
+            $(".demand-print").hide();
+        }
+    });
+
+    $('#print').on("click", function() {
+        $(".supply-print").printThis();
+        // printJS({ printable: 'demand-print', type: 'html' })
+
     });
 
 

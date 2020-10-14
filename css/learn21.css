@@ -2389,30 +2389,6 @@ span.badge-pulse-orange {
     max-width: 350px !important;
 }
 
-.font-weight-300 {
-    font-weight: 300;
-}
-
-.font-weight-300 {
-    font-weight: 300;
-}
-
-.font-weight-400 {
-    font-weight: 400;
-}
-
-.font-weight-500 {
-    font-weight: 500;
-}
-
-.font-weight-600 {
-    font-weight: 600;
-}
-
-.font-weight-700 {
-    font-weight: 700;
-}
-
 
 /*
  * EM SEPARATOR
@@ -2871,10 +2847,14 @@ span.badge-pulse-orange {
 }
 
 .dataTables_info {
+    font-size: 0.85rem;
+}
+
+#sorting-table_info.dataTables_info,
+#buy-sorting-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;
-    font-size: 0.85rem;
 }
 
 .dataTables_wrapper .dataTables_paginate ul.pagination {
@@ -3156,8 +3136,6 @@ form label {
 }
 
 .input-group span.input-group-addon {
-    font-family: "Montserrat";
-    font-weight: 500;
     border-radius: 0;
     border: 0 none;
     padding: 0.5rem 0.4rem 0 0.4rem;
@@ -4862,7 +4840,7 @@ section.forms form small {
     max-width: none;
     background-color: transparent;
     border: 0;
-    z-index: 1000;
+    z-index: 1200;
     -webkit-box-shadow: none;
     box-shadow: none
 }
@@ -5585,16 +5563,19 @@ nav.navbar .nav-item>a {
     min-width: 1300px;
 }
 
-.table .styled-radio {
+.widget .styled-radio,
+.widget .styled-checkbox {
     top: 7px;
 }
 
-.table .styled-radio label {
+.widget .styled-radio label,
+.widget .styled-checkbox label {
     margin-bottom: 1rem;
     font-size: .85rem;
 }
 
-.table .styled-radio+.styled-radio {
+.widget .styled-radio+.styled-radio,
+.widget .styled-checkbox+.styled-checkbox {
     margin-left: 25px;
 }
 
@@ -6042,7 +6023,16 @@ footer.second-footer a:hover.nav-link {
     border: 0;
 }
 
+.modal .table-bordered.item-select tr:last-child td {
+    border-bottom: 1px solid #dee2e6;
+}
+
 .modal .btn-item {
+    width: 100%;
+    line-height: 3;
+}
+
+.modal .btn-item.lg {
     width: 100%;
     line-height: 6;
 }
@@ -6077,4 +6067,51 @@ footer.second-footer a:hover.nav-link {
     background: #e23f83;
     background: linear-gradient(to right, #e23f83 0%, #ea5844 100%);
     border: 1px solid #e23f83
+}
+
+
+/* 거래명세서 */
+
+#specPrintModal .table,
+#specPrintModal .widget-body p {
+    color: #000;
+}
+
+#specPrintModal .supply-print .table-bordered th,
+#specPrintModal .supply-print .table-bordered td {
+    border: 0.07rem solid red;
+}
+
+#specPrintModal .demand-print .table-bordered th,
+#specPrintModal .demand-print .table-bordered td {
+    border: 0.07rem solid blue;
+}
+
+#specPrintModal .title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#specPrintModal .widget-body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#specPrintModal .print-item td {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+#specPrintModal .price {
+    font-size: 1rem;
+}
+
+#specPrintModal .modal-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#specPrintModal .modal-body {
+    height: 584px;
+    overflow-y: scroll;
 }

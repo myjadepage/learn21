@@ -115,7 +115,7 @@
                             <label class="col-sm-4">조회건수 : 20개</label> -->
                         </div>
                         <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
-                            <button class="btn btn-outline-primary">엑셀다운로드</button>
+                            <button class="btn btn-outline-primary btn_excel">엑셀다운로드</button>
                             <button class="btn btn-outline-danger">+ 신규등록</button>
                         </div>
                     </div>
@@ -201,13 +201,13 @@
 
 <script>
     $(function() {
-        //single date
-        $('input[name="dates"').daterangepicker({
-            singleDatePicker: true,
-            autoUpdateInput: false,
-        });
-        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('YYYY-MM-DD'));
+        $(".btn_excel").on("click", function() {
+            $("#buy-sorting-table").table2excel({
+                exclude: ".excludeThisClass",
+                name: "Worksheet Name",
+                filename: "SomeFile.xls",
+                preserveColors: false
+            });
         });
 
         $('#buy-sorting-table').DataTable({
