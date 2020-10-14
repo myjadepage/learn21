@@ -711,6 +711,276 @@
         </div>
     </div>
 
+    <!-- 4.매입명세서 관리 -->
+    <div id="purchasedSpecModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-item">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">매입 명세서</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="widget no-margin">
+                                <div class="widget-body no-padding">
+                                    <table class="table table-bordered" summary="매입명세서 관리">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="7%">
+                                            <col width="20%">
+                                            <col width="7%">
+                                            <col width="20%">
+                                            <col width="7%">
+                                            <col width=*>
+                                            <col width="7%">
+                                            <col width="20%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3"><button class="btn btn-primary btn-item">편집</button></td>
+                                                <th scope="row"><span class="text-primary">매입일자</span></th>
+                                                <td>날짜</td>
+                                                <th scope="row"><span class="text-primary">거래처</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">공급가</span></th>
+                                                <td>15,200</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">담당자</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <select class="form-control">
+                                                                <option>선택</option>
+                                                                <option>홍길동</option>
+                                                                <option>Relish</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">발주전표</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">부가세</span></th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">메모</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="7.17일 주문서">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">합계수량</span></th>
+                                                <td>15</td>
+                                                <th scope="row"><span class="text-primary">합계금액</span></th>
+                                                <td>15,200</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 매입명세서리스트 -->
+                            <div class="widget">
+                                <div class="widget-body no-padding">
+                                    <table id="spec-table" class="table table-bordered table-hover" summary="품목명 리스트">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width=*>
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="25%">
+                                            <col width="5%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>품목명</th>
+                                                <th>수량</th>
+                                                <th>단가</th>
+                                                <th>공급가</th>
+                                                <th>부가세</th>
+                                                <th>합계금액</th>
+                                                <th>재고</th>
+                                                <th>비고</th>
+                                                <th>관리</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="3">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>13,000</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>39,000</td>
+                                                <td>10</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                        <button class="btn btn-sm btn-outline-danger">-</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="3">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>13,000</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>39,000</td>
+                                                <td>10</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                        <button class="btn btn-sm btn-outline-danger">-</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="3">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>13,000</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" value="0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>39,000</td>
+                                                <td>10</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                        <button class="btn btn-sm btn-outline-danger">-</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="widget-footer">
+                                    <div class="d-flex align-items-stretch justify-content-between">
+                                        <button class="btn btn-sm btn-outline-primary">품목선택</button>
+                                        <button class="btn btn-sm btn-primary">항목 추가</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="row col">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-outline-primary">신규전표</button>
+                            <button type="button" class="btn btn-outline-primary">전표복사</button>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary margin-right-5">저장</button>
+                            <button type="button" class="btn btn-info margin-right-5">인쇄</button>
+                            <button type="button" class="btn btn-seconday">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/datatables.min.js"></script>
     <script src="../vendor/core.min.js"></script>
