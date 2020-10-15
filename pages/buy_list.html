@@ -191,6 +191,7 @@
 
                         </tbody>
                     </table>
+
                 </div>
             </div>
             <!-- 리스트영역 끝 -->
@@ -201,6 +202,57 @@
 
 <script>
     $(function() {
+        var reader = new FileReader();
+        $('input[type=file]').change(function() {
+            if (typeof(FileReader) != "undefined") {
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.xls|.xlsx)$/;
+                $($(this)[0].files).each(function() {
+                    var file = $(this);
+                    if (regex.test(file[0].name.toLowerCase())) {
+                        reader.readAsDataURL(file[0]);
+                    } else {
+                        alert(file[0].name + " is not a valid image file.");
+                        return false;
+                    }
+                });
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        });
+
+        // $('#btnUpload').on("click", function() {
+        //     var byteData = reader.result;
+        //     byteData = byteData.split(';')[1].replace("base64,", "");
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "excel.html",
+        //         data: '{byteData: "' + byteData + '" }',
+        //         contentType: "application/json; charset=utf-8",
+        //         dataType: "json",
+        //         success: function(response) {
+        //             console.log("response", response);
+        //             var xmlDoc = $.parseXML(response.d);
+        //             var xml = $(xmlDoc);
+        //             var customers = xml.find("Table");
+        //             $("#tblCustomers").show();
+        //             var row = $("#tblCustomers tr:last-child").removeAttr("style").clone(true);
+        //             $("#tblCustomers tr").not($("#tblCustomers tr:first-child")).remove();
+        //             $.each(customers, function() {
+        //                 $("td", row).eq(0).html($(this).find("Id").text());
+        //                 $("td", row).eq(1).html($(this).find("Name").text());
+        //                 $("td", row).eq(2).html($(this).find("Country").text());
+        //                 $("#tblCustomers").append(row);
+        //                 row = $("#tblCustomers tr:last-child").clone(true);
+        //             });
+        //         },
+        //         error: function(response) {
+        //             alert(response.responseText);
+        //         }
+        //     });
+        //     return false;
+        // });
+
+
         $(".btn_excel").on("click", function() {
             $("#buy-sorting-table").table2excel({
                 exclude: ".excludeThisClass",

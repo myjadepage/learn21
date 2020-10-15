@@ -1,0 +1,315 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">품목 등록</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">기초 관리</li>
+                        <li class="breadcrumb-item active">품목 관리</li>
+                        <li class="breadcrumb-item active">품목 등록</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 작성영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="품목 등록">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">분류</span></th>
+                                <td colspan="7">
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                    <option>대분류 선택</option>
+                                                                    <option>대분류 1</option>
+                                                                    <option>대분류 2</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                    <option>중분류 선택</option>
+                                                                    <option>중분류 1</option>
+                                                                    <option>중분류 2</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                    <option>소분류 선택</option>
+                                                                    <option>소분류 1</option>
+                                                                    <option>소분류 2</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">품목명</span></th>
+                                <td>
+                                    <div class="row">
+
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">품목코드</span></th>
+                                <td>
+                                    <div class="row">
+
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="자동 생성입니다.">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">관리 번호</span></th>
+                                <td>
+                                    <div class="row">
+
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">규격</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">공급처</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>선택 해주세요</option>
+                                                                        <option>공급처 1</option>
+                                                                        <option>공급처 2</option>
+                                                                </select>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">출판사</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>선택</option>
+                                                                        <option>청담</option>
+                                                                        <option>청담2</option>
+                                                                </select>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">취급여부</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemTreat" id="radItemTreat-1">
+                                                <label for="radItemTreat-1">취급</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemTreat" id="radItemTreat-2">
+                                                <label for="radItemTreat-2">단종</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemTreat" id="radItemTreat-3">
+                                                <label for="radItemTreat-3">품질</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">재고관리 여부</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemStock" id="radItemStock-1">
+                                                <label for="radItemStock-1">관리</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemStock" id="radItemStock-2">
+                                                <label for="radItemStock-2">미관리</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">재고구분</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                </select>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <th><span class="text-primary"></span></th>
+                                <td>
+                                    <div class="row">
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">과세구분(매출)</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemVat" id="radItemVat-1">
+                                                <label for="radItemVat-1">과세</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemVat" id="radItemVat-2" checked>
+                                                <label for="radItemVat-2">면세</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">과세구분(매입)</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemVat2" id="radItemVat-3">
+                                                <label for="radItemVat-3">과세</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radItemVat2" id="radItemVat-4" checked>
+                                                <label for="radItemVat-4">면세</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">입고단가</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">소비자가</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><span class="text-primary">메모</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-12">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <th><span class="text-primary"></span></th>
+                                <td>
+                                    <div class="row">
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="widget-footer">
+                    <div class="row col">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-outline-primary">목록</button>
+                            <button type="button" class="btn btn-outline-primary">신규품목</button>
+                            <button type="button" class="btn btn-outline-danger">삭제</button>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 입력폼 끝-->
+
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+<script>
+    $(function() {
+        //single date
+        $('input[name="dates"').daterangepicker({
+            "singleDatePicker": true,
+            "autoUpdateInput": false,
+        });
+        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY-MM-DD'));
+        });
+
+        $('#sorting-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "columnDefs": [{
+                "targets": [3, 5],
+                "orderable": false
+            }],
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

@@ -1,0 +1,189 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">가맹점 관리</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">기초관리</li>
+                        <li class="breadcrumb-item active">가맹점 관리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="가맹점 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">가맹점명</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">가맹점 그룹</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>선택하세요</option>
+                                                                <option>청담어학원</option>
+                                                                <option>APRIL</option>
+                                                            </select>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">검색</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
+                            <button type="button" class="btn btn-outline-danger" rel="base/base_shop_input" data-src="base/base_shop_input.html">+ 신규등록</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="shop-list-table" class="table table-bordered table-hover mb-0" summary="가맹점보기 리스트">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width=*>
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>그룹</th>
+                                <th>가맹점명</th>
+                                <th>사업자번호</th>
+                                <th>대표자</th>
+                                <th>전화</th>
+                                <th>FAX</th>
+                                <th>지역</th>
+                                <th>외부연결 코드</th>
+                                <th>관리</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9</td>
+                                <td>APRIL</td>
+                                <td>CMS</td>
+                                <td>123-45-67890</td>
+                                <td>홍길동</td>
+                                <td>02-515-8753</td>
+                                <td>02-557-5596</td>
+                                <td>경기</td>
+                                <td>연결1 | 연결2</td>
+                                <td>
+                                    <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                                        <button class="btn btn-sm btn-primary">수정</button>
+                                        <button class="btn btn-sm btn-danger">삭제</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>청담어학원</td>
+                                <td>청담러닝</td>
+                                <td>123-45-67890</td>
+                                <td>홍길동</td>
+                                <td>02-515-8753</td>
+                                <td>02-557-5596</td>
+                                <td>서울</td>
+                                <td><span class="strike">연결1</span> | <span>연결2</span></td>
+                                <td>
+                                    <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                                        <button class="btn btn-sm btn-primary">수정</button>
+                                        <button class="btn btn-sm btn-danger">삭제</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+<script>
+    $(function() {
+
+        $('#shop-list-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "columnDefs": [{
+                "targets": [3, 5],
+                "orderable": false
+            }],
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>
