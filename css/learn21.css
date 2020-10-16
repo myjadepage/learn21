@@ -1723,7 +1723,6 @@ a:hover.rounded-button {
 
 .input-btn-util {
     line-height: 23px;
-    ;
 }
 
 .btn-item {
@@ -2826,7 +2825,8 @@ span.badge-pulse-orange {
     color: #5d5386;
 }
 
-.widget+.widget .widget-body .table th {
+.widget+.widget .widget-body .table thead th,
+.widget-body .table thead th {
     text-align: center;
 }
 

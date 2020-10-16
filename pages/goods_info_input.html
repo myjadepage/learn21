@@ -1,0 +1,412 @@
+<div class="container-fluid">
+
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">상품 등록/수정</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">상품 관리</li>
+                        <li class="breadcrumb-item">상품정보 관리</li>
+                        <li class="breadcrumb-item active">상품 등록/수정</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="widget has-shadow">
+                <div class="widget-body">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- 검색영역 끝-->
+                            <div class="widget">
+                                <div class="widget-body no-padding">
+                                    <table id="item-table" class="table table-bordered no-margin" summary="상품등록">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="40%">
+                                            <col width="10%">
+                                            <col width="40%">
+                                        </colgroup>
+
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">상품분류</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>대분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>중분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>소분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <button type="button" class="btn btn-sm btn-outline-primary input-btn-util">+</button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row margin-top-5">
+
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>대분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>중분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>소분류 선택</option>
+                                                                                    <option>어학원용(1,500)</option>
+                                                                                    <option>무료</option>
+                                                                                    <option>일반용(1,500)</option>
+                                                                                </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <button type="button" class="btn btn-sm btn-outline-danger input-btn-util"> - </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">상품명</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" value="i-Spring Level 2C Homework Book">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">상품코드</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <input type="text" class="form-control" value="PD3456789" disabled>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">표시 상품명</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" value="i-Spring Level 2C Homework Book">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">상품구분</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">일반</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">STB</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">물류선택</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                <option>선택</option>
+                                                                                <option>판매</option>
+                                                                                <option>미판매</option>
+                                                                                <option>일시품절</option>
+                                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th ope="row"><span class="text-primary">반품유형</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">가능</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">불가능</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">과세구분(매출)</th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">과세</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">면세</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">상품 이미지</th>
+                                                <td>
+                                                    <div class="row  d-flex align-items-center">
+                                                        <div class="col col-sm-6">
+                                                            <input type="file" class="form-control" />
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <button type="button" class="btn btn-primary btn-sm input-btn-util">미리보기</button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">정상가</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control text-right" value="15,000">
+                                                                <span class="input-group-addon">원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">판매가</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control text-right" value="15,000">
+                                                                <span class="input-group-addon">원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">판매여부</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">판매</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">미판매</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">일시품절</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">이전내역 중복체크</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">체크</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">제외</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">옵션정보 CD</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">있음</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">없음</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"><span class="text-primary">옵션정보 ebook</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-1">
+                                                                <label for="rad-1">있음</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="rad-2">
+                                                                <label for="rad-2">없음</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-primary">검색어 키워드</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="/로 구분하여 키운드 복수 입력 가능">
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">메모</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="widget ">
+                                <div class="widget-header">
+
+                                    <h5>상품-품목정보</h5>
+                                </div>
+                                <div class="widget-body no-padding">
+                                    <table id="sorting-table" class="table table-bordered mb-0" summary="품목정보">
+                                        <colgroup>
+                                            <col width="7%">
+                                            <col width=*>
+                                            <col width="12%">
+                                            <col width="12%">
+                                            <col width="12%">
+
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>품목ID</th>
+                                                <th>품목명</th>
+                                                <th>소비자가</th>
+                                                <th>할인율</th>
+                                                <th>공급가</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>325678</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-5">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="" value="i-Spring Level 2C Homework Book">
+                                                                <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control-plaintext text-right" value="13,000">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control text-right" value="0%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control text-right" value="15,000">
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget-footer">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start">
+                            <button type="button" class="btn btn-outline-primary">목록</button>
+                            <button type="button" class="btn btn-outline-danger">삭제</button>
+                            <button type="button" class="btn btn-outline-dark">상품복사</button>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end">
+                            <button type="button" class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Page Content -->
+</div>
