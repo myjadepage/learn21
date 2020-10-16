@@ -1,0 +1,373 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">상품정보 일괄 변경</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">상품관리</li>
+                        <li class="breadcrumb-item active">상품정보 일괄 변경</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+             <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="sorting-table" class="table table-bordered table-hover mb-0" summary="가맹점보기 리스트">
+                        <colgroup>
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="17%"> 
+                            <col width="7%"> 
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            
+                            
+                            
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>상품분류</th>
+                                <th>상품코드</th>
+                                <th>상품명</th>
+                                <th>공급처</th>
+                                <th>물류정보</th>
+                                <th>정상가</th>
+                                <th>판매가</th>
+                                <th>제거</th>
+                            
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="text-center">상품 정보를 일괄 변경할 상풍을 선택 하세요.</td>
+                                
+                                
+                            </tr>
+                             <tr>
+                                <td>i6-3</td>
+                                <td>003401</td>
+                                <td>i-Spring Level 2C Homework Book</td>
+                                <td>( 주 ) 청담러닝</td>
+                                <td>1,500원(어학원)</td>
+                                <td>10,000</td>
+                                <td>10,000</td>
+                                <td>제거</td>
+                         
+                          
+                             
+                            </tr>
+                          
+                          
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="상품일괄 등록하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">상품분류</span></th>
+                                <td colspan="4">
+                                    <div class="row">
+                                    <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>대분류 선택</option>
+                                                                <option>대분류</option>
+                                                               
+                                                            </select>
+                                        </div>
+                                    <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>중분류선택</option>
+                                                                <option>중분류1</option>
+                                                                <option>중분류2</option>
+                                                            </select>
+                                        </div>
+                                     <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>소분류선택</option>
+                                                                <option>소분류1</option>
+                                                                <option>소분류2</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                             <tr>
+                                <th scope="row"><span class="text-primary">물류정보</span></th>
+                                <td>
+                                    <div class="row">
+                                     <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>선택</option>
+                                                                <option>어학원용(1,500)</option>
+                                                                <option>무료</option>
+                                                                <option>일반용(1,500)</option>
+                                                            </select>
+                                        </div>
+                                     </div>
+                                </td>
+                                <th><span class="text-primary">상품구분</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">일반</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">STB</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">판매여부</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">판매</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">미판매</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">일시품절</label>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">반품유형</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">가능</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">불가능</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">정상가</span></th>
+                                <td>
+                                    <div class="row">
+                                       
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="15,000 원">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">판매가</span></th>
+                                <td>
+                                    <div class="row">
+                                       
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="15,000 원">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                             <tr>
+                                <th scope="row"><span class="text-primary">과세구분(매출)</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">과세</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">면세</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">이전내역 중복체크</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">체크</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">제외</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">옵션정보 CD</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">있음</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">없음</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">옵션정보 ebook</span></th>
+                                <td>
+                                    <div class="row">
+                                       <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-1">
+                                                <label for="rad-1">있음</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radio" id="rad-2">
+                                                <label for="rad-2">없음</label>
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">검색어 키워드</span></th>
+                                <td>
+                                    <div class="row">
+                                       
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="text-primary">메모</span></th>
+                                <td>
+                                    <div class="row">
+                                       
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">상품선택</button>
+                        <button class="btn btn-primary">일괄변경</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+<script>
+    $(function() {
+        //single date
+        $('input[name="dates"').daterangepicker({
+            "singleDatePicker": true,
+            "autoUpdateInput": false,
+        });
+        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY-MM-DD'));
+        });
+
+        $('#sorting-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "columnDefs": [{
+                "targets": [3, 5],
+                "orderable": false
+            }],
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

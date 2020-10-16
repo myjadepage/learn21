@@ -14,9 +14,7 @@ Item Name: learn21 - Admin Dashboard
   02.03) Sidebar
   02.04) Footer
 03) Pages
-  03.01) Authentication
-  03.02) Search Results
-  03.03) Faq
+  03.01) o
 ========================================= */
 
 
@@ -2837,14 +2835,12 @@ span.badge-pulse-orange {
 }
 
 
-/* .table input[name="dates"] {
-    font-size: .85rem; 
-} */
-
-
 /*
  * DATATABLES
  */
+
+
+/* datatables custom */
 
 .table.dataTable {
     border-collapse: collapse!important;
@@ -2904,6 +2900,10 @@ table.table-bordered.dataTable td {
     position: absolute;
     top: -73px;
     left: 110px;
+}
+
+.dataTables_wrapper select[name="code-list-table_length"] {
+    display: none !important;
 }
 
 

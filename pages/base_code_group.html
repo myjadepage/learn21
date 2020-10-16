@@ -80,7 +80,7 @@
                             <!-- 검색영역 끝-->
                             <div class="widget">
                                 <div class="widget-body no-padding">
-                                    <table id="item-table" class="table table-bordered table-hover item-table" summary="코드그룹 리스트">
+                                    <table id="code-list-table" class="table table-bordered table-hover item-table" summary="코드그룹 리스트">
                                         <colgroup>
                                             <col width="5%">
                                             <col width="7%">
@@ -102,6 +102,18 @@
                                                 <td>업체그룹</td>
                                                 <td>사용</td>
                                             </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>A12345678</td>
+                                                <td>업체그룹</td>
+                                                <td>사용</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>A12345678</td>
+                                                <td>업체그룹</td>
+                                                <td>사용</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -109,7 +121,161 @@
                         </div>
 
                         <div class="col-sm-8">
-                            fsfsafafas
+                            <div class="widget">
+                                <div class="widget-body no-padding">
+                                    <table class="table table-bordered" summary="코드 검색하기">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="40%">
+                                            <col width="10%">
+                                            <col width="40%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">코드그룹</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-4">
+                                                            1011
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">코드그룹명</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-4">
+                                                            품목 중분류
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 작성영역 시작-->
+                            <div class="widget">
+                                <div class="widget-body no-padding">
+                                    <table class="table table-bordered" summary="코드그룹 등록">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="40%">
+                                            <col width="10%">
+                                            <col width="40%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">코드그룹</span></th>
+                                                <td>
+                                                    <div class="row">
+
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="" value="202" disabled>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">코드그룹명</span></th>
+                                                <td>
+                                                    <div class="row">
+
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="품목 중분류">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">코드길이</span></th>
+                                                <td>
+                                                    <div class="row">
+
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="" value="6" disabled>
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary">상위참조코드</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="" value="품목대분류" disabled>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">사용여부</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radCodeGroupUse" id="radCodeGroupUse-1">
+                                                                <label for="radCodeGroupUse-1">사용</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radCodeGroupUse" id="radCodeGroupUse-2">
+                                                                <label for="radCodeGroupUse-2">미사용</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th><span class="text-primary"></span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex">
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">분류</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>[101]품목 대분류</option>
+                                                                                    <option>대분류 1</option>
+                                                                                    <option>대분류 2</option>
+                                                                            </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>[102]품목 중분류</option>
+                                                                                    <option>중분류 1</option>
+                                                                                    <option>중분류 2</option>
+                                                                            </select>
+                                                        </div>
+                                                        <div class="col col-sm-3">
+                                                            <select class="form-control">
+                                                                                    <option>[103]품목 소분류</option>
+                                                                                    <option>소분류 1</option>
+                                                                                    <option>소분류 2</option>
+                                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">메모</span></th>
+                                                <td colspan="3">
+                                                    <div class="row">
+                                                        <div class="col col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 입력폼 끝-->
+
                         </div>
 
                     </div>
@@ -120,11 +286,8 @@
                 </div>
 
                 <div class="widget-footer">
-                    <div class="row">
-                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start">
-                            <button type="button" class="btn btn-outline-primary">목록</button>
-                        </div>
-                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end">
+                    <div class="row d-flex">
+                        <div class="col-sm-12 d-flex align-items-center justify-content-end">
                             <button type="button" class="btn btn-primary">저장</button>
                         </div>
                     </div>
@@ -137,3 +300,22 @@
 
     <!-- End Page Content -->
 </div>
+
+<script>
+    $('#code-list-table').DataTable({
+        "destroy": true, //intitialize
+        "dom": '<"top"li>t<"bottom"p>',
+        "searching": false,
+        "ordering": false,
+        "language": {
+            "paginate": {
+                "previous": "<",
+                "next": ">"
+            },
+            "infoEmpty": "검색 결과가 없습니다.",
+            "sInfoEmpty": "검색 결과가 없습니다.",
+            "sInfo": "조회건수 : _TOTAL_ 건",
+            "sLengthMenu": "_MENU_"
+        }
+    });
+</script>
