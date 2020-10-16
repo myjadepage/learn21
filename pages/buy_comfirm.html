@@ -115,7 +115,7 @@
                             <button class="btn btn-outline-primary">엑셀다운로드</button>
                             <button class="btn btn-outline-primary">저장</button>
                             <button class="btn btn-outline-primary">인쇄</button>
-                            <button class="btn btn-outline-danger">매입확정</button>
+                            <button class="btn btn-outline-danger" id="buyConfirmModal" data-toggle="modal" data-target="buyConfirmModal">매입확정</button>
                         </div>
                     </div>
                 </div>
@@ -228,9 +228,6 @@
                                 <td class="text-right">2,000,000</td>
                                 <td class="text-right">2,000,000</td>
                             </tr>
-
-
-
                         </tbody>
                     </table>
                 </div>
@@ -242,22 +239,106 @@
 </div>
 
 
-<script>
-    $(function() {
-        $('#buy-confirm-list').DataTable({
-            "destroy": true, //intitialize
-            "dom": '<"top"li>t<"bottom"p>',
-            "searching": false,
-            "language": {
-                "paginate": {
-                    "previous": "<",
-                    "next": ">"
-                },
-                "infoEmpty": "검색 결과가 없습니다.",
-                "sInfoEmpty": "검색 결과가 없습니다.",
-                "sInfo": "조회건수 : _TOTAL_ 건",
-                "sLengthMenu": "_MENU_"
-            }
-        });
-    });
-</script>
+
+<!-- 매입확정 클릭시 팝업 -->
+<div id="buyConfirmModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">매입확정</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+                                <table class="table table-bordered" summary="구매발주서 인쇄">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="80%">
+                                    </colgroup>
+
+                                    <tbody>
+                                        <tr>
+                                            <th>매입일자</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                            <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>메모</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <textarea rows="3" class="form-control" placeholder="">
+                                                            [일괄 매입 확정]메모를 입력하세요
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-center">
+                                    <button class="btn btn-primary">일괄매입확정</button>
+                                </div>
+
+
+                                <div class="em-separator separator-dotted"></div>
+
+                                <table class="table table-bordered mt-5" summary="매입확정품목">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width=*>
+                                        <col width="15%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>품목명</th>
+                                            <th>입고수량</th>
+                                            <th>잔량</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>PB TOEFL JUNIOR SET (A</td>
+                                            <td class="text-center">123</td>
+                                            <td class="text-right">13</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>PB TOEFL JUNIOR SET (A</td>
+                                            <td class="text-center">123</td>
+                                            <td class="text-right">13</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>PB TOEFL JUNIOR SET (A</td>
+                                            <td class="text-center">123</td>
+                                            <td class="text-right">13</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
