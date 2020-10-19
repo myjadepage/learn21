@@ -2751,6 +2751,11 @@ span.badge-pulse-orange {
  * TABLES
  */
 
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
 .table thead {
     background-color: rgba(52, 40, 104, 0.05);
     border-radius: 0px;
@@ -6086,4 +6091,18 @@ footer.second-footer a:hover.nav-link {
 #specPrintModal .modal-body {
     height: 584px;
     overflow-y: scroll;
+}
+
+.buy_title {
+    border-bottom: 2px solid #000;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.buy_title_period {
+    margin-top: 5px;
+    border-top: 1px solid #000;
+    padding-top: 5px;
 }

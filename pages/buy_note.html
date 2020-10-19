@@ -1,0 +1,541 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">매입처 원장</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">구매 관리</li>
+                        <li class="breadcrumb-item active">매입처 원장</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="매입처 원장 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span class="text-primary">조회기간</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="text-primary">가맹점</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-5">
+                                            <select class="form-control">
+                                                        <option>그룹</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </select>
+                                        </div>
+                                        <div class="col col-sm-5">
+                                            <select class="form-control">
+                                                        <option>가맹점</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-primary">비고</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="checkbox" id="check-1">
+                                                <label for="check-1">인쇄포함</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <th scope="row"><span class="text-primary">거래처</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="거래처검색">
+                                                <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">조회</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered" summary="매입처 원장 검색하기">
+                                <colgroup>
+                                    <col width="7%">
+                                    <col width="30%">
+                                    <col width="7%">
+                                    <col width="20%">
+                                    <col width="7%">
+                                    <col width=*>
+                                    <col width="7%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>거래처명</th>
+                                        <td>k0011-키다리영어샵(광주)</td>
+                                        <th>사업자NO</th>
+                                        <td>410-23-74203</td>
+                                        <th>대표이사</th>
+                                        <td>오성일</td>
+                                        <td rowspan="2">
+                                            <button type="button" class="btn btn-dark" id="buyVendorNotePrintModal" data-toggle="modal" data-target="buyVendorNotePrintModal">매입처 원장 인쇄</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td>광주 서구 쌍촌동 969-56 삼성이노베이션빌딩 5층</td>
+                                        <th>전화</th>
+                                        <td>062-236-5689</td>
+                                        <th>거래잔액</th>
+                                        <td><b class="text-info">1,503,600</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table class="table table-bordered table-hover mb-0" summary="매입처원장 리스트">
+                        <colgroup>
+                            <col width="7%">
+                            <col width="5%">
+                            <col width="15%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width=*>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>일자</th>
+                                <th>구분</th>
+                                <th>품목</th>
+                                <th>수량</th>
+                                <th>단가</th>
+                                <th>공급율</th>
+                                <th>공급단가</th>
+                                <th>합계금액</th>
+                                <th>결제금액</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-active">
+                                <td class="text-center">[이월]</td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">0</td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td class="text-right">5</td>
+                                <td class="text-right">200,500</td>
+                                <td class="text-right">100%</td>
+                                <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td class="text-right">5</td>
+                                <td class="text-right">200,500</td>
+                                <td class="text-right">100%</td>
+                                <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td class="text-right">5</td>
+                                <td class="text-right">200,500</td>
+                                <td class="text-right">100%</td>
+                                <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+
+                            <!---- 총합    -->
+                            <tr class="table-active sum_month">
+                                <th class="text-center">[월계]</th>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">11</td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right">1,650,000</td>
+                                <td class="text-right">1,650,000</td>
+                                <td class="text-right">1,650,000</td>
+                                <td></td>
+                            </tr>
+                            <tr class="table-active sum_total">
+                                <th class="text-center">[누계]</th>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">11</td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right">1,650,000</td>
+                                <td class="text-right">1,650,000</td>
+                                <td class="text-right">1,650,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td>5</td>
+                                <td>200,500</td>
+                                <td>100%</td>
+                                <td>50,000</td>
+                                <td>1,500,000</td>
+                                <td>1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td>5</td>
+                                <td>200,500</td>
+                                <td>100%</td>
+                                <td>50,000</td>
+                                <td>1,500,000</td>
+                                <td>1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td class="text-center">매입</td>
+                                <td>PB TOEFL JUNIOR SET</td>
+                                <td>5</td>
+                                <td>200,500</td>
+                                <td>100%</td>
+                                <td>50,000</td>
+                                <td>1,500,000</td>
+                                <td>1,500,000</td>
+                                <td>안양평촌</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+<!------------------------------- 
+    popup 매입처원장 인쇄-------------
+---------------------------------->
+<div id="buyVendorNotePrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">매입처 원장</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-2">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title">매입처 원장</div>
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title_period">(조회기간 : 2020-09-01 ~ 2020-09-17)</div>
+                                </div>
+                            </div>
+
+                            <!----테이블 내용-->
+                            <div class="widget">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-bordered" summary="매입처 원장 검색하기">
+                                                <colgroup>
+                                                    <col width="7%">
+                                                    <col width="30%">
+                                                    <col width="7%">
+                                                    <col width="20%">
+                                                    <col width="7%">
+                                                    <col width=*>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>거래처명</th>
+                                                        <td>k0011-키다리영어샵(광주)</td>
+                                                        <th>사업자NO</th>
+                                                        <td>410-23-74203</td>
+                                                        <th>대표이사</th>
+                                                        <td>오성일</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th>주소</th>
+                                                        <td>광주 서구 쌍촌동 969-56 삼성이노베이션빌딩 5층</td>
+                                                        <th>전화</th>
+                                                        <td>062-236-5689</td>
+                                                        <th>거래잔액</th>
+                                                        <td><b class="text-info">1,503,600</b></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="widget-body">
+                                    <table class="table table-bordered table-hover mb-0" summary="매입처원장 리스트">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="5%">
+                                            <col width="15%">
+                                            <col width="5%">
+                                            <col width="10%">
+                                            <col width="7%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width=*>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>일자</th>
+                                                <th>구분</th>
+                                                <th>품목</th>
+                                                <th>수량</th>
+                                                <th>단가</th>
+                                                <th>공급율</th>
+                                                <th>공급단가</th>
+                                                <th>합계금액</th>
+                                                <th>결제금액</th>
+                                                <th>비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-active">
+                                                <td class="text-center">[이월]</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">0</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td class="text-right">5</td>
+                                                <td class="text-right">200,500</td>
+                                                <td class="text-right">100%</td>
+                                                <td class="text-right">50,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td class="text-right">5</td>
+                                                <td class="text-right">200,500</td>
+                                                <td class="text-right">100%</td>
+                                                <td class="text-right">50,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td class="text-right">5</td>
+                                                <td class="text-right">200,500</td>
+                                                <td class="text-right">100%</td>
+                                                <td class="text-right">50,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td class="text-right">1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+
+                                            <!---- 총합    -->
+                                            <tr class="table-active sum_month">
+                                                <th class="text-center">[월계]</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">11</td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="table-active sum_total">
+                                                <th class="text-center">[누계]</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">11</td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right"></td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td class="text-right">1,650,000</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td>5</td>
+                                                <td>200,500</td>
+                                                <td>100%</td>
+                                                <td>50,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td>5</td>
+                                                <td>200,500</td>
+                                                <td>100%</td>
+                                                <td>50,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-09-15</td>
+                                                <td class="text-center">매입</td>
+                                                <td>PB TOEFL JUNIOR SET</td>
+                                                <td>5</td>
+                                                <td>200,500</td>
+                                                <td>100%</td>
+                                                <td>50,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,500,000</td>
+                                                <td>안양평촌</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

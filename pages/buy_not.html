@@ -1,0 +1,434 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">미입고 현황</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">구매 관리</li>
+                        <li class="breadcrumb-item active">미입고 현황</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="미입고 현황 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+
+                                <th scope="row"><span class="text-primary">가맹점</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-5">
+                                            <select class="form-control">
+                                                        <option>그룹</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </select>
+                                        </div>
+                                        <div class="col col-sm-5">
+                                            <select class="form-control">
+                                                        <option>가맹점</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="text-primary">거래처</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="거래처검색">
+                                                <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-primary">조회기간</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">비고</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex justify-content-start">
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="checkbox" id="check-1" checked>
+                                                <label for="check-1">전표건별 확인</label>
+                                            </div>
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="checkbox" id="check-1" checked>
+                                                <label for="check-1">잔량 0이하 제외</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">조회</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-12 d-flex justify-content-end">
+
+                            <button type="button" class="btn btn-outline-primary" id="buyNotPrintModal" data-toggle="modal" data-target="buyNotPrintModal">인쇄</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table class="table table-bordered mb-0" summary="미입고현황 리스트">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width=*>
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>전표번호</th>
+                                <th>발주일자</th>
+                                <th>거래처</th>
+                                <th>품목</th>
+                                <th>발주수량</th>
+                                <th>입고수량</th>
+                                <th>미입고수량</th>
+                                <th>공급가</th>
+                                <th>합계금액</th>
+                                <th>잔량합계금액</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th class="text-center">[합계]</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right">5,960</td>
+                                <td class="text-right">5,960</td>
+                                <td class="text-right">5,960</td>
+                                <td class="text-right">5,960,000</td>
+                                <td class="text-right">5,960,000</td>
+                                <td class="text-right">5,960,000</td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>1234567</td>
+                                <td>2020-12-10</td>
+                                <td>(주)다래출판</td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>1234567</td>
+                                <td>2020-12-10</td>
+                                <td>(주)다래출판</td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">180</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                                <td class="text-right">250,000,000</td>
+                            </tr>
+                        </tbody>
+
+
+
+
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+<!------------------------------- 
+    popup 미입고 인쇄-------------
+---------------------------------->
+<div id="buyNotPrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">미입고 현황</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-2">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title">미입고 현황</div>
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title_period">(조회기간 : 2020-09-01 ~ 2020-09-17)</div>
+                                </div>
+                            </div>
+
+                            <!----테이블 내용-->
+                            <div class="widget">
+
+                                <div class="widget-body">
+                                    <table class="table table-bordered mb-0" summary="미입고현황 리스트">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="15%">
+                                            <col width=*>
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>전표번호</th>
+                                                <th>발주일자</th>
+                                                <th>거래처</th>
+                                                <th>품목</th>
+                                                <th>발주수량</th>
+                                                <th>입고수량</th>
+                                                <th>미입고수량</th>
+                                                <th>공급가</th>
+                                                <th>합계금액</th>
+                                                <th>잔량합계금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th class="text-center">[합계]</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">5,960</td>
+                                                <td class="text-right">5,960</td>
+                                                <td class="text-right">5,960</td>
+                                                <td class="text-right">5,960,000</td>
+                                                <td class="text-right">5,960,000</td>
+                                                <td class="text-right">5,960,000</td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1234567</td>
+                                                <td>2020-12-10</td>
+                                                <td>(주)다래출판</td>
+                                                <td>PB TOEFL JUNIOR SET(A)</td>
+                                                <td class="text-right">200</td>
+                                                <td class="text-right">180</td>
+                                                <td class="text-right">20</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                                <td class="text-right">250,000,000</td>
+                                            </tr>
+                                        </tbody>
+
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
