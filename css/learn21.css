@@ -2902,7 +2902,9 @@ table.table-bordered.dataTable td {
 #stock-period-table_info.dataTables_info,
 #stock-state-table_info.dataTables_info,
 #stock-date-table_info.dataTables_info,
-#goods-info-table_info.dataTables_info {
+#goods-info-table_info.dataTables_info,
+#stock-manager-table_info.dataTables_info,
+#invoice-list-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;
@@ -5995,6 +5997,42 @@ footer.second-footer a:hover.nav-link {
         width: 100%;
         margin: 0;
     }
+}
+
+
+/* 
+*tabpage 
+/*1. 물류관리> 재고현황
+/*2. 물류관리> 송장관리
+*/
+
+.tab-content {
+    position: relative;
+}
+
+.tab-right-menu {
+    position: absolute;
+    top: -45px;
+    right: -15px;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.filebox .upload-name {
+    display: inline-block;
+    margin-right: -5px;
+    font-size: 0.85rem;
+    padding: 10px;
+    vertical-align: middle;
+    background-color: #dedede;
+    border: 1px solid #ebebeb;
 }
 
 
