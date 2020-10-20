@@ -2909,7 +2909,8 @@ table.table-bordered.dataTable td {
 #stock-delivery-table_info.dataTables_info,
 #stock-return-table_info.dataTables_info,
 #stock-return-list-table_info.dataTables_info,
-#stock-shop-table_info.dataTables_info {
+#stock-shop-table_info.dataTables_info,
+#notice-list-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;

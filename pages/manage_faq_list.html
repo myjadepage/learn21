@@ -1,0 +1,668 @@
+<div class="container-fluid">
+
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">FAQ 관리</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">운영관리</li>
+                        <li class="breadcrumb-item active">FAQ관리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="FAQ관리 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">검색어</span></th>
+                                <td>
+                                  <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>검색구분</option>
+                                                                <option>제목</option>
+                                                                <option>내용</option>
+                                                                
+                                                            </select>
+                                        </div>
+                                      </div>
+                                </td>
+                                <th><span class="text-primary">게시일자</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">검색</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+             <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
+                           
+                            <button class="btn btn-outline-danger" id="buySpecModal" data-toggle="modal" data-target="buySpecModal" rel="manage/manage_faq_input" data-src="manage/manage_faq_input.html">+ 신규</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="buy-sorting-table" class="table table-bordered table-hover mb-0" summary="공지사항보기 리스트">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width=*>
+                            <col width="7%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                               
+                                <th>No</th>
+                                <th>분류</th>
+                                <th>제목</th>
+                                <th>표시순서</th>
+                                <th>등록자</th>
+                                <th>조회수</th>
+                                <th>등록일자</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 9</td>
+                                <td>상품</td>
+                                <td>학원 재원생입니다. 구매해애ㅑ 할 교제를 어디에서 볼 수 있나요?</td>
+                                <td>5</td>
+                                <td>김무엽</td>
+                                <td>27</td>
+                                <td>2020-09-15</td>
+                            
+                            </tr>
+
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+<!-- 구매발주서 팝업 -->
+<div id="buySpecModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">구매 발주서</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="widget no-margin">
+                            <div class="widget-body no-padding">
+                                <table class="table table-bordered" summary="매입명세서 관리">
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="7%">
+                                        <col width="15%">
+                                        <col width="5%">
+                                        <col width=*>
+                                        <col width="7%">
+                                        <col width="15%">
+                                        <col width="7%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="3"><button class="btn btn-primary btn-item lg">입고</button></td>
+                                            <th scope="row"><span class="text-primary">발주일자</span></th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                            <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="text-primary">거래처</span></th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="거래처검색">
+                                                            <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="text-primary">입고요청</span></th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                            <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="text-primary">공급가</span></th>
+                                            <td class="text-right">15,200</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row"><span class="text-primary">담당자</span></th>
+                                            <td colspan="5">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <select class="form-control">
+                                                            <option>선택</option>
+                                                            <option>홍길동</option>
+                                                            <option>Relish</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <th scope="row"><span class="text-primary">부가세</span></th>
+                                            <td class="text-right">0</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row"><span class="text-primary">메모</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" placeholder="" value="7.17일 주문서">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="text-primary">합계수량</span></th>
+                                            <td class="text-right">15</td>
+                                            <th scope="row"><span class="text-primary">합계금액</span></th>
+                                            <td class="text-right">15,200</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- 구매발주서리스트 -->
+                        <div class="widget">
+                            <div class="widget-body no-padding">
+                                <table id="spec-table" class="table table-bordered table-hover" summary="구매발주서리스트">
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width=*>
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="25%">
+                                        <col width="5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>품목명</th>
+                                            <th>수량</th>
+                                            <th>단가</th>
+                                            <th>공급가</th>
+                                            <th>부가세</th>
+                                            <th>합계금액</th>
+                                            <th>재고</th>
+                                            <th>비고</th>
+                                            <th>관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                            <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>13,000</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="0">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>39,000</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                    <button class="btn btn-sm btn-outline-danger">-</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                            <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>13,000</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="0">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>39,000</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                    <button class="btn btn-sm btn-outline-danger">-</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                            <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>13,000</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="0">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>39,000</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" placeholder="비고 내용 표기">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="col-sm-12 d-flex align-items-center justify-content-center">
+                                                    <button class="btn btn-sm btn-outline-danger">-</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="widget-footer">
+                                <div class="d-flex align-items-stretch justify-content-between">
+                                    <button class="btn btn-sm btn-outline-primary" id="itemModal" data-toggle="modal" data-target="itemModal">품목선택</button>
+                                    <button id="btnAddRow" class="btn btn-sm btn-primary">항목 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <div class="row col">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-outline-primary">신규전표</button>
+                        <button type="button" class="btn btn-outline-primary">엑셀내보내기</button>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary margin-right-5">저장</button>
+                        <button type="button" class="btn btn-info margin-right-5" id="buySpecPrintModal" data-toggle="modal" data-target="buySpecPrintModal">인쇄</button>
+                        <button type="button" class="btn btn-seconday" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 구매발주서 팝업 -->
+
+<!--구매발주서 인쇄 -->
+<div id="buySpecPrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">구매 발주서 인쇄</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header bordered">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-4">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                    <h1 class="col-sm-6">발주서</h1>
+                                </div>
+
+                            </div>
+                            <div class="widget-body supply-print">
+                                <table class="table table-bordered" summary="구매발주서 인쇄">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="40%">
+                                        <col width="10%">
+                                        <col width="40%">
+                                    </colgroup>
+
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">(주)런이십일</th>
+                                            <th colspan="2">다가치출판</th>
+                                        </tr>
+                                        <tr>
+                                            <th>발주일자</th>
+                                            <td>2020-07-02</td>
+                                            <th>대표이사</th>
+                                            <td>김신현</td>
+                                        </tr>
+                                        <tr>
+                                            <th>입고요청</th>
+                                            <td>2020-09-15</td>
+                                            <th>주소</th>
+                                            <td>성수일로 77, 5층 (성수동1가,서울숲IT밸리)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td>안보솔</td>
+                                            <th>전화</th>
+                                            <td>02-568-5555</td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td></td>
+                                            <th>참조</th>
+                                            <td>가을학기 도서 주문서_다가치_2077552</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-between">
+                                        <p>아래와 같이 발주 합니다.</p>
+                                        <p>일금:삼백이십만육천원정(W3,260,000) (V.A.T. 포함)</p>
+                                    </div>
+                                </div>
+
+                                <table class="table table-bordered print-item" summary="품목명프린트 리스트">
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width=*>
+                                        <col width="7%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>품목명</th>
+                                            <th>수량</th>
+                                            <th>단가</th>
+                                            <th>금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-right">39,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-right">39,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-right">39,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function() {
+        var reader = new FileReader();
+        $('input[type=file]').change(function() {
+            if (typeof(FileReader) != "undefined") {
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.xls|.xlsx)$/;
+                $($(this)[0].files).each(function() {
+                    var file = $(this);
+                    if (regex.test(file[0].name.toLowerCase())) {
+                        reader.readAsDataURL(file[0]);
+                    } else {
+                        alert(file[0].name + " is not a valid image file.");
+                        return false;
+                    }
+                });
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        });
+
+        // $('#btnUpload').on("click", function() {
+        //     var byteData = reader.result;
+        //     byteData = byteData.split(';')[1].replace("base64,", "");
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "excel.html",
+        //         data: '{byteData: "' + byteData + '" }',
+        //         contentType: "application/json; charset=utf-8",
+        //         dataType: "json",
+        //         success: function(response) {
+        //             console.log("response", response);
+        //             var xmlDoc = $.parseXML(response.d);
+        //             var xml = $(xmlDoc);
+        //             var customers = xml.find("Table");
+        //             $("#tblCustomers").show();
+        //             var row = $("#tblCustomers tr:last-child").removeAttr("style").clone(true);
+        //             $("#tblCustomers tr").not($("#tblCustomers tr:first-child")).remove();
+        //             $.each(customers, function() {
+        //                 $("td", row).eq(0).html($(this).find("Id").text());
+        //                 $("td", row).eq(1).html($(this).find("Name").text());
+        //                 $("td", row).eq(2).html($(this).find("Country").text());
+        //                 $("#tblCustomers").append(row);
+        //                 row = $("#tblCustomers tr:last-child").clone(true);
+        //             });
+        //         },
+        //         error: function(response) {
+        //             alert(response.responseText);
+        //         }
+        //     });
+        //     return false;
+        // });
+
+
+        $(".btn_excel").on("click", function() {
+            $("#buy-sorting-table").table2excel({
+                exclude: ".excludeThisClass",
+                name: "Worksheet Name",
+                filename: "SomeFile.xls",
+                preserveColors: false
+            });
+        });
+
+        $('#buy-sorting-table').DataTable({
+            "destroy": true, //intitialize
+            "dom": '<"top"li>t<"bottom"p>',
+            "columnDefs": [{
+                "targets": [9, 10],
+                "orderable": false
+            }],
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

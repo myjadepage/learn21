@@ -243,7 +243,7 @@
                         <div class="filebox">
                             <input type="text" class="upload-name">
                             <input type="file" id="fileup" name="file" accept=".xlsx,.xls" style="display:none" />
-                            <button type="button" class="btn btn-outline-primary" id="btn-excel-upload">엑셀파일 올리기</button>
+                            <button type="button" class="btn btn-outline-primary" id="btn-upload">엑셀파일 올리기</button>
                         </div>
                         <button class="btn btn-outline-danger margin-left-5">송장번호 올리기</button>
                     </div>
@@ -601,7 +601,6 @@
                                             <td class="text-right">23</td>
                                             <td class="text-right">3</td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -628,6 +627,14 @@
 
 <script>
     $(function() {
+        $('#btn-upload').on('click', function() {
+            $('input[type="file"').click();
+            $('.filebox input[type="file"').on('change', function() {
+                let uploadName = $('.upload-name').val($(this).val());
+                uploadName.attr('readonly', true)
+            });
+        });
+
 
         $('#invoice-list-table').DataTable({
             "destroy": true, //intitialize
