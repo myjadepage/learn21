@@ -35,7 +35,7 @@
                                 <th scope="row"><span class="text-primary">분류</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col col-sm-3">
+                                        <div class="col-sm-4">
                                             <select class="form-control">
                                                                         <option>선택</option>
                                                                         <option>분류1</option>
@@ -48,21 +48,20 @@
                                 <th><span class="text-primary">분류 내 표시 순서</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col col-sm-6">
+                                        <div class="col col-sm-4">
                                             <input type="text" class="form-control" placeholder="">
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <th scope="row"><span class="text-primary">제목</span></th>
                                 <td colspan="7">
                                     <div class="row">
-                                         <div class="col col-sm-4">
+                                        <div class="col-sm-12">
                                             <input type="text" class="form-control" placeholder="">
                                         </div>
-                                        
                                     </div>
                                 </td>
 
@@ -71,17 +70,13 @@
                                 <th scope="row"><span class="text-primary">내용</span></th>
                                 <td colspan="7">
                                     <div class="row">
-                                         <div class="col col-sm-4">
-                                            <textarea id="w3review" name="w3review" rows="4" cols="150">
-                                            </textarea>
-
+                                        <div class="col-sm-12">
+                                            <textarea class="form-control" placeholder=""></textarea>
                                         </div>
-                                        
                                     </div>
                                 </td>
-
                             </tr>
-                            
+
                             <tr>
                                 <th scope="row"><span class="text-primary">사용여부</span></th>
                                 <td>
@@ -98,30 +93,16 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th><span class="text-primary"></span></th>
-                                <td>
-                                    
-                                </td>
+                                <th></th>
+                                <td></td>
                             </tr>
-                        
+
                             <tr>
                                 <th scope="row"><span class="text-primary">작성자</span></th>
-                                <td>
-                                    <div class="row">
-                                      홍길동(ID)
-
-                                    </div>
-                                </td>
+                                <td>홍길동(ID)</td>
                                 <th><span class="text-primary">작성일자</span></th>
-                                <td>
-                                    <div class="row">
-                                         2020-09-05 오후 3:24:19
-                                    </div>
-                                </td>
+                                <td>2020-09-05 오후 3:24:19</td>
                             </tr>
-                            
-
-
                         </tbody>
                     </table>
                 </div>
@@ -133,7 +114,7 @@
                             <button type="button" class="btn btn-outline-danger">삭제</button>
                         </div>
                         <div class="col-sm-6 d-flex justify-content-end">
-                         <button type="button" class="btn btn-primary">미리보기</button>
+                            <button type="button" class="btn btn-primary">미리보기</button>
                             <button type="button" class="btn btn-primary">저장</button>
                         </div>
                     </div>
@@ -145,35 +126,3 @@
     </div>
     <!-- End Page Content -->
 </div>
-<script>
-    $(function() {
-        //single date
-        $('input[name="dates"').daterangepicker({
-            "singleDatePicker": true,
-            "autoUpdateInput": false,
-        });
-        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-            $(this).val(picker.startDate.format('YYYY-MM-DD'));
-        });
-
-        $('#sorting-table').DataTable({
-            "destroy": true,
-            "dom": '<"top"li>t<"bottom"p>',
-            "columnDefs": [{
-                "targets": [3, 5],
-                "orderable": false
-            }],
-            "searching": false,
-            "language": {
-                "paginate": {
-                    "previous": "<",
-                    "next": ">"
-                },
-                "infoEmpty": "검색 결과가 없습니다.",
-                "sInfoEmpty": "검색 결과가 없습니다.",
-                "sInfo": "조회건수 : _TOTAL_ 건",
-                "sLengthMenu": "_MENU_"
-            }
-        });
-    });
-</script>

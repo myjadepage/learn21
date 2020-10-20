@@ -2910,7 +2910,8 @@ table.table-bordered.dataTable td {
 #stock-return-table_info.dataTables_info,
 #stock-return-list-table_info.dataTables_info,
 #stock-shop-table_info.dataTables_info,
-#notice-list-table_info.dataTables_info {
+#notice-list-table_info.dataTables_info,
+#manage-faq-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;
@@ -6031,7 +6032,8 @@ footer.second-footer a:hover.nav-link {
     border: 0;
 }
 
-.filebox .upload-name {
+.filebox .upload-name,
+.filebox .upload-name2 {
     display: inline-block;
     margin-right: -5px;
     font-size: 0.85rem;
