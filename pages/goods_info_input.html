@@ -193,12 +193,17 @@
                                                 </td>
                                                 <th scope="row"><span class="text-primary">상품 이미지</th>
                                                 <td>
-                                                    <div class="row  d-flex align-items-center">
+                                                    <div class="row  d-flex align-items-center justify-content-start">
                                                         <div class="col col-sm-6">
-                                                            <input type="file" class="form-control" />
+                                                            <div class="filebox">
+                                                                <input type="text" class="upload-name">
+                                                                <input type="file" id="fileup" name="file" style="display:none" />
+                                                                <button type="button" class="btn btn-outline-primary" id="btn-upload">파일찾기</button>
+                                                            </div>
+                                                            <!-- <input type="file" class="form-control" /> -->
                                                         </div>
                                                         <div class="col col-sm-3">
-                                                            <button type="button" class="btn btn-primary btn-sm input-btn-util">미리보기</button>
+                                                            <button type="button" class="btn btn-primary">미리보기</button>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -410,3 +415,15 @@
 
     <!-- End Page Content -->
 </div>
+
+<script>
+    $(function() {
+        $('#btn-upload').on('click', function() {
+            $('#fileup').click();
+            $('#fileup').on('change', function() {
+                let uploadName = $('.upload-name').val($(this).val());
+                uploadName.attr('readonly', true)
+            });
+        });
+    });
+</script>
