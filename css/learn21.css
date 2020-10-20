@@ -2904,7 +2904,12 @@ table.table-bordered.dataTable td {
 #stock-date-table_info.dataTables_info,
 #goods-info-table_info.dataTables_info,
 #stock-manager-table_info.dataTables_info,
-#invoice-list-table_info.dataTables_info {
+#invoice-list-table_info.dataTables_info,
+#invoice-all-table_info.dataTables_info,
+#stock-delivery-table_info.dataTables_info,
+#stock-return-table_info.dataTables_info,
+#stock-return-list-table_info.dataTables_info,
+#stock-shop-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;

@@ -1,0 +1,339 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">택배출고 현황</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">물류 관리</li>
+                        <li class="breadcrumb-item active">택배출고 현황</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="택배출고 현황 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span class="text-primary">조회기간</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <th>상태</th>
+                                <td>
+                                    <div class="col-sm-12 d-flex align-items-center">
+                                        <div class="styled-radio">
+                                            <input type="radio" name="radDelivery" id="radDelivery-1">
+                                            <label for="radDelivery-1">전체</label>
+                                        </div>
+                                        <div class="styled-radio">
+                                            <input type="radio" name="radDelivery" id="radDelivery-2">
+                                            <label for="radDelivery-2">출고</label>
+                                        </div>
+                                        <div class="styled-radio">
+                                            <input type="radio" name="radDelivery" id="radDelivery-3">
+                                            <label for="radDelivery-3">미출고</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row"><span class="text-primary">주문번호</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="주문번호 입력">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <th scope="row"><span class="text-primary">검색구분</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-5">
+                                            <select class="form-control">
+                                                        <option>주문자</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </select>
+                                        </div>
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">조회</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <!-- <select class="form-control col-sm-2">
+                                        <option>표시갯수</option>
+                                        <option>10개</option>
+                                        <option>20개</option>
+                                        <option>30개</option>
+                                    </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-outline-primary">엑셀 다운로드</button>
+                            <button type="button" class="btn btn-outline-primary" id="deliveryStatusPrintModal" data-toggle="modal" data-target="deliveryStatusPrintModal">인쇄</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="stock-delivery-table" class="table table-bordered mb-0" summary="택배출고현황 리스트">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width=*>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>송장번호</th>
+                                <th>상태</th>
+                                <th>일자</th>
+                                <th>주문번호</th>
+                                <th>주문자</th>
+                                <th>전화번호</th>
+                                <th>수취인</th>
+                                <th>우편번호</th>
+                                <th>주소</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">출고</td>
+                                <td class="text-center">2020-09-15</td>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">010-2234-1235</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">14770</td>
+                                <td>서울시 강남구 대치동</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">미출고</td>
+                                <td class="text-center">2020-09-15</td>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">010-2234-1235</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">14770</td>
+                                <td>서울시 강남구 대치동</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">출고</td>
+                                <td class="text-center">2020-09-15</td>
+                                <td class="text-center">123456789</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">010-2234-1235</td>
+                                <td class="text-center">홍길동</td>
+                                <td class="text-center">14770</td>
+                                <td>서울시 강남구 대치동</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+<!------------------------------- 
+    popup 택배출고현황 인쇄-------------
+---------------------------------->
+<div id="deliveryStatusPrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">택배출고현황</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-2">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title">택배출고현황 </div>
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title_period">(조회 기간 : 2020-09-01 ~ 2020-09-16)</div>
+                                </div>
+                            </div>
+
+                            <!----테이블 내용-->
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <table class="table table-bordered mb-0" summary="택배출고현황 리스트">
+                                        <colgroup>
+                                            <col width="10%">
+                                            <col width="7%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="7%">
+                                            <col width="10%">
+                                            <col width="7%">
+                                            <col width="7%">
+                                            <col width=*>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>송장번호</th>
+                                                <th>상태</th>
+                                                <th>일자</th>
+                                                <th>주문번호</th>
+                                                <th>주문자</th>
+                                                <th>전화번호</th>
+                                                <th>수취인</th>
+                                                <th>우편번호</th>
+                                                <th>주소</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">출고</td>
+                                                <td class="text-center">2020-09-15</td>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">010-2234-1235</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">14770</td>
+                                                <td>서울시 강남구 대치동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">미출고</td>
+                                                <td class="text-center">2020-09-15</td>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">010-2234-1235</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">14770</td>
+                                                <td>서울시 강남구 대치동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">출고</td>
+                                                <td class="text-center">2020-09-15</td>
+                                                <td class="text-center">123456789</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">010-2234-1235</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">14770</td>
+                                                <td>서울시 강남구 대치동</td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+    $(function() {
+        $('#stock-delivery-table').DataTable({
+            "destroy": true, //intitialize
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

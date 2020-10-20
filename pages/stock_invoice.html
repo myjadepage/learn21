@@ -240,14 +240,10 @@
                 <!-- tab-stock-2-->
                 <div class="tab-pane" id="tab-invoice-2" role="tabpanel">
                     <div class="col-sm-5 d-flex justify-content-end tab-right-menu">
-                        <!-- <div class="filebox">
+                        <div class="filebox">
                             <input type="text" class="upload-name">
-                            <input type="file" id="fileup" accept=".xlsx,.xls">
-                            <label for="fileup" class="btn btn-outline-primary">엑셀파일 올리기</label>
-                        </div> -->
-                        <div>
-                            <input type="file" id="fileup" name="file" onchange="changeValue(this)" style="display:none" />
-                            <button type="button" class="btn btn-outline-danger" id="btn-excel-upload">엑셀파일 올리기</button>
+                            <input type="file" id="fileup" name="file" accept=".xlsx,.xls" style="display:none" />
+                            <button type="button" class="btn btn-outline-primary" id="btn-excel-upload">엑셀파일 올리기</button>
                         </div>
                         <button class="btn btn-outline-danger margin-left-5">송장번호 올리기</button>
                     </div>
@@ -266,83 +262,103 @@
                             <label class="col-sm-4">조회건수 : 20개</label> -->
                                 </div>
                                 <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
-                                    <button class="btn btn-outline-primary btn_excel">인쇄</button>
+                                    <button class="btn btn-primary" id="shipOrderPrintModal" data-toggle="modal" data-target="shipOrderPrintModal">출고지시서</button>
+                                    <button class="btn btn-primary" id="itemOrderPrintModal" data-toggle="modal" data-target="itemOrderPrintModal">품목별집품</button>
+                                    <button class="btn btn-primary" id="goodsIssuePrintModal" data-toggle="modal" data-target="goodsIssuePrintModal">출고처리</button>
+                                    <button class="btn btn-primary">저장</button>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-body">
-                            <table id="stock-period-table" class="table table-bordered table-hover mb-0" summary="상세재고 리스트">
+                            <table id="invoice-all-table" class="table table-bordered table-hover mb-0" summary="송장번호일괄처리 리스트">
                                 <colgroup>
-                                    <col width="7%">
-                                    <col width="20%">
-                                    <col width="7%">
+                                    <col width="5%">
                                     <col width="7%">
                                     <col width="7%">
-                                    <col width="7%">
-                                    <col width="7%">
-                                    <col width="7%">
-                                    <col width="7%">
-                                    <col width="7%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
                                     <col width=*>
+                                    <col width="7%">
+                                    <col width="7%">
+                                    <col width="7%">
+                                    <col width="10%">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th rowspan="2">코드</th>
-                                        <th rowspan="2">품목</th>
-                                        <th rowspan="2">이월</th>
-                                        <th colspan="2">입고</th>
-                                        <th colspan="2">출고</th>
-                                        <th rowspan="2">재고량</th>
-                                        <th rowspan="2">단가</th>
-                                        <th rowspan="2">금액</th>
-                                        <th rowspan="2">비고</th>
-                                    </tr>
-                                    <tr>
-                                        <th>매입</th>
-                                        <th>기타</th>
-                                        <th>매출</th>
-                                        <th>기타</th>
+                                        <th>
+                                            <div class="styled-checkbox  margin-bottom-5">
+                                                <input type="checkbox" name="checkbox" id="chkStock">
+                                                <label for="chkStock"></label>
+                                            </div>
+                                        </th>
+                                        <th>출고 요청일</th>
+                                        <th>그룹</th>
+                                        <th>업체명(주문자)</th>
+                                        <th>주문번호</th>
+                                        <th>송장번호</th>
+                                        <th>품목</th>
+                                        <th>발주품목수</th>
+                                        <th>금액</th>
+                                        <th>수취인</th>
+                                        <th>수취인전화</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>00000</td>
+                                        <td>
+                                            <div class="styled-checkbox  margin-bottom-5">
+                                                <input type="checkbox" name="checkbox" id="chkStock">
+                                                <label for="chkStock"></label>
+                                            </div>
+                                        </td>
+                                        <td>2020-09-01</td>
+                                        <td>그룹먕</td>
+                                        <td>가맹점명</td>
+                                        <td>202012345678</td>
+                                        <td>202012345678</td>
                                         <td>PB TOEFL JUNIOR SET (1)</td>
-                                        <td class="text-right">1,500</td>
-                                        <td class="text-right">200</td>
-                                        <td class="text-right">10</td>
-                                        <td class="text-right">300</td>
                                         <td class="text-right">20</td>
-                                        <td class="text-right">2,500</td>
-                                        <td class="text-right">10,000</td>
-                                        <td class="text-right">1,984,000</td>
-                                        <td></td>
+                                        <td class="text-right">1,200</td>
+                                        <td>홍길동</td>
+                                        <td class="text-center">010-1123-1452</td>
                                     </tr>
                                     <tr>
-                                        <td>00000</td>
+                                        <td>
+                                            <div class="styled-checkbox  margin-bottom-5">
+                                                <input type="checkbox" name="checkbox" id="chkStock">
+                                                <label for="chkStock"></label>
+                                            </div>
+                                        </td>
+                                        <td>2020-09-01</td>
+                                        <td>그룹먕</td>
+                                        <td>가맹점명</td>
+                                        <td>202012345678</td>
+                                        <td>202012345678</td>
                                         <td>PB TOEFL JUNIOR SET (1)</td>
-                                        <td class="text-right">1,500</td>
-                                        <td class="text-right">200</td>
-                                        <td class="text-right">10</td>
-                                        <td class="text-right">300</td>
                                         <td class="text-right">20</td>
-                                        <td class="text-right">2,500</td>
-                                        <td class="text-right">10,000</td>
-                                        <td class="text-right">1,984,000</td>
-                                        <td></td>
+                                        <td class="text-right">1,200</td>
+                                        <td>홍길동</td>
+                                        <td class="text-center">010-1123-1452</td>
                                     </tr>
+
                                     <tr>
-                                        <td>00000</td>
+                                        <td>
+                                            <div class="styled-checkbox  margin-bottom-5">
+                                                <input type="checkbox" name="checkbox" id="chkStock">
+                                                <label for="chkStock"></label>
+                                            </div>
+                                        </td>
+                                        <td>2020-09-01</td>
+                                        <td>그룹먕</td>
+                                        <td>가맹점명</td>
+                                        <td>202012345678</td>
+                                        <td>202012345678</td>
                                         <td>PB TOEFL JUNIOR SET (1)</td>
-                                        <td class="text-right">1,500</td>
-                                        <td class="text-right">200</td>
-                                        <td class="text-right">10</td>
-                                        <td class="text-right">300</td>
                                         <td class="text-right">20</td>
-                                        <td class="text-right">2,500</td>
-                                        <td class="text-right">10,000</td>
-                                        <td class="text-right">1,984,000</td>
-                                        <td></td>
+                                        <td class="text-right">1,200</td>
+                                        <td>홍길동</td>
+                                        <td class="text-center">010-1123-1452</td>
                                     </tr>
 
 
@@ -365,12 +381,253 @@
     <!-- End Page Content -->
 </div>
 
+
+
+
+<!----------------------------->
+<!---------출고지시서 팝업--------->
+<!----------------------------->
+<div id="shipOrderPrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">출고지시서</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header bordered">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-2">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <h5 class="d-flex justify-content-end ">NO : 2000339493939-조민선</h5>
+                                <table class="table table-bordered" summary="출고지시서 인쇄">
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col width="15%">
+                                        <col width="7%">
+                                        <col width="13%">
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col width="15%">
+                                        <col width="7%">
+                                        <col width="13%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="12">
+                                                <h2>출고지시서-(회원거래처) : 대한통운</h2>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="5">공급자</td>
+                                            <td>등록번호</td>
+                                            <td colspan="3">123-333-3333</td>
+                                            <td rowspan="5">공급받는자</td>
+                                            <td>등록번호</td>
+                                            <td colspan="3">123-333-3333</td>
+                                        </tr>
+                                        <tr>
+                                            <td>상호<br>(법인명)</td>
+                                            <td>(주)런이십일</td>
+                                            <td>성명</td>
+                                            <td>김신현</td>
+                                            <td>상호<br>(법인명)</td>
+                                            <td>(주)런이십일</td>
+                                            <td>성명</td>
+                                            <td>김신현</td>
+                                        </tr>
+                                        <tr>
+                                            <td>사업장<br>주소</td>
+                                            <td colspan="3">성수일로 77, 5층 (성수동1가,서울숲IT밸리)</td>
+                                            <td>사업장<br>주소</td>
+                                            <td colspan="3">성수일로 77, 5층 (성수동1가,서울숲IT밸리)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>업태</td>
+                                            <td>서비스</td>
+                                            <td>종목</td>
+                                            <td>도소매</td>
+                                            <td>업태</td>
+                                            <td>서비스</td>
+                                            <td>종목</td>
+                                            <td>도소매</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TEL</td>
+                                            <td>02-568-5555</td>
+                                            <td>FAX</td>
+                                            <td>02-568-5555</td>
+                                            <td>TEL</td>
+                                            <td>02-568-5555</td>
+                                            <td>FAX</td>
+                                            <td>02-568-5555</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                                <table class="table table-bordered print-item" summary="품목명프린트 리스트">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width=*>
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>관리번호</th>
+                                            <th>품목명</th>
+                                            <th>수량</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">123456789</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">123456789</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">123456789</td>
+                                            <td>품목명1</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!------------------------------- 
+    popup 품목별집품내역 인쇄-------------
+---------------------------------->
+<div id="itemOrderPrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">품목별 집품내역</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-header bordered">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-sm-4">
+                                        <button type="button" id="print" class="btn btn-primary">인쇄</button>
+                                    </div>
+                                    <h1 class="col-sm-8">품목별 집품내역</h1>
+                                </div>
+
+                            </div>
+                            <div class="widget-body">
+                                <table class="table table-bordered print-item" summary="품목별 집품내역 리스트">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width=*>
+                                        <col width="20%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>관리코드</th>
+                                            <th>품목명</th>
+                                            <th>규격</th>
+                                            <th>재고수량</th>
+                                            <th>출고수량</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">LN12345678</td>
+                                            <td>품목명1</td>
+                                            <td>L105</td>
+                                            <td class="text-right">12</td>
+                                            <td class="text-right">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">LN12345678</td>
+                                            <td>품목명1</td>
+                                            <td>L105</td>
+                                            <td class="text-right">23</td>
+                                            <td class="text-right">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">LN12345678</td>
+                                            <td>품목명1</td>
+                                            <td>L105</td>
+                                            <td class="text-right">23</td>
+                                            <td class="text-right">3</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col d-flex justify-content-between">
+                    <div class="col-sm-6 d-flex justify-content-between">
+                        PRINT DATE : 2020-09-16
+                        <b>-2/2-</b>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        (주)런이십일
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     $(function() {
-        $('#btn-excel-upload').on('click', function() {
-            $('#fileup').click();
-        });
-
 
         $('#invoice-list-table').DataTable({
             "destroy": true, //intitialize
@@ -388,7 +645,7 @@
             }
         });
 
-        $('#stock-period-table').DataTable({
+        $('#invoice-all-table').DataTable({
             "destroy": true, //intitialize
             "dom": '<"top"li>t<"bottom"p>',
             "searching": false,
