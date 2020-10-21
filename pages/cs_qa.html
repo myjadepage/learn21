@@ -1,0 +1,589 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">1:1 상담관리</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">상담관리</li>
+                        <li class="breadcrumb-item active">1:1 상담관리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="상담 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">작성자 검색</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>고객ID</option>
+                                                                <option>고객명</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">담당자 검색</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>담당자ID</option>
+                                                                <option>담당자명</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">상담구분</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>전체</option>
+                                                                <option>알반상담</option>
+                                                                <option>주문상담</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">상담유형</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                    <option>상담유형1</option>
+                                                                    <option>Ketchup</option>
+                                                                    <option>Relish</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                    <option>상담유형2</option>
+                                                                    <option>Ketchup</option>
+                                                                    <option>Relish</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">작성일자</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>상태</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-1">
+                                                <label for="radQa-1">전체</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-2">
+                                                <label for="radQa-2">접수</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-3">
+                                                <label for="radQa-3">답변완료</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">검색</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                            <label class="col-sm-4 mt-3"></label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="qa-list-table" class="table table-bordered table-hover mb-0" summary="상담보기 리스트">
+                        <colgroup>
+                            <col width="5%">
+                            <col width=*>
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자명</th>
+                                <th scope="col">상담구분</th>
+                                <th scope="col">상담유형1</th>
+                                <th scope="col">상담유형2</th>
+                                <th scope="col">담당자</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">접수일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7</td>
+                                <td><a data-toggle="modal" data-target="#qaInfoModal">환불 관련 문의 드립니다.</a></td>
+                                <td>홍길동</td>
+                                <td>일반상담</td>
+                                <td>기타문의</td>
+                                <td>추가환불요청</td>
+                                <td>홍길동</td>
+                                <td class="text-danger">접수</td>
+                                <td>2020-12-12</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a data-toggle="modal" data-target="#qaInfoModal">환불 관련 문의 드립니다.</a></td>
+                                <td>홍길동</td>
+                                <td>일반상담</td>
+                                <td>기타문의</td>
+                                <td>추가환불요청</td>
+                                <td>홍길동</td>
+                                <td>답변완료</td>
+                                <td>2020-12-12</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a data-toggle="modal" data-target="#qaInfoModal">환불 관련 문의 드립니다.</a></td>
+                                <td>홍길동</td>
+                                <td>일반상담</td>
+                                <td>기타문의</td>
+                                <td>추가환불요청</td>
+                                <td>홍길동</td>
+                                <td class="text-danger">접수</td>
+                                <td>2020-12-12</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a data-toggle="modal" data-target="#qaInfoModal">환불 관련 문의 드립니다.</a></td>
+                                <td>홍길동</td>
+                                <td>일반상담</td>
+                                <td>기타문의</td>
+                                <td>추가환불요청</td>
+                                <td>홍길동</td>
+                                <td>답변완료</td>
+                                <td>2020-12-12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+
+            <!----선택된 주문 영역-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="선택 주문 리스트">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35">
+                            <col width="15%">
+                            <col width="35">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>주문기간</th>
+                                <td>2020-08-10 ~ 2020-10-12</td>
+                                <th>총주문금액</th>
+                                <td><b class="text-danger">12,207,950</b>원</td>
+                            </tr>
+                            <tr>
+                                <th>배송비총액</th>
+                                <td><b class="text-danger">12,207</b>원</td>
+                                <th>수수료총액</th>
+                                <td>0원</td>
+
+                            </tr>
+                            <tr>
+                                <th>신용카드결제(건수</th>
+                                <td>12,207,950원(149건)</td>
+                                <th>가상계좌입금(건수)</th>
+                                <td>결제완료 : 552,000원(15건), 입금대기:0원(0건)</td>
+                            </tr>
+                            <tr>
+                                <th>총결제금액</th>
+                                <td><b class="text-danger">12,207,950원</b>원</td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+<!---------------------------------------->
+<!----------popup--1:1상담상세--------->
+<!---------------------------------------->
+
+<div id="qaInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">1:1 상담 상세</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+
+                                <h3>-상담내용</h3>
+                                <table class="table table-bordered" summary="상담내용">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>작성자</th>
+                                            <td>홍길동</td>
+                                            <th>회원ID</th>
+                                            <td>maildbox</td>
+                                            <th>작성일자</th>
+                                            <td>2020-09-10 10:48</td>
+                                        </tr>
+                                        <tr>
+                                            <th>상담구분</th>
+                                            <td>주문상담</td>
+                                            <th>상담유형1</th>
+                                            <td>환불문의</td>
+                                            <th>상담유형2</th>
+                                            <td>부분반품요청</td>
+                                        </tr>
+                                        <tr>
+                                            <th>주문번호</th>
+                                            <td>123466</td>
+                                            <th>계좌번호</th>
+                                            <td colspan="3">은행명 : <span>국민은행</span>, 계좌번호 : <span>123456-12-123457</span>, 예금주 : <span>홍길동</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td colspan="5">교재 부분 반품 요청합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td colspan="5">
+                                                <textarea class="form-control">주문번호 12345, 부분 반품 신청했습니다.
+                                                        
+                                                    </textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td></td>
+                                            <th>상태</th>
+                                            <td><span class="text-danger">접수</span></td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-주문 목록</h3>
+                                <table id="qa-item-table" class="table table-bordered" summary="상담자 주문목록">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="9%">
+                                        <col width=*>
+                                        <col width="9%">
+                                        <col width="7%">
+                                        <col width="9%">
+                                        <col width="9%">
+                                        <col width="7%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <th>주문번호</th>
+                                        <th>주문자</th>
+                                        <th>수취인명</th>
+                                        <th>주문상품</th>
+                                        <th>주문총액</th>
+                                        <th>배송비</th>
+                                        <th>결제총액</th>
+                                        <th>결제수단</th>
+                                        <th>상태</th>
+                                        <th>주문일자</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>홍길동</td>
+                                            <td>홍길동</td>
+                                            <td>Seedbed 2(B1) - April Grammar</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">1,550</td>
+                                            <td class="text-center">1,550</td>
+                                            <td>가상계좌</td>
+                                            <td>결제완료</td>
+                                            <td>2020-12-12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>홍길동</td>
+                                            <td>홍길동</td>
+                                            <td>Seedbed 2(B1) - April Grammar</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">1,550</td>
+                                            <td class="text-center">1,550</td>
+                                            <td>가상계좌</td>
+                                            <td>결제완료</td>
+                                            <td>2020-12-12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>홍길동</td>
+                                            <td>홍길동</td>
+                                            <td>Seedbed 2(B1) - April Grammar</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">1,550</td>
+                                            <td class="text-center">1,550</td>
+                                            <td>가상계좌</td>
+                                            <td>결제완료</td>
+                                            <td>2020-12-12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>홍길동</td>
+                                            <td>홍길동</td>
+                                            <td>Seedbed 2(B1) - April Grammar</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">1,550</td>
+                                            <td class="text-center">1,550</td>
+                                            <td>가상계좌</td>
+                                            <td>결제완료</td>
+                                            <td>2020-12-12</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-답변 내용</h3>
+                                <table id="qa-item-table" class="table table-bordered" summary="상담자 주문목록">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="90%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>상담유형</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>전체</option>
+                                                                                <option>일반상담</option>
+                                                                                <option>주문상담</option>
+                                                                        </select>
+                                                    </div>
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>상담유형1</option>
+                                                                                <option>Ketchup</option>
+                                                                                <option>Relish</option>
+                                                                        </select>
+                                                    </div>
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>상담유형2</option>
+                                                                                <option>Ketchup</option>
+                                                                                <option>Relish</option>
+                                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용유형</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>선택</option>
+                                                                                <option>Ketchup</option>
+                                                                                <option>Relish</option>
+                                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class='col-sm-12'>
+                                                        <textarea class="form-control" style="height:200px; overflow-y:scroll;">주문번호 125683 부분 반품 신청 했습니다.
+가상계좌 발급이 됐는지 확인이 되지 않아 반품 택배비를 입금하지 못했습니다.
+가상계좌 번호 확인 바랍니다.
+[환불은행정보] 국민은행 802124568245</textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="justify-content: space-between;">
+                <div class="row col">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">닫기</button>
+                        <button type="button" class="btn btn-outline-primary">고객상담 접수</button>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row d-flex justify-content-end margin-top-10 ">
+                            <label class="col col-sm-5 d-flex justify-content-end form-control-label">저장 후 메시지 전송 :</label>
+                            <div class="col col-sm-4 d-flex justify-content-between">
+                                <div class="styled-checkbox">
+                                    <input type="checkbox" name="checkbox" id="check-1">
+                                    <label for="check-1">메일</label>
+                                </div>
+                                <div class="styled-checkbox">
+                                    <input type="checkbox" name="checkbox" id="check-2">
+                                    <label for="check-2">SMS</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-primary">메모 저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+    $(function() {
+        $('#qa-list-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+
+        $('#qa-item-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "info": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

@@ -1,0 +1,314 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">SMS 전송 결과</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">상담관리</li>
+                        <li class="breadcrumb-item active">SMS 전송 결과</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="SMS 전송 결과">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">문자구분</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <select class="form-control">
+                                                                <option>전체</option>
+                                                                <option>SMS</option>
+                                                                <option>LMS</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">전송구분</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <select class="form-control">
+                                                                <option>전체</option>
+                                                                <option>일반</option>
+                                                                <option>주문</option>
+                                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">고객검색</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                <option>주문번호</option>
+                                                                <option>학생ID</option>
+                                                                <option>휴대폰번호</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col col-sm-6">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">내용</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">전송일자</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>전송결과</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-1">
+                                                <label for="radQa-1">전체</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-2">
+                                                <label for="radQa-2">성공</label>
+                                            </div>
+                                            <div class="styled-radio">
+                                                <input type="radio" name="radQa" id="radQa-3">
+                                                <label for="radQa-3">실패</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">검색</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button class="btn btn-outline-primary">SMS재전송</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="cs-sms-table" class="table table-bordered table-hover" summary="SMS전송결과 리스트">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width=*>
+                            <col width="7%">
+                            <col width="7%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div class="styled-checkbox margin-bottom-5">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </th>
+                                <th scope="col">NO</th>
+                                <th scope="col">문자구분</th>
+                                <th scope="col">전송구분</th>
+                                <th scope="col">주문번호</th>
+                                <th scope="col">학생ID</th>
+                                <th scope="col">주문상태</th>
+                                <th scope="col">수신번호</th>
+                                <th scope="col">전송일시</th>
+                                <th scope="col">전송결과</th>
+                                <th scope="col">재전송</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox margin-bottom-5">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td>123456</td>
+                                <td>SMS</td>
+                                <td>일반</td>
+                                <td>12345788</td>
+                                <td>sthdkfjdkkim</td>
+                                <td>주문완료</td>
+                                <td>010-****-1234</td>
+                                <td>2020-12-12 오후 3:22:11</td>
+                                <td>성공</td>
+                                <td><button class="btn btn-sm btn-primary">재전송</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox margin-bottom-5">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td>123456</td>
+                                <td>SMS</td>
+                                <td>일반</td>
+                                <td>12345788</td>
+                                <td>sthdkfjdkkim</td>
+                                <td class="text-danger">환불완료</td>
+                                <td>010-****-1234</td>
+                                <td>2020-12-12 오후 3:22:11</td>
+                                <td class="text-danger">실패</td>
+                                <td><button class="btn btn-sm btn-primary">재전송</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox margin-bottom-5">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td>123456</td>
+                                <td>SMS</td>
+                                <td>일반</td>
+                                <td>12345788</td>
+                                <td>sthdkfjdkkim</td>
+                                <td class="text-info">반품접수</td>
+                                <td>010-****-1234</td>
+                                <td>2020-12-12 오후 3:22:11</td>
+                                <td class="text-danger">실패</td>
+                                <td><button class="btn btn-sm btn-primary">재전송</button></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+
+            <!----선택된 주문 영역-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="선택 주문 리스트">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35">
+                            <col width="15%">
+                            <col width="35">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>주문기간</th>
+                                <td>2020-08-10 ~ 2020-10-12</td>
+                                <th>총주문금액</th>
+                                <td><b class="text-danger">12,207,950</b>원</td>
+                            </tr>
+                            <tr>
+                                <th>배송비총액</th>
+                                <td><b class="text-danger">12,207</b>원</td>
+                                <th>수수료총액</th>
+                                <td>0원</td>
+
+                            </tr>
+                            <tr>
+                                <th>신용카드결제(건수</th>
+                                <td>12,207,950원(149건)</td>
+                                <th>가상계좌입금(건수)</th>
+                                <td>결제완료 : 552,000원(15건), 입금대기:0원(0건)</td>
+                            </tr>
+                            <tr>
+                                <th>총결제금액</th>
+                                <td><b class="text-danger">12,207,950원</b>원</td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+<script>
+    $(function() {
+        $('#cs-sms-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+
+    });
+</script>

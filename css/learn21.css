@@ -2884,6 +2884,10 @@ table.table-bordered.dataTable td {
     left: 0;
 }
 
+#qaInfoModal .dataTables_length>label {
+    display: none;
+}
+
 .dataTables_length select.form-control {
     width: 100px !important;
     height: calc(2.26rem + 1px);
@@ -2913,7 +2917,10 @@ table.table-bordered.dataTable td {
 #notice-list-table_info.dataTables_info,
 #manage-faq-table_info.dataTables_info,
 #order-cancel-table_info.dataTables_info,
-#order-refund-table_info.dataTables_info {
+#order-refund-table_info.dataTables_info,
+#qa-list-table_info.dataTables_info,
+#qa-manage-table_info.dataTables_info,
+#cs-sms-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;
@@ -6050,6 +6057,12 @@ footer.second-footer a:hover.nav-link {
  * 공통팝업 page
  */
 
+.modal-body {
+    max-height: 750px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .modal-item {
     max-width: 1200px;
 }
@@ -6138,7 +6151,8 @@ footer.second-footer a:hover.nav-link {
 
 #specPrintModal .modal-body {
     height: 584px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .buy_title {
