@@ -2911,7 +2911,9 @@ table.table-bordered.dataTable td {
 #stock-return-list-table_info.dataTables_info,
 #stock-shop-table_info.dataTables_info,
 #notice-list-table_info.dataTables_info,
-#manage-faq-table_info.dataTables_info {
+#manage-faq-table_info.dataTables_info,
+#order-cancel-table_info.dataTables_info,
+#order-refund-table_info.dataTables_info {
     position: absolute;
     top: -73px;
     left: 110px;

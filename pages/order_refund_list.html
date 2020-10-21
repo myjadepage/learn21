@@ -1,0 +1,493 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">환불 관리</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="db-default.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">주문/배송관리</li>
+                        <li class="breadcrumb-item active">환불 관리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="환불 관리 검색하기">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="text-primary">조회기간</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>지시일자</option>
+                                                                        <option>접수일자</option>
+                                                                </select>
+                                        </div>
+                                        <div class="col col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                <span class="input-group-addon">~</span>
+                                                <input type="text" class="form-control" placeholder="날짜선택">
+                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="text-primary">환불상태/환불유형</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>환불지시</option>
+                                                                        <option>환불완료</option>
+                                                                </select>
+                                        </div>
+                                        <div class="col col-sm-3">
+                                            <select class="form-control">
+                                                                        <option>카드</option>
+                                                                        <option>현금</option>
+                                                                </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="text-primary">주문번호</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="검색어 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="text-primary">주문자</span></th>
+                                <td>
+                                    <div class="row">
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="주문자 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">검색</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 검색영역 끝-->
+
+            <!-- 리스트영역 시작 -->
+            <div class="widget has-shadow">
+                <div class="widget-header bordered">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                            <!-- <select class="form-control col-sm-2">
+                                                <option>표시갯수</option>
+                                                <option>10개</option>
+                                                <option>20개</option>
+                                                <option>30개</option>
+                                            </select>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
+                            <button class="btn btn-outline-primary">엑셀다운로드</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <table id="order-refund-table" class="table table-bordered table-hover mb-0" summary="환불관리 보기 리스트">
+                        <colgroup>
+                            <col width="3%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="5%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width=*>
+                            <col width="5%">
+                            <col width="7%">
+                            <col width="5%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="7%">
+                            <col width="5%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="styled-checkbox">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </th>
+                                <th>승인번호</th>
+                                <th>주문번호</th>
+                                <th>주문자</th>
+                                <th>주문일자</th>
+                                <th>환불지시일</th>
+                                <th>환불계좌</th>
+                                <th>환불<br>상태</th>
+                                <th>환불완료일</th>
+                                <th>환불<br>유형</th>
+                                <th>결제총액</th>
+                                <th>환불금액</th>
+                                <th>현금환불<br>(승인취소)</th>
+                                <th>배송비</th>
+                                <th>처리자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td><a data-toggle="modal" data-target="#orderRefundIfoModal">20201023456</a></td>
+                                <td><a data-toggle="modal" data-target="#orderInfoModal">20201023456</a></td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>2020-02-12</td>
+                                <td>국민은행<br>4512-12-456789</td>
+                                <td>환불지시</td>
+                                <td>2020-02-12</td>
+                                <td>카드</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>-<br>15,000</td>
+                                <td>1,000</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td><a data-toggle="modal" data-target="#orderRefundIfoModal">20201023456</a></td>
+                                <td><a data-toggle="modal" data-target="#orderInfoModal">20201023456</a></td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>2020-02-12</td>
+                                <td>국민은행<br>4512-12-456789</td>
+                                <td>환불지시</td>
+                                <td>2020-02-12</td>
+                                <td>카드</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>-<br>15,000</td>
+                                <td>1,000</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td><a data-toggle="modal" data-target="#orderRefundIfoModal">20201023456</a></td>
+                                <td><a data-toggle="modal" data-target="#orderInfoModal">20201023456</a></td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>2020-02-12</td>
+                                <td>국민은행<br>4512-12-456789</td>
+                                <td class="text-info">환불완료</td>
+                                <td>2020-02-12</td>
+                                <td>카드</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>-<br>15,000</td>
+                                <td>1,000</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="styled-checkbox">
+                                        <input type="checkbox" name="checkbox" id="check-1">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </td>
+                                <td><a data-toggle="modal" data-target="#orderRefundIfoModal">20201023456</a></td>
+                                <td><a data-toggle="modal" data-target="#orderInfoModal">20201023456</a></td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>2020-02-12</td>
+                                <td>국민은행<br>4512-12-456789</td>
+                                <td>환불지시</td>
+                                <td>2020-02-12</td>
+                                <td>카드</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>100,000<br>(-)</td>
+                                <td>1,000</td>
+                                <td>홍길동</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 리스트영역 끝 -->
+
+            <!----선택된 주문 영역-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="환불 요약">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35">
+                            <col width="15%">
+                            <col width="35">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>환불기간</th>
+                                <td>2020-08-10 ~ 2020-10-12</td>
+                                <th>환불건수</th>
+                                <td>7건</td>
+                            </tr>
+                            <tr>
+                                <th>총 환불액</th>
+                                <td>441,001원</td>
+                                <th>배송비 환불액</th>
+                                <td>1,001원</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- End Container -->
+
+    </div>
+    <!-- End Page Content -->
+</div>
+
+
+
+
+
+<!---------------------------------------->
+<!----------popup--환불지시 상세정보--->
+<!---------------------------------------->
+
+<div id="orderRefundIfoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">환불지시 상세정보</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+                                <h3>-주문정보</h3>
+                                <table class="table table-bordered" summary="주문정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>주문번호</th>
+                                            <td>32123</td>
+                                            <th>회원ID</th>
+                                            <td>maildbox</td>
+                                            <th>주문자</th>
+                                            <td>홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>SMS연락처</th>
+                                            <td>010-1234-1236</td>
+                                            <th>주문자 E-mail</th>
+                                            <td>maildbox@naver.com</td>
+                                            <th>결제수단</th>
+                                            <td class="text-danger">신용카드</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제총액</th>
+                                            <td>151,500</td>
+                                            <th>주문총액</th>
+                                            <td>151,500</td>
+                                            <th>배송비총액</th>
+                                            <td>1,500</td>
+                                        </tr>
+                                        <tr>
+                                            <th>주문일시</th>
+                                            <td>2020-09-10 10:48</td>
+                                            <th>주문상태</th>
+                                            <td class="text-danger">결제완료</td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-주문 예외 정보</h3>
+                                <table class="table table-bordered" summary="주문 예외 정보">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>주문예외번호</th>
+                                            <td>123456</td>
+                                            <th>접수일자</th>
+                                            <td>2020-12-12 10:48</td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td>홍길동</td>
+                                            <th>처리일자</th>
+                                            <td>2020-12-12 10:48</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-환불 지시 정보</h3>
+                                <table class="table table-bordered" summary="환불 지시 정보">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>환불계좌</th>
+                                            <td>국민은행 (123456-12-12346)</td>
+                                            <th>환불지시일</th>
+                                            <td>2020-12-12 10:48</td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불요청 메모</th>
+                                            <td colspan="3">환불요청 메모를 확인 합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불상태</th>
+                                            <td class="text-danger">환불지시</td>
+                                            <th>환불완료일</th>
+                                            <td>2020-12-12 10:48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <h3>-환불 완료 처리</h3>
+                                <table class="table table-bordered" summary="환불 완료 처리">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="2%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>환불총액</th>
+                                            <td><span class="text-danger">34,500</span>원</td>
+                                            <th>승인 취소액</th>
+                                            <td><span class="text-danger">34,500</span>원</td>
+                                            <th>현금 환불액</th>
+                                            <td><span>0</span>원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="row col">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary margin-right-5">환불 완료 처리</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function() {
+
+        $(".btn_excel").on("click", function() {
+            $("#order-refund-table").table2excel({
+                exclude: ".excludeThisClass",
+                name: "Worksheet Name",
+                filename: "SomeFile.xls",
+                preserveColors: false
+            });
+        });
+
+
+        $('#order-refund-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>

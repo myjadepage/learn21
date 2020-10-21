@@ -154,7 +154,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table class="table table-bordered table-hover mb-0" summary="주문취소/반품 보기 리스트">
+                    <table id="order-cancel-table" class="table table-bordered table-hover mb-0" summary="주문취소/반품 보기 리스트">
                         <colgroup>
                             <col width="5%">
                             <col width="7%">
@@ -523,3 +523,34 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function() {
+
+        $(".btn_excel").on("click", function() {
+            $("#order-cancel-table").table2excel({
+                exclude: ".excludeThisClass",
+                name: "Worksheet Name",
+                filename: "SomeFile.xls",
+                preserveColors: false
+            });
+        });
+
+
+        $('#order-cancel-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>
