@@ -2884,7 +2884,8 @@ table.table-bordered.dataTable td {
     left: 0;
 }
 
-#qaInfoModal .dataTables_length>label {
+#qaInfoModal .dataTables_length>label,
+#member-list-table .dataTables_length>label {
     display: none;
 }
 

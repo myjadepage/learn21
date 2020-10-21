@@ -1,0 +1,216 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+        <div class="page-header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-header-title">직원 관리</h2>
+                <div>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item">직원 관리</li>
+                        <li class="breadcrumb-item active">직원 관리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <div class="row">
+        <div class="col-xl-12">
+
+            <!-- 검색영역 시작-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <div class="row">
+                        <div class="col col-sm-4">
+                            <!-- 검색영역 시작-->
+                            <div class="widget">
+                                <div class="widget-body no-padding">
+                                    <table class="table table-bordered item-select" summary="직원 검색하기">
+                                        <colgroup>
+                                            <col width="20%">
+                                            <col width=*>
+                                            <col width="15%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">직원</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <select class="form-control">
+                                                <option>직원명</option>
+                                                <option>직원ID</option>
+                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="3">
+                                                    <button class="btn btn-primary btn-item lg">조회</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">재직여부</span></th>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex align-items-center">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radMemCode" id="radMemCode-1">
+                                                                <label for="radMemCode-1">전체</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radMemCode" id="radMemCode-2">
+                                                                <label for="radMemCode-2">재직</label>
+                                                            </div>
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="radMemCode-3">
+                                                                <label for="radMemCode-3">퇴사</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 검색영역 끝-->
+                            <div class="widget">
+                                <div class="widget-body no-padding" style="height: 500px; overflow-y: auto;">
+                                    <table id="member-list-table" class="table table-bordered table-hover item-table" summary="직원 리스트">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="25%">
+                                            <col width=*>
+                                            <col width="20%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>이름</th>
+                                                <th>부서</th>
+                                                <th>상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>관리팀</td>
+                                                <td>재직</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-8">
+                            <div class="widget">
+                                <div class="widget-header no-padding">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <ul class="nav nav-tabs nav-fill" role="tablist">
+                                                <li class="nav-item no-padding">
+                                                    <a class="nav-link  active" data-toggle="tab" href="#tab-member-1" role="tab" aria-controls="tab-member-1" aria-selected="true">직원기본정보</a>
+                                                </li>
+                                                <li class="nav-item no-padding">
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-member-2" role="tab" aria-controls="tab-member-2" aria-selected="false">메뉴권한설정</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="widget-body no-padding tab-content">
+                                    <div class="tab-pane show active" id="tab-member-1" role="tabpanel">ㄹㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇ</div>
+                                    <div class="tab-pane" id="tab-member-2" role="tabpanel">ㄴㅇㄹㄴㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇ</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Content -->
+</div>
+
+<script>
+    $(function() {
+
+
+        $('#member-list-table').DataTable({
+            "destroy": true,
+            "dom": '<"top"li>t<"bottom"p>',
+            "searching": false,
+            "info": false,
+            "language": {
+                "paginate": {
+                    "previous": "<",
+                    "next": ">"
+                },
+                "infoEmpty": "검색 결과가 없습니다.",
+                "sInfoEmpty": "검색 결과가 없습니다.",
+                "sInfo": "조회건수 : _TOTAL_ 건",
+                "sLengthMenu": "_MENU_"
+            }
+        });
+    });
+</script>
