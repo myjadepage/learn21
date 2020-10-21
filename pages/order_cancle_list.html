@@ -22,7 +22,7 @@
             <!-- 검색영역 시작-->
             <div class="widget has-shadow">
                 <div class="widget-body">
-                    <table class="table table-bordered" summary="주문서 검색하기">
+                    <table class="table table-bordered" summary="주문/취소 반품 검색하기">
                         <colgroup>
                             <col width="10%">
                             <col width="40%">
@@ -36,9 +36,10 @@
                                     <div class="row">
                                         <div class="col col-sm-3">
                                             <select class="form-control">
+                                                                <option>주문자</option>
+                                                                <option>수취인명</option>
                                                                 <option>학생ID</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
+                                                                <option>학생명</option>
                                                             </select>
                                         </div>
                                         <div class="col col-sm-4">
@@ -46,14 +47,13 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th><span class="text-primary">학생</span></th>
+                                <th><span class="text-primary">연락처</span></th>
                                 <td>
                                     <div class="row">
                                         <div class="col col-sm-3">
                                             <select class="form-control">
-                                                                <option>학생ID</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
+                                                                <option>전화번호</option>
+                                                                <option>휴대폰</option>
                                                             </select>
                                         </div>
                                         <div class="col col-sm-4">
@@ -66,45 +66,32 @@
                                 <th scope="row"><span class="text-primary">주문번호</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                <option>학생ID</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
-                                                            </select>
-                                        </div>
                                         <div class="col col-sm-4">
                                             <input type="text" class="form-control" placeholder="검색어 입력">
                                         </div>
                                     </div>
                                 </td>
-                                <th><span class="text-primary">회원ID</span></th>
+                                <th><span class="text-primary">처리상태</span></th>
                                 <td>
                                     <div class="row">
                                         <div class="col col-sm-3">
                                             <select class="form-control">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
+                                                                    <option>접수</option>
+                                                                    <option>처리중</option>
+                                                                    <option>회수지시</option>
+                                                                    <option>회수중</option>
+                                                                    <option>회수완료</option>
+                                                                    <option>처리완료</option>
+                                                                    <option>접수취소</option>
                                                             </select>
-                                        </div>
-                                        <div class="col col-sm-4">
-                                            <input type="text" class="form-control" placeholder="검색어 입력">
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="text-primary">조회기간</span></th>
+                                <th scope="row"><span class="text-primary">접수일자</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                    <option>학생ID</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
-                                                            </select>
-                                        </div>
                                         <div class="col col-sm-8">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="날짜선택">
@@ -116,61 +103,21 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th><span class="text-primary">결제수단/주문상태</span></th>
+                                <th><span class="text-primary">예외구분/접수경로</span></th>
                                 <td>
                                     <div class="row">
                                         <div class="col col-sm-3">
                                             <select class="form-control">
-                                                                        <option>결제수단</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
+                                                                        <option>예외구분</option>
+                                                                        <option>취소</option>
+                                                                        <option>반품</option>
                                                                 </select>
                                         </div>
                                         <div class="col col-sm-3">
                                             <select class="form-control">
-                                                                        <option>주문상태</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
-                                                                </select>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><span class="text-primary">회원구분/학원구분</span></th>
-                                <td>
-                                    <div class="row">
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                        <option>회원구분</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
-                                                                </select>
-                                        </div>
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                        <option>학원구분</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
-                                                                </select>
-                                        </div>
-                                    </div>
-                                </td>
-                                <th><span class="text-primary">배송구분/구분</span></th>
-                                <td>
-                                    <div class="row">
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                        <option>배송구분</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
-                                                                </select>
-                                        </div>
-                                        <div class="col col-sm-3">
-                                            <select class="form-control">
-                                                                        <option>구분</option>
-                                                                        <option>Ketchup</option>
-                                                                        <option>Relish</option>
+                                                                        <option>접수경로</option>
+                                                                        <option>상담</option>
+                                                                        <option>FRONT</option>
                                                                 </select>
                                         </div>
                                     </div>
@@ -193,13 +140,13 @@
                 <div class="widget-header bordered">
                     <div class="row">
                         <div class="col-sm-6 d-flex align-items-center justify-content-md-start justify-content-center">
-                            <select class="form-control col-sm-2">
+                            <!-- <select class="form-control col-sm-2">
                                                 <option>표시갯수</option>
                                                 <option>10개</option>
                                                 <option>20개</option>
                                                 <option>30개</option>
                                             </select>
-                            <label class="col-sm-4">조회건수 : 20개</label>
+                            <label class="col-sm-4">조회건수 : 20개</label> -->
                         </div>
                         <div class="col-sm-6 d-flex align-items-center justify-content-md-end justify-content-center">
                             <button class="btn btn-outline-primary">엑셀다운로드</button>
@@ -207,7 +154,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
+                    <table class="table table-bordered table-hover mb-0" summary="주문취소/반품 보기 리스트">
                         <colgroup>
                             <col width="5%">
                             <col width="7%">
@@ -225,141 +172,354 @@
                         <thead>
                             <tr>
                                 <th>NO</th>
+                                <th>접수번호</th>
                                 <th>주문번호</th>
-                                <th class="text-center">주문자명<br>(수취인명)</th>
-                                <th>주문상태</th>
-                                <th>주문상품</th>
-                                <th>주문총액</th>
-                                <th>배송비</th>
-                                <th>결제총액</th>
-                                <th>결제수단</th>
-                                <th>주문일자</th>
-                                <th>학원명</th>
+                                <th>접수경로</th>
+                                <th>예외구분</th>
+                                <th>주문자</th>
+                                <th>학생ID</th>
+                                <th>처리상태</th>
+                                <th>접수일자</th>
+                                <th>접수자</th>
+                                <th>처리완료일자</th>
+                                <th>처리자</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>777777</td>
+                                <td>7777</td>
+                                <td><a data-toggle="modal" data-target="#orderRetrunInfoModal">20201023456</a></td>
                                 <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
+                                <td>FRONT</td>
+                                <td class="text-danger">취소</td>
+                                <td>홍길동</td>
+                                <td>honggildong</td>
+                                <td class="text-info">회수중</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>7777</td>
                                 <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
+                                <td>20201023456</td>
+                                <td>FRONT</td>
+                                <td>반품</td>
+                                <td>홍길동</td>
+                                <td>honggildong</td>
+                                <td class="text-green">처리중</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>7777</td>
                                 <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
+                                <td>20201023456</td>
+                                <td>FRONT</td>
+                                <td class="text-orange">교환</td>
+                                <td>홍길동</td>
+                                <td>honggildong</td>
+                                <td class="text-green">처리완료</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
-                                <td>777777</td>
+                                <td>7777</td>
                                 <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
-                            </tr>
-                            <tr>
-                                <td>777777</td>
                                 <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
+                                <td>FRONT</td>
+                                <td>반품</td>
+                                <td>홍길동</td>
+                                <td>honggildong</td>
+                                <td class="text-danger">회수지시</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
+                                <td>2020-02-12</td>
+                                <td>홍길동</td>
                             </tr>
-                            <tr>
-                                <td>777777</td>
-                                <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
-                            </tr>
-                            <tr>
-                                <td>777777</td>
-                                <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
-                            </tr>
-                            <tr>
-                                <td>777777</td>
-                                <td>20201023456</td>
-                                <td class="text-center">홍길동<br>(홍길동)</td>
-                                <td>결제완료</td>
-                                <td>품목은 길면 2줄로 해서 하시오
-                                </td>
-                                <td>1,000</td>
-                                <td>2,500</td>
-                                <td>13,000</td>
-                                <td>신용카드</td>
-                                <td>20.09.15</td>
-                                <td>안양평촌</td>
-                            </tr>
-
                         </tbody>
                     </table>
                 </div>
             </div>
             <!-- 리스트영역 끝 -->
+
+            <!----선택된 주문 영역-->
+            <div class="widget has-shadow">
+                <div class="widget-body">
+                    <table class="table table-bordered" summary="주문취소/반품 요약">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35">
+                            <col width="15%">
+                            <col width="35">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>접수기간</th>
+                                <td>2020-08-10 ~ 2020-10-12</td>
+                                <th>총주문금액</th>
+                                <td><b class="text-danger">12,207,950</b>원</td>
+                            </tr>
+                            <tr>
+                                <th>배송비총액</th>
+                                <td><b class="text-danger">12,207</b>원</td>
+                                <th>수수료총액</th>
+                                <td>0원</td>
+
+                            </tr>
+                            <tr>
+                                <th>신용카드결제(건수</th>
+                                <td>12,207,950원(149건)</td>
+                                <th>가상계좌입금(건수)</th>
+                                <td>결제완료 : 552,000원(15건), 입금대기:0원(0건)</td>
+                            </tr>
+                            <tr>
+                                <th>총결제금액</th>
+                                <td><b class="text-danger">12,207,950원</b>원</td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
         </div>
 
         <!-- End Container -->
 
     </div>
     <!-- End Page Content -->
+</div>
+
+
+<!---------------------------------------->
+<!----------popup--주문취소반품 접수 정보--->
+<!---------------------------------------->
+
+<div id="orderRetrunInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">주문취소/반품접수 정보</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+                                <h3>-주문취소/반품 접수 정보</h3>
+                                <table class="table table-bordered" summary="주문취소/반품 접수 정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>신청자</th>
+                                            <td>홍길동</td>
+                                            <th>신청일자</th>
+                                            <td>2020-02+12</td>
+                                            <th>주문번호</th>
+                                            <td>123456</td>
+                                        </tr>
+                                        <tr>
+                                            <th>처리상태</th>
+                                            <td>접수</td>
+                                            <th>취소/반품구분</th>
+                                            <td>취소</td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>접수자</th>
+                                            <td>홍길동</td>
+                                            <th>접수일자</th>
+                                            <td>2020-12-12 10:45</td>
+                                            <th>접수경로</th>
+                                            <td>FRONT</td>
+                                        </tr>
+                                        <tr>
+                                            <th>처리메모</th>
+                                            <td colspan="5">
+                                                <div class="row">
+                                                    <div class='col-sm-12'>
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3 class="d-flex justify-content-between">-주문취소/반품 항목 정보<button type="button" class="btn btn-sm btn-dark">배송현황보기</button></h3>
+                                <table class="table table-bordered" summary="주문취소/반품 항목 정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width=*>
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+                                        <col width="7%">
+
+                                    </colgroup>
+                                    <thead>
+                                        <th>상품코드</th>
+                                        <th>품목</th>
+                                        <th>유형</th>
+                                        <th>공급처</th>
+                                        <th>접수수량</th>
+                                        <th>사유</th>
+                                        <th>회수유형</th>
+                                        <th>양품회수</th>
+                                        <th>불량회수</th>
+                                        <th>상태</th>
+                                        <th>물류구분</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>품목1</td>
+                                            <td class="text-center">일반</td>
+                                            <td>(주)청담러닝</td>
+                                            <td>13</td>
+                                            <td>고객변심</td>
+                                            <td>자사</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>전송완료</td>
+                                            <td>SCM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-회수송장 정보</h3>
+                                <table class="table table-bordered" summary="회수송장 정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <thead>
+                                        <th>택배사</th>
+                                        <th>송장정보</th>
+                                        <th>회수구분</th>
+                                        <th>회수일자</th>
+                                        <th>관리메모</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>대한통운</td>
+                                            <td>123456</td>
+                                            <td class="text-center">접수</td>
+                                            <td>2020-12-12</td>
+                                            <td>관리메모를 확인합니다.</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-주문취소/반품 처리 정보</h3>
+                                <table class="table table-bordered" summary="주문취소/반품 처리 정보">
+                                    <colgroup>
+                                        <col width="13%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>환불요청메모</th>
+                                            <td colspan="5">환불요청메모를 표기합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불계좌</th>
+                                            <td colspan="3">국민은행(574012-12-12345</td>
+                                            <th>예금주</th>
+                                            <td>홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불지시일</th>
+                                            <td>2020-02-12 10:12</td>
+                                            <th>환불완료일</th>
+                                            <td></td>
+                                            <th>환불상태</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>현금환불액</th>
+                                            <td>15,000원</td>
+                                            <th>승인취소액</th>
+                                            <td>0원</td>
+                                            <th>할인취소액</th>
+                                            <td>0원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>고객부담회수비용</th>
+                                            <td>0원</td>
+                                            <th>배송비취소액</th>
+                                            <td>0원</td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>관리메모</th>
+                                            <td colspan="5">
+                                                <div class="row">
+                                                    <div class='col-sm-12'>
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="row col">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-outline-danger">접수취소</button>
+                            <button type="button" class="btn btn-outline-primary">회수지시</button>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary margin-right-5">메모저장</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
