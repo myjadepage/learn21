@@ -522,6 +522,15 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            이버튼의 위치는 나중에 fixed
+                                            <button type="button" class="btn btn-danger" id="orderReturnModal" data-toggle="modal" data-target="orderReturnModal">반품접수</button>
+
+                                        </div>
+
+
+                                    </div>
                                 </div>
 
 
@@ -989,6 +998,364 @@
     </div>
 </div>
 
+
+<!---------------------------------------->
+<!----------popup--주문취소반품 접수--->
+<!---------------------------------------->
+
+<div id="orderReturnModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-item">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">주문취소/반품접수</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+                                <h3>-주문정보</h3>
+                                <table class="table table-bordered" summary="주문정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>주문번호/경로</th>
+                                            <td>32123/CDE</td>
+                                            <th>회원ID</th>
+                                            <td>maildbox</td>
+                                            <th>주문자</th>
+                                            <td>홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>SMS연락처</th>
+                                            <td>010-1234-1236</td>
+                                            <th>주문자 E-mail</th>
+                                            <td>maildbox@naver.com</td>
+                                            <th>결제수단</th>
+                                            <td>신용카드</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제총액</th>
+                                            <td>151,500</td>
+                                            <th>주문총액</th>
+                                            <td>151,500</td>
+                                            <th>배송비총액</th>
+                                            <td>1,500</td>
+                                        </tr>
+                                        <tr>
+                                            <th>주문일시</th>
+                                            <td>2020-09-10 10:48</td>
+                                            <th>주문상태</th>
+                                            <td class="text-danger">결제완료</td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-주문 상품 정보</h3>
+                                <table class="table table-bordered" summary="주문상품정보">
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col width=*>
+                                        <col width="7%">
+                                        <col width="15%">
+                                        <col width="10%">
+                                        <col width="7%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <th>
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="checkbox" id="check-1">
+                                                <label for="check-1"></label>
+                                            </div>
+                                        </th>
+                                        <th>상품코드</th>
+                                        <th>품목</th>
+                                        <th>상품유형</th>
+                                        <th>공급처</th>
+                                        <th>판매가</th>
+                                        <th>수량</th>
+                                        <th>환불가</th>
+                                        <th>사유</th>
+                                        <th>회수유형</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="styled-checkbox">
+                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                    <label for="check-1"></label>
+                                                </div>
+                                            </td>
+                                            <td>123456</td>
+                                            <td>상품명1</td>
+                                            <td class="text-center">일반</td>
+                                            <td>(주)청담러닝</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">5</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-4">
+                                                        <input type="text" class="form-control text-right" placeholder="" value="13,000">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>전체</option>
+                                                                                <option>취소</option>
+                                                                                <option>반품</option>
+                                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                    <option>전체</option>
+                                                                                    <option>취소</option>
+                                                                                    <option>반품</option>
+                                                                            </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="styled-checkbox">
+                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                    <label for="check-1"></label>
+                                                </div>
+                                            </td>
+                                            <td>123456</td>
+                                            <td>상품명1</td>
+                                            <td class="text-center">일반</td>
+                                            <td>(주)청담러닝</td>
+                                            <td class="text-right">13,000</td>
+                                            <td class="text-center">5</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-4">
+                                                        <input type="text" class="form-control text-right" placeholder="" value="13,000">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                <option>전체</option>
+                                                                                <option>취소</option>
+                                                                                <option>반품</option>
+                                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                                    <option>전체</option>
+                                                                                    <option>취소</option>
+                                                                                    <option>반품</option>
+                                                                            </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <h3>-취소반품신청 정보</h3>
+                                <table class="table table-bordered" summary="취소반품신청 정보">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="35%">
+                                        <col width="15%">
+                                        <col width="35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>취소/반품 구분</th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col col-sm-3">
+                                                        <select class="form-control">
+                                                                <option>취소</option>
+                                                                <option>반품</option>                                                               
+                                                            </select>
+                                                    </div>
+                                                    <div class="col col-sm-9">
+                                                        <span>접수한 상품이 배송상태가 전송완료인 경우에는 반드시 "반품"으로 접수하시기 바랍니다.</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불계좌</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>고객부담 회수비용</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control">
+                                                            <span>원</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>신청메모</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>처리메모</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불요청메모</th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>-회수 정보</h3>
+                                <table class="table table-bordered" summary="회수 정보">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col width=*>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>이름</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="홍길동">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>휴대폰번호</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="010-1234-4567">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>전화번호</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" value="032-1234-4567">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>배송지주소</th>
+                                            <td colspan="5">
+                                                <div class="row">
+                                                    <div class="col col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col col-sm-2">
+                                                                <input type="text" class="form-control" placeholder="" value="11123">
+                                                            </div>
+                                                            <div class="col col-sm-2">
+                                                                <button class="btn btn-sm btn-secondary input-btn-util">주소검색</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row  d-flex justify-content-start margin-top-5">
+                                                            <div class="col col-sm-5">
+                                                                <input type="text" class="form-control" value="경기도 성남시 분당구 탄천로 95">
+                                                            </div>
+                                                            <div class="col col-sm-4">
+                                                                <input type="text" class="form-control" value="409동 102호">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>요청사항</th>
+                                            <td colspan="5">
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="row col">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary margin-right-5">주문취소/반품접수</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     $(function() {
