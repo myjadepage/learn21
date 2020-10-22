@@ -63,6 +63,7 @@
                     </div>
 
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+                        <li class="nav-item d-flex align-items-center"><button type=button clsss="btn btn-sm btn-primary" id="smsSendModal" data-toggle="modal" data-target="smsSendModal">SMS 전송</a></li>
                         <li class="nav-item d-flex align-items-center"><a href="#">기획팀 홍길동</a></li>
                         <li class="nav-item d-flex align-items-center"><a href="#" rel="index" data-src="index.html"><i class="ti ti-home"></i>대시보드</a></li>
                         <li class="nav-item d-flex align-items-center page_move"><a href="#" rel="member_update" data-src="member_update.html">정보수정</a></li>
@@ -495,8 +496,8 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
 
 
@@ -1219,6 +1220,428 @@
     </div>
 
 
+
+    <!-------- SMS popup-->
+    <div id='smsSendModal' class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">SMS 전송</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col col-sm-6 sms-left-area">
+                            <!-- 검색영역 시작-->
+                            <div class="widget no-margin">
+                                <div class="widget-body no-padding">
+                                    <table class="table table-bordered mb-0" summary="SMS 전송">
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col width=*>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">발신번호</span></th>
+                                                <td>
+                                                    <input type="text" class="form-control" value="1654-4567">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">메시지</span></th>
+                                                <td>
+                                                    <textarea type="text" class="form-control text-area" placeholder="전송할 SMS 내용을 입력합니다."></textarea>
+                                                    <span>48/80 byte</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="text-primary">수신번호</span></th>
+                                                <td class="no-padding">
+                                                    <div class="widget no-margin sms-num-area">
+                                                        <div class="widget-body no-padding  ">
+                                                            <table class="table " summary="수신번호리스트 리스트">
+                                                                <colgroup>
+                                                                    <col width="15%">
+                                                                    <col width=*>
+                                                                    <col width="20%">
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>010-1234-4567</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-sm btn-danger"> - </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="radCodeAll-1">
+                                                                <label for="radCodeAll-1">즉시전송</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col col-sm-4">
+                                                            <div class="styled-radio">
+                                                                <input type="radio" name="radio" id="radCodeAll-1">
+                                                                <label for="radCodeAll-1">예약전송</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                                <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="widget-footer text-center">
+
+                                    <button class="btn btn-primary">SMS 전송</button>
+                                </div>
+                            </div>
+                            <!-- 검색영역 끝-->
+
+                        </div>
+
+                        <div class="col col-sm-6 sms-right-area">
+                            <div class="widget has-shadow">
+                                <div class="widget-header no-padding">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <ul class="nav nav-tabs nav-fill" role="tablist">
+                                                <li class="nav-item no-padding">
+                                                    <a class="nav-link  active" data-toggle="tab" href="#tab-sms-1" role="tab" aria-controls="tab-sms-1" aria-selected="true">발신자조회</a>
+                                                </li>
+                                                <li class="nav-item no-padding">
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-sms-2" role="tab" aria-controls="tab-sms-2" aria-selected="false">저장메시시</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="widget-body no-padding tab-content">
+                                    <div class="tab-pane show active" id="tab-sms-1" role="tabpanel">
+                                        <div class="widget">
+                                            <div class="widget-header bordered">
+                                                <div class="row">
+                                                    <div class="col col-sm-4">
+                                                        <select class="form-control">
+                                                            <option>선택</option>
+                                                            <option>Ketchup</option>
+                                                            <option>Relish</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col col-sm-6">
+                                                        <input type="text" class="form-control" placeholder="검색어 입력" value="">
+                                                    </div>
+                                                    <div class="col col-sm-2">
+                                                        <button class="btn btn-sm btn-primary input-btn-util">검색</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-body send-num-area">
+                                                <table class="table table-bordered" summary="">
+                                                    <colgroup>
+                                                        <col width="10%">
+                                                        <col width="25%">
+                                                        <col width="20%">
+                                                        <col width=*>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="styled-checkbox">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th>학생ID</th>
+                                                            <th>학생명</th>
+                                                            <th>휴대폰번호</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="styled-checkbox margin-bottom-5">
+                                                                    <input type="checkbox" name="checkbox" id="check-1">
+                                                                    <label for="check-1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>studentkim</td>
+                                                            <td>김준서</td>
+                                                            <td>010-1234-4567</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab-sms-2" role="tabpanel">
+                                        <div class="widget">
+                                            <div class="widget-body save-text-area">
+                                                <table class="table table-bordered " summary="">
+                                                    <colgroup>
+                                                        <col width="15%">
+                                                        <col width=*>
+                                                        <col width="15%">
+
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>NO</th>
+                                                            <th>구분</th>
+                                                            <th>Byte</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="sms-title">
+                                                            <td>1</td>
+                                                            <td><a href="#collapse1" data-toggle="collapse" aria-expanded="false">상품관련안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse1" class="sms-content collapse ">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="sms-title">
+                                                            <td>2</td>
+                                                            <td>
+                                                                <a href="#collapse2" data-toggle="collapse" aria-expanded="false">주문관련안내</a>
+                                                            </td>
+                                                            <td>65</td>
+                                                        </tr>
+                                                        <tr id="collapse2" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="sms-title">
+                                                            <td>3</td>
+                                                            <td><a href="#collapse3" data-toggle="collapse" aria-expanded="false">상품관련안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse3" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="sms-title">
+                                                            <td>4</td>
+                                                            <td><a href="#collapse4" data-toggle="collapse" aria-expanded="false">배송관련안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse4" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="sms-title">
+                                                            <td>5</td>
+                                                            <td><a href="#collapse5" data-toggle="collapse" aria-expanded="false">반품 접수/처리 안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse5" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="sms-title">
+                                                            <td>6</td>
+                                                            <td><a href="#collapse6" data-toggle="collapse" aria-expanded="false">환불처리안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse6" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="sms-title">
+                                                            <td>7</td>
+                                                            <td><a href="#collapse7" data-toggle="collapse" aria-expanded="false">상품관련안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse7" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="sms-title">
+                                                            <td>8</td>
+                                                            <td><a href="#collapse8" data-toggle="collapse" aria-expanded="false">상담답변등록안내</a></td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                        <tr id="collapse8" class="sms-content collapse">
+                                                            <td colspan="3">
+                                                                홍길동님이 주문하신 상품이 금일 발송 되었습니다. 아래 송장번호를 확인 해주시기 바랍니다. 대한통운 : 23568946
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/datatables.min.js"></script>
     <script src="../vendor/core.min.js"></script>
@@ -1313,6 +1736,7 @@
                             $(`#${id}.modal`).modal('show');
                         });
 
+
                         //2. single date
                         $('input[name="dates"').daterangepicker({
                             "singleDatePicker": true,
@@ -1321,6 +1745,7 @@
                         $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
                             $(this).val(picker.startDate.format('YYYY-MM-DD'));
                         });
+
                     },
                     complete: function(data) {
                         $(".loader").fadeOut();

@@ -41,6 +41,24 @@
         });
     });
 
+    // Close dropdown after click
+    $(function() {
+        $(".sms-title a").click(function(event) {
+            $(".collapse").collapse('hide');
+        });
+    });
+
+
+    // Close dropdown after click
+    $(function() {
+        $(".folding-switch a").click(function(event) {
+            $(".collapse").collapse('hide');
+        });
+    });
+
+
+
+
     // ------------------------------------------------------- //
     // Dynamic Height
     // ------------------------------------------------------ //	
@@ -117,6 +135,8 @@
         cursorfixedheight: 80
     });
 
+
+
     // ------------------------------------------------------- //
     // Widget Scrollbar
     // ------------------------------------------------------ //	
@@ -134,6 +154,7 @@
         cursorcolor: "rgba(52, 40, 104, 0.1)",
         cursorborder: "rgba(52, 40, 104, 0.1)"
     });
+
 
     // ------------------------------------------------------- //
     // Table Scrollbar
@@ -163,15 +184,6 @@
 
     $('.dropdown').on('hide.bs.dropdown', function(e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
-    });
-
-    // ------------------------------------------------------- //
-    // Options hover effect to dropdown
-    // ------------------------------------------------------ //
-    $('.widget-options > .dropdown, .actions > .dropdown, .quick-actions > .dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(350);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(350);
     });
 
 
