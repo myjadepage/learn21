@@ -30,6 +30,10 @@ Item Name: learn21 - Admin Dashboard
 @import url(../vendor/icons/ionicons.min.css);
 @import url(../vendor/icons/themify-icons.min.css);
 @import url(../vendor/icons/meteocons.min.css);
+.la-seedling:before {
+    content: '\f4d8';
+}
+
 html {
     font-size: 90%;
 }
