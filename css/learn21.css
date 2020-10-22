@@ -2885,7 +2885,7 @@ table.table-bordered.dataTable td {
 }
 
 #qaInfoModal .dataTables_length>label,
-#member-list-table .dataTables_length>label {
+#member-list-table_wrapper .dataTables_length>label {
     display: none;
 }
 
@@ -2929,6 +2929,13 @@ table.table-bordered.dataTable td {
 
 .dataTables_wrapper select[name="code-list-table_length"] {
     display: none !important;
+}
+
+#member-list-table_wrapper .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
