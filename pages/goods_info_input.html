@@ -7,7 +7,7 @@
                 <h2 class="page-header-title">상품 등록/수정</h2>
                 <div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
                         <li class="breadcrumb-item">상품 관리</li>
                         <li class="breadcrumb-item">상품정보 관리</li>
                         <li class="breadcrumb-item active">상품 등록/수정</li>
@@ -15,9 +15,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Page Header -->
-    <div class="row">
+        <!-- End Page Header -->
+
         <div class="col-sm-12">
             <div class="widget has-shadow">
                 <div class="widget-body">
@@ -27,7 +26,7 @@
                             <!-- 검색영역 끝-->
                             <div class="widget">
                                 <div class="widget-body no-padding">
-                                    <table id="item-table" class="table table-bordered no-margin" summary="상품등록">
+                                    <table id="item-table" class="table table-bordered no-margin totla-info" summary="상품등록">
                                         <colgroup>
                                             <col width="10%">
                                             <col width="40%">
@@ -194,17 +193,16 @@
                                                 <th scope="row"><span class="text-primary">상품 이미지</th>
                                                 <td>
                                                     <div class="row  d-flex align-items-center justify-content-start">
-                                                        <div class="col col-sm-6">
+                                                        <div class="col">
                                                             <div class="filebox">
                                                                 <input type="text" class="upload-name">
                                                                 <input type="file" id="fileup" name="file" style="display:none" />
                                                                 <button type="button" class="btn btn-outline-primary" id="btn-upload">파일찾기</button>
+                                                                <button type="button" class="btn btn-secondary">미리보기</button>
                                                             </div>
                                                             <!-- <input type="file" class="form-control" /> -->
                                                         </div>
-                                                        <div class="col col-sm-3">
-                                                            <button type="button" class="btn btn-primary">미리보기</button>
-                                                        </div>
+                                                       
                                                     </div>
                                                 </td>
                                             </tr>
@@ -303,21 +301,15 @@
                                             <tr>
                                                 <th><span class="text-primary">검색어 키워드</span></th>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col col-sm-12">
-                                                            <input type="text" class="form-control" placeholder="/로 구분하여 키운드 복수 입력 가능">
-                                                        </div>
 
-                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="/로 구분하여 키운드 복수 입력 가능">
+
                                                 </td>
                                                 <th><span class="text-primary">메모</span></th>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col col-sm-12">
-                                                            <input type="text" class="form-control" placeholder="">
-                                                        </div>
 
-                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="">
+
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -357,31 +349,24 @@
                                                         <div class="col-sm-5">
                                                             <div class="input-group">
                                                                 <input type="text" class="form-control" placeholder="" value="i-Spring Level 2C Homework Book">
-                                                                <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                                <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <input type="text" class="form-control-plaintext text-right" value="13,000">
-                                                        </div>
-                                                    </div>
+
+                                                    <input type="text" class="form-control-plaintext text-right" value="13,000">
+
                                                 </td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <input type="text" class="form-control text-right" value="0%">
-                                                        </div>
-                                                    </div>
+
+                                                    <input type="text" class="form-control text-right" value="0%">
+
                                                 </td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <input type="text" class="form-control text-right" value="15,000">
-                                                        </div>
-                                                    </div>
+
+                                                    <input type="text" class="form-control text-right" value="15,000">
 
                                                 </td>
                                             </tr>

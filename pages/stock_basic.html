@@ -7,18 +7,18 @@
                 <h2 class="page-header-title">재고 현황</h2>
                 <div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
                         <li class="breadcrumb-item">물류 관리</li>
                         <li class="breadcrumb-item active">재고 현황</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Page Header -->
 
-    <div class="row">
-        <div class="col-xl-12">
+        <!-- End Page Header -->
+
+
+        <div class="col-sm-12">
 
             <ul class="nav nav-tabs nav-fill" role="tablist">
                 <li class="nav-item">
@@ -74,7 +74,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -173,7 +173,7 @@
                                     </tr>
                                     <tr>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
@@ -181,7 +181,7 @@
                                     </tr>
                                     <tr>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
@@ -200,7 +200,7 @@
                                     </tr>
                                     <tr>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
@@ -268,7 +268,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -359,7 +359,7 @@
                                 <tbody>
                                     <tr>
                                         <td>00000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">10</td>
@@ -385,7 +385,7 @@
                                     </tr>
                                     <tr>
                                         <td>00000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">10</td>
@@ -448,7 +448,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -526,7 +526,7 @@
                                 <tbody>
                                     <tr>
                                         <td>00000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
                                         <td class="text-right">1,984,000</td>
@@ -534,7 +534,7 @@
                                     </tr>
                                     <tr>
                                         <td>00000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
                                         <td class="text-right">1,984,000</td>
@@ -543,7 +543,7 @@
 
                                     <tr>
                                         <td>00000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">2,500</td>
                                         <td class="text-right">10,000</td>
                                         <td class="text-right">1,984,000</td>
@@ -575,14 +575,14 @@
                                         <th scope="row"><span class="text-primary">가맹점</span></th>
                                         <td>
                                             <div class="row">
-                                                <div class="col-sm-5">
+                                                <div class="col col-sm-5">
                                                     <select class="form-control">
                                                                 <option>그룹</option>
                                                                 <option>Ketchup</option>
                                                                 <option>Relish</option>
                                                             </select>
                                                 </div>
-                                                <div class="col-sm-5">
+                                                <div class="col col-sm-5">
                                                     <select class="form-control">
                                                                 <option>가맹점</option>
                                                                 <option>Ketchup</option>
@@ -597,7 +597,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -701,7 +701,7 @@
                                         <td>2020-02-02</td>
                                         <td>매입</td>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">100,000</td>
@@ -714,7 +714,7 @@
                                         <td>2020-02-02</td>
                                         <td>매출</td>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">100,000</td>

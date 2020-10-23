@@ -6,17 +6,17 @@
                 <h2 class="page-header-title">주문취소/반품 조회</h2>
                 <div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="db-default.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
                         <li class="breadcrumb-item">주문/배송관리</li>
                         <li class="breadcrumb-item active">주문취소/반품 조회</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Page Header -->
 
-    <div class="row">
+        <!-- End Page Header -->
+
+
         <div class="col-xl-12">
 
             <!-- 검색영역 시작-->
@@ -154,19 +154,19 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table id="order-cancel-table" class="table table-bordered table-hover mb-0" summary="주문취소/반품 보기 리스트">
+                    <table id="order-cancel-table" class="table table-bordered" summary="주문취소/반품 보기 리스트">
                         <colgroup>
-                            <col width="5%">
                             <col width="7%">
-                            <col width="7%">
-                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
                             <col width=*>
                             <col width="7%">
+                            <col width="10%">
                             <col width="7%">
                             <col width="7%">
                             <col width="7%">
-                            <col width="7%">
-                            <col width="7%">
+                            <col width="10%">
                             <col width="7%">
                         </colgroup>
                         <thead>
@@ -251,7 +251,7 @@
             <!----선택된 주문 영역-->
             <div class="widget has-shadow">
                 <div class="widget-body">
-                    <table class="table table-bordered" summary="주문취소/반품 요약">
+                    <table class="table table-bordered totla-info" summary="주문취소/반품 요약">
                         <colgroup>
                             <col width="15%">
                             <col width="35">
@@ -303,7 +303,7 @@
 <!----------popup--주문취소반품 접수 정보--->
 <!---------------------------------------->
 
-<div id="orderRetrunInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="orderRetrunInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop='static' data-keyboard="false">
     <div class="modal-dialog modal-item">
         <div class="modal-content">
             <div class="modal-header">
@@ -314,197 +314,205 @@
                     </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="widget no-margin">
-                            <div class="widget-body">
-                                <h3>-주문취소/반품 접수 정보</h3>
-                                <table class="table table-bordered" summary="주문취소/반품 접수 정보">
-                                    <colgroup>
-                                        <col width="10%">
-                                        <col width="23%">
-                                        <col width="10%">
-                                        <col width="23%">
-                                        <col width="10%">
-                                        <col width=*>
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>신청자</th>
-                                            <td>홍길동</td>
-                                            <th>신청일자</th>
-                                            <td>2020-02+12</td>
-                                            <th>주문번호</th>
-                                            <td>123456</td>
-                                        </tr>
-                                        <tr>
-                                            <th>처리상태</th>
-                                            <td>접수</td>
-                                            <th>취소/반품구분</th>
-                                            <td>취소</td>
-                                            <th></th>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th>접수자</th>
-                                            <td>홍길동</td>
-                                            <th>접수일자</th>
-                                            <td>2020-12-12 10:45</td>
-                                            <th>접수경로</th>
-                                            <td>FRONT</td>
-                                        </tr>
-                                        <tr>
-                                            <th>처리메모</th>
-                                            <td colspan="5">
-                                                <div class="row">
-                                                    <div class='col-sm-12'>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </td>
 
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div class="widget has-shadow">
+                    <div class="widget-body">
+                        <h5><i class="la la-minus"></i>주문취소/반품 접수 정보</h5>
+                        <table class="table table-bordered totla-info" summary="주문취소/반품 접수 정보">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="10%">
+                                <col width=*>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>신청자</th>
+                                    <td>홍길동</td>
+                                    <th>신청일자</th>
+                                    <td>2020-02+12</td>
+                                    <th>주문번호</th>
+                                    <td>123456</td>
+                                </tr>
+                                <tr>
+                                    <th>처리상태</th>
+                                    <td>접수</td>
+                                    <th>취소/반품구분</th>
+                                    <td>취소</td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>접수자</th>
+                                    <td>홍길동</td>
+                                    <th>접수일자</th>
+                                    <td>2020-12-12 10:45</td>
+                                    <th>접수경로</th>
+                                    <td>FRONT</td>
+                                </tr>
+                                <tr>
+                                    <th>처리메모</th>
+                                    <td colspan="5">
+                                        <div class="row">
+                                            <div class='col-sm-12'>
+                                                <textarea class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </td>
 
-                                <h3 class="d-flex justify-content-between">-주문취소/반품 항목 정보<button type="button" class="btn btn-sm btn-dark">배송현황보기</button></h3>
-                                <table class="table table-bordered" summary="주문취소/반품 항목 정보">
-                                    <colgroup>
-                                        <col width="10%">
-                                        <col width=*>
-                                        <col width="5%">
-                                        <col width="10%">
-                                        <col width="7%">
-                                        <col width="10%">
-                                        <col width="7%">
-                                        <col width="7%">
-                                        <col width="7%">
-                                        <col width="7%">
-                                        <col width="7%">
-
-                                    </colgroup>
-                                    <thead>
-                                        <th>상품코드</th>
-                                        <th>품목</th>
-                                        <th>유형</th>
-                                        <th>공급처</th>
-                                        <th>접수수량</th>
-                                        <th>사유</th>
-                                        <th>회수유형</th>
-                                        <th>양품회수</th>
-                                        <th>불량회수</th>
-                                        <th>상태</th>
-                                        <th>물류구분</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>123456</td>
-                                            <td>품목1</td>
-                                            <td class="text-center">일반</td>
-                                            <td>(주)청담러닝</td>
-                                            <td>13</td>
-                                            <td>고객변심</td>
-                                            <td>자사</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>전송완료</td>
-                                            <td>SCM</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <h3>-회수송장 정보</h3>
-                                <table class="table table-bordered" summary="회수송장 정보">
-                                    <colgroup>
-                                        <col width="10%">
-                                        <col width="10%">
-                                        <col width="7%">
-                                        <col width="10%">
-                                        <col width=*>
-                                    </colgroup>
-                                    <thead>
-                                        <th>택배사</th>
-                                        <th>송장정보</th>
-                                        <th>회수구분</th>
-                                        <th>회수일자</th>
-                                        <th>관리메모</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>대한통운</td>
-                                            <td>123456</td>
-                                            <td class="text-center">접수</td>
-                                            <td>2020-12-12</td>
-                                            <td>관리메모를 확인합니다.</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <h3>-주문취소/반품 처리 정보</h3>
-                                <table class="table table-bordered" summary="주문취소/반품 처리 정보">
-                                    <colgroup>
-                                        <col width="13%">
-                                        <col width="23%">
-                                        <col width="10%">
-                                        <col width="23%">
-                                        <col width="10%">
-                                        <col width=*>
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>환불요청메모</th>
-                                            <td colspan="5">환불요청메모를 표기합니다.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>환불계좌</th>
-                                            <td colspan="3">국민은행(574012-12-12345</td>
-                                            <th>예금주</th>
-                                            <td>홍길동</td>
-                                        </tr>
-                                        <tr>
-                                            <th>환불지시일</th>
-                                            <td>2020-02-12 10:12</td>
-                                            <th>환불완료일</th>
-                                            <td></td>
-                                            <th>환불상태</th>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th>현금환불액</th>
-                                            <td>15,000원</td>
-                                            <th>승인취소액</th>
-                                            <td>0원</td>
-                                            <th>할인취소액</th>
-                                            <td>0원</td>
-                                        </tr>
-                                        <tr>
-                                            <th>고객부담회수비용</th>
-                                            <td>0원</td>
-                                            <th>배송비취소액</th>
-                                            <td>0원</td>
-                                            <th></th>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th>관리메모</th>
-                                            <td colspan="5">
-                                                <div class="row">
-                                                    <div class='col-sm-12'>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-
-                            </div>
-                        </div>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+
+                <div class="widget has-shadow">
+                    <div class="widget-body">
+                        <h5 class="d-flex justify-content-between"><i class="la la-minus"></i>주문취소/반품 항목 정보<button type="button" class="btn btn-sm btn-dark">배송현황보기</button></h5>
+                        <table class="table table-bordered" summary="주문취소/반품 항목 정보">
+                            <colgroup>
+                                <col width="10%">
+                                <col width=*>
+                                <col width="5%">
+                                <col width="10%">
+                                <col width="7%">
+                                <col width="10%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+
+                            </colgroup>
+                            <thead>
+                                <th>상품코드</th>
+                                <th>품목</th>
+                                <th>유형</th>
+                                <th>공급처</th>
+                                <th>접수수량</th>
+                                <th>사유</th>
+                                <th>회수유형</th>
+                                <th>양품회수</th>
+                                <th>불량회수</th>
+                                <th>상태</th>
+                                <th>물류구분</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>123456</td>
+                                    <td class="text-left">품목1</td>
+                                    <td class="text-center">일반</td>
+                                    <td>(주)청담러닝</td>
+                                    <td>13</td>
+                                    <td>고객변심</td>
+                                    <td>자사</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>전송완료</td>
+                                    <td>SCM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="widget has-shadow">
+                    <div class="widget-body">
+                        <h5><i class="la la-minus"></i>회수송장 정보</h5>
+                        <table class="table table-bordered" summary="회수송장 정보">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="7%">
+                                <col width="10%">
+                                <col width=*>
+                            </colgroup>
+                            <thead>
+                                <th>택배사</th>
+                                <th>송장정보</th>
+                                <th>회수구분</th>
+                                <th>회수일자</th>
+                                <th>관리메모</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>대한통운</td>
+                                    <td>123456</td>
+                                    <td class="text-center">접수</td>
+                                    <td>2020-12-12</td>
+                                    <td class="text-left">관리메모를 확인합니다.</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="widget has-shadow">
+                    <div class="widget-body">
+                        <h5><i class="la la-minus"></i>주문취소/반품 처리 정보</h5>
+                        <table class="table table-bordered totla-info" summary="주문취소/반품 처리 정보">
+                            <colgroup>
+                                <col width="13%">
+                                <col width="23%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="10%">
+                                <col width=*>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>환불요청메모</th>
+                                    <td colspan="5">환불요청메모를 표기합니다.</td>
+                                </tr>
+                                <tr>
+                                    <th>환불계좌</th>
+                                    <td colspan="3">국민은행(574012-12-12345</td>
+                                    <th>예금주</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>환불지시일</th>
+                                    <td>2020-02-12 10:12</td>
+                                    <th>환불완료일</th>
+                                    <td></td>
+                                    <th>환불상태</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>현금환불액</th>
+                                    <td>15,000원</td>
+                                    <th>승인취소액</th>
+                                    <td>0원</td>
+                                    <th>할인취소액</th>
+                                    <td>0원</td>
+                                </tr>
+                                <tr>
+                                    <th>고객부담회수비용</th>
+                                    <td>0원</td>
+                                    <th>배송비취소액</th>
+                                    <td>0원</td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>관리메모</th>
+                                    <td colspan="5">
+                                        <div class="row">
+                                            <div class='col-sm-12'>
+                                                <textarea class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
 
             <div class="modal-footer" style="justify-content: center;">

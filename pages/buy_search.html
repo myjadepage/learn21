@@ -7,18 +7,18 @@
                 <h2 class="page-header-title">매입 조회</h2>
                 <div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="ti ti-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
                         <li class="breadcrumb-item">구매 관리</li>
                         <li class="breadcrumb-item active">매입 조회</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Page Header -->
 
-    <div class="row">
-        <div class="col-xl-12">
+        <!-- End Page Header -->
+
+
+        <div class="col-sm-12">
 
             <ul class="nav nav-tabs nav-fill" role="tablist">
                 <li class="nav-item">
@@ -90,7 +90,7 @@
                                                 <div class="col col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                                 <div class="col col-sm-3">
@@ -109,7 +109,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="거래처검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,9 +199,9 @@
                                         <td></td>
                                         <td>80</td>
                                         <td></td>
-                                        <td>100,000</td>
-                                        <td>0</td>
-                                        <td>100,000</td>
+                                        <td class="text-right">100,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">100,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -211,31 +211,31 @@
                                         <td></td>
                                         <td>80</td>
                                         <td></td>
-                                        <td>1,980,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">1,980,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th rowspan="2">002</th>
                                         <td>00015</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td>40</td>
-                                        <td>24,452</td>
-                                        <td>1,458,000</td>
-                                        <td>0</td>
-                                        <td>450,111</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
                                     <tr>
                                         <td>00015</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td>40</td>
-                                        <td>24,452</td>
-                                        <td>1,458,000</td>
-                                        <td>0</td>
-                                        <td>450,111</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
                                     <tr>
@@ -245,21 +245,21 @@
                                         <td></td>
                                         <td>80</td>
                                         <td></td>
-                                        <td>1,980,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">1,980,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th>002</th>
                                         <td>00015</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td>40</td>
-                                        <td>24,452</td>
-                                        <td>1,458,000</td>
-                                        <td>0</td>
-                                        <td>450,111</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
                                     <tr>
@@ -270,21 +270,21 @@
                                         <td></td>
                                         <td>80</td>
                                         <td></td>
-                                        <td>100,000</td>
-                                        <td>0</td>
-                                        <td>100,000</td>
+                                        <td class="text-right">100,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">100,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th>0004</th>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET</td>
                                         <td>80</td>
-                                        <td>90,000</td>
-                                        <td>1,980,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
 
@@ -306,7 +306,7 @@
                 <div class="tab-pane" id="tab-buy-2" role="tabpanel">
                     <div class="widget has-shadow">
                         <div class="widget-body">
-                            <table class="table table-bordered" summary="거래처별 매입 검색하기">
+                            <table class="table table-bordered" summary="품목별 매입 검색하기">
                                 <colgroup>
                                     <col width="10%">
                                     <col width="40%">
@@ -356,7 +356,7 @@
                                                 <div class="col col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                                 <div class="col col-sm-3">
@@ -375,7 +375,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="거래처검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -412,14 +412,12 @@
                             </div>
                         </div>
                         <div class="widget-body">
-                            <table id="stock-list-table" class="table table-bordered mb-0" summary="거래처별 매입조회 리스트">
+                            <table id="stock-list-table" class="table table-bordered mb-0" summary="품목별 매입조회 리스트">
                                 <colgroup>
-                                    <col width="15%">
-                                    <col width="7%">
-                                    <col width="7%">
-                                    <col width="7%">
                                     <col width="20%">
-                                    <col width="7%">
+                                    <col width="10%">
+                                    <col width="15%">
+                                    <col width="5%">
                                     <col width="7%">
                                     <col width="7%">
                                     <col width="7%">
@@ -459,9 +457,9 @@
                                         <td></td>
                                         <td>80</td>
                                         <td></td>
-                                        <td>100,000</td>
-                                        <td>0</td>
-                                        <td>100,000</td>
+                                        <td class="text-right">100,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">100,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -469,28 +467,28 @@
                                         <th class="text-center">[소계]</th>
                                         <td>80</td>
                                         <td></td>
-                                        <td>1,980,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">1,980,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th>거래처1</th>
                                         <td>40</td>
-                                        <td>24,452</td>
-                                        <td>1,458,000</td>
-                                        <td>0</td>
-                                        <td>450,111</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
                                     <tr>
                                         <th>거래처1</th>
                                         <td>40</td>
-                                        <td>24,452</td>
-                                        <td>1,458,000</td>
-                                        <td>0</td>
-                                        <td>450,111</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">24,452</td>
+                                        <td class="text-right">1,458,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">450,111</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
                                     <tr>
@@ -499,19 +497,19 @@
                                         <th class="text-center">[소계]</th>
                                         <td>80</td>
                                         <td></td>
-                                        <td>100,000</td>
-                                        <td>0</td>
-                                        <td>100,000</td>
+                                        <td class="text-right">100,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">100,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th>거래처2</th>
                                         <td>65</td>
-                                        <td>1,980,000</td>
-                                        <td>30,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-right">30,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
                                     <tr>
@@ -520,19 +518,19 @@
                                         <th class="text-center">[소계]</th>
                                         <td>80</td>
                                         <td></td>
-                                        <td>100,000</td>
-                                        <td>0</td>
-                                        <td>100,000</td>
+                                        <td class="text-right">100,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">100,000</td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <th>거래처3</th>
                                         <td>65</td>
-                                        <td>1,980,000</td>
-                                        <td>30,000</td>
-                                        <td>0</td>
-                                        <td>1,980,000</td>
-                                        <td>세트도서</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-right">30,000</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">1,980,000</td>
+                                        <td class="text-left">세트도서</td>
                                     </tr>
 
 
@@ -607,7 +605,7 @@
                                                 <div class="col col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                                 <div class="col col-sm-3">
@@ -626,7 +624,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="거래처검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -667,10 +665,10 @@
                                 <colgroup>
                                     <col width="10%">
                                     <col width="20%">
-                                    <col width="10%">
-                                    <col width="10%">
-                                    <col width="10%">
-                                    <col width="10%">
+                                    <col width="7%">
+                                    <col width="7%">
+                                    <col width="7%">
+                                    <col width="7%">
                                     <col width="10%">
                                     <col width=*>
                                 </colgroup>
@@ -700,7 +698,7 @@
                                 </tfoot>
                                 <tbody>
                                     <tr>
-                                        <th rowspan="4">2020-09-15</th>
+                                        <th rowspan="4" class="text-center">2020-09-15</th>
                                         <th class="text-center">[소계]</th>
                                         <td class="text-right">500</td>
                                         <td class="text-right"></td>
@@ -738,7 +736,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th rowspan="2">2020-09-15</th>
+                                        <th rowspan="2" class="text-center">2020-09-15</th>
                                         <th class="text-center">[소계]</th>
                                         <td class="text-right">500</td>
                                         <td class="text-right"></td>
@@ -758,7 +756,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th rowspan="2">2020-09-15</th>
+                                        <th rowspan="2" class="text-center">2020-09-15</th>
                                         <th class="text-center">[소계]</th>
                                         <td class="text-right">500</td>
                                         <td class="text-right"></td>
@@ -797,7 +795,7 @@
                 <div class="tab-pane" id="tab-buy-4" role="tabpanel">
                     <div class="widget has-shadow">
                         <div class="widget-body">
-                            <table class="table table-bordered" summary="기간입출현황 검색하기">
+                            <table class="table table-bordered" summary="월별매입 검색하기">
                                 <colgroup>
                                     <col width="10%">
                                     <col width="40%">
@@ -809,14 +807,14 @@
                                         <th scope="row"><span class="text-primary">가맹점</span></th>
                                         <td>
                                             <div class="row">
-                                                <div class="col-sm-5">
+                                                <div class="col col-sm-5">
                                                     <select class="form-control">
                                                                 <option>그룹</option>
                                                                 <option>Ketchup</option>
                                                                 <option>Relish</option>
                                                             </select>
                                                 </div>
-                                                <div class="col-sm-5">
+                                                <div class="col col-sm-5">
                                                     <select class="form-control">
                                                                 <option>가맹점</option>
                                                                 <option>Ketchup</option>
@@ -831,7 +829,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="품목검색">
-                                                        <span class="input-group-addon addon-secondary"><i class="la la-search"></i></span>
+                                                        <button type="button" class="btn btn-sm btn-secondary" id="itemModal" data-toggle="modal" data-target="itemModal"><i class="la la-search"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -886,7 +884,7 @@
                             </div>
                         </div>
                         <div class="widget-body">
-                            <table id="stock-state-table" class="table table-bordered table-hover mb-0" summary="상세재고 리스트">
+                            <table id="stock-state-table" class="table table-bordered table-hover mb-0" summary="월별매입 리스트">
                                 <colgroup>
                                     <col width="7%">
                                     <col width="7%">
@@ -935,7 +933,7 @@
                                         <td>2020-02-02</td>
                                         <td>매입</td>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET (1)</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">100,000</td>
@@ -948,7 +946,7 @@
                                         <td>2020-02-02</td>
                                         <td>매출</td>
                                         <td>000000</td>
-                                        <td>PB TOEFL JUNIOR SET (1)</td>
+                                        <td class="text-left">PB TOEFL JUNIOR SET (1)</td>
                                         <td class="text-right">1,500</td>
                                         <td class="text-right">200</td>
                                         <td class="text-right">100,000</td>

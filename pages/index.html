@@ -11,7 +11,7 @@
     <script>
         WebFont.load({
             google: {
-                "families": ["Noto+Sans+KR:400,700", "Montserrat:400,500,600,700"]
+                "families": ["Noto+Sans+KR:400,700"]
             },
             active: function() {
                 sessionStorage.fonts = true;
@@ -63,9 +63,11 @@
                     </div>
 
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
-                        <li class="nav-item d-flex align-items-center"><button type=button clsss="btn btn-sm btn-primary" id="smsSendModal" data-toggle="modal" data-target="smsSendModal">SMS 전송</a></li>
+                        <li class="nav-item d-flex align-items-center">
+                            <button type="button" class="btn btn-gradient-03" id="smsSendModal" data-toggle="modal" data-target="smsSendModal">SMS전송</button>
+                        </li>
                         <li class="nav-item d-flex align-items-center"><a href="#">기획팀 홍길동</a></li>
-                        <li class="nav-item d-flex align-items-center"><a href="#" rel="index" data-src="index.html"><i class="ti ti-home"></i>대시보드</a></li>
+                        <li class="nav-item d-flex align-items-center"><a href="#" rel="index" data-src="index.html"><i class="la la-home"></i>대시보드</a></li>
                         <li class="nav-item d-flex align-items-center page_move"><a href="#" rel="member_update" data-src="member_update.html">정보수정</a></li>
                         <li class="nav-item d-flex align-items-center"><a href="logout.html">로그아웃</a></li>
                     </ul>
@@ -285,10 +287,10 @@
                             <!-- 검색영역 끝-->
                             <div class="widget">
                                 <div class="widget-body no-padding">
-                                    <table id="item-table" class="table table-bordered table-hover item-table" summary="품목명 리스트">
+                                    <table id="item-table" class="table table-bordered item-table" summary="품목명 리스트">
                                         <colgroup>
                                             <col width="5%">
-                                            <col width="7%">
+                                            <col width="10%">
                                             <col width=*>
                                             <col width="7%">
                                         </colgroup>
@@ -304,133 +306,104 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>3</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>4</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>5</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>6</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>7</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>8</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>9</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10</td>
+                                                <td>1</td>
                                                 <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
+                                                <td class="text-left">대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
+                                                        <button class="btn btn-sm btn-outline-dark"><i class="la la-plus"></i></button>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
-                                                <td>
-                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
-                                                <td>
-                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>A12345678</td>
-                                                <td>대분류 1 > 중분류 1 > 소분류 1 <b class="item-name">PB TOEFL JUNIOR SET (A)</b></td>
-                                                <td>
-                                                    <div class="col-sm-12 d-flex align-items-center justify-content-center">
-                                                        <button class="btn btn-sm btn-outline-primary">+</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -447,8 +420,8 @@
 
 
                             <div class="widget">
-                                <div class="widget-body no-padding">
-                                    <table id="item-selected-table" class="table table-bordered table-hover" summary="품목명 리스트">
+                                <div class="widget-body no-padding ">
+                                    <table id="item-selected-table" class="table table-bordered" summary="품목명 리스트">
                                         <colgroup>
                                             <col width="5%">
                                             <col width="15%">
@@ -465,9 +438,8 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td colspan="4" class="text-center">
+                                                <td colspan="4" class="default-state-table">
                                                     선택할 품목을 먼저 조회한 후 "+" 버튼을 통해 목록에 담으세요
-
                                                 </td>
                                             </tr>
                                             <!-- <tr>
@@ -496,8 +468,8 @@
                     </div>
 
                 </div>
-    </div>
-    </div>
+            </div>
+        </div>
     </div>
 
 
@@ -594,7 +566,7 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>매출처</td>
-                                                <td>(주)청담러닝 청담어학원 대전</td>
+                                                <td class="text-left">(주)청담러닝 청담어학원 대전</td>
                                                 <td>
                                                     <div class="col-sm-12 d-flex align-items-center justify-content-center">
                                                         <button class="btn btn-sm btn-outline-primary">선택</button>
