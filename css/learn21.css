@@ -24,7 +24,7 @@ html {
 
 body {
     font-family: "Noto Sans KR", "dotum", sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -144,7 +144,7 @@ h5,
 
 h6,
 .h6 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
@@ -201,7 +201,7 @@ h6,
 .blockquote {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     border-left: 0.25rem solid #eceeef;
 }
 
@@ -250,7 +250,7 @@ header.page-header {
 }
 
 table {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #2c304d;
 }
 
@@ -1368,7 +1368,7 @@ fieldset[disabled] a.btn {
 
 .btn-sm {
     padding: 0.25rem 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .button-nav {
@@ -1460,7 +1460,7 @@ a:hover.rounded-button {
 }
 
 .input-btn-util {
-    line-height: 23px;
+    line-height: calc(0.8rem + 8px);
 }
 
 .btn-item {
@@ -1960,146 +1960,6 @@ a.text-primary:hover {
  * ACTIONS
  */
 
-.widget-options {
-    z-index: 999;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-    float: right;
-}
-
-.widget-options .dropdown-toggle {
-    color: #98a8b4;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 1.7rem;
-}
-
-.widget-options .dropdown-toggle:after {
-    display: none;
-}
-
-.widget-options .dropdown-menu {
-    border: none;
-    min-width: auto;
-    font-size: 1rem;
-    border-radius: 4px;
-    padding: 1.4rem 1.8rem;
-    text-align: left;
-    transform: translateX(calc(-100% + 5px));
-    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.15);
-}
-
-.widget-options .dropdown-menu .dropdown-item {
-    padding: 0.5rem 0;
-}
-
-.widget-options .dropdown-menu .dropdown-item:hover,
-.widget-options .dropdown-menu .dropdown-item:focus {
-    background: none;
-}
-
-.widget-options .dropdown-menu a {
-    color: #2c304d;
-    font-weight: 500;
-}
-
-.widget-options .dropdown-menu a:hover,
-.widget-options .dropdown-menu a:hover i {
-    background: transparent;
-    color: #5d5386;
-}
-
-.widget-options .dropdown-menu a i {
-    font-size: 1.6rem;
-    vertical-align: middle;
-    color: #aea9c3;
-    margin-right: 0.7rem;
-    transition: all 0.4s ease;
-}
-
-.widget-options .btn {
-    padding: 8px 15px;
-}
-
-.quick-actions {
-    z-index: 999;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.quick-actions.hover {
-    z-index: 999;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    display: none;
-}
-
-.widget-image:hover .quick-actions.hover {
-    display: block;
-}
-
-.quick-actions.light .dropdown-toggle {
-    color: #fff;
-}
-
-.quick-actions.dark .dropdown-toggle {
-    color: #2c304d;
-}
-
-.quick-actions .dropdown-toggle {
-    color: #98a8b4;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 1.7rem;
-}
-
-.quick-actions .dropdown-toggle:after {
-    display: none;
-}
-
-.quick-actions .dropdown-menu {
-    border: none;
-    min-width: auto;
-    font-size: 1rem;
-    border-radius: 4px;
-    padding: 1.4rem 1.8rem;
-    text-align: left;
-    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.15);
-}
-
-.quick-actions .dropdown-menu .dropdown-item {
-    padding: 0.5rem 0;
-}
-
-.quick-actions .dropdown-menu .dropdown-item:hover,
-.quick-actions .dropdown-menu .dropdown-item:focus {
-    background: none;
-}
-
-.quick-actions .dropdown-menu a {
-    color: #2c304d;
-    font-weight: 500;
-}
-
-.quick-actions .dropdown-menu a:hover,
-.quick-actions .dropdown-menu a:hover i {
-    background: transparent;
-    color: #5d5386;
-}
-
-.quick-actions .dropdown-menu a i {
-    font-size: 1.4rem;
-    vertical-align: -2px;
-    color: #2c304d;
-    margin-right: 0.7rem;
-    transition: all 0.4s ease;
-}
-
 .actions {
     z-index: 999;
     display: block;
@@ -2202,7 +2062,7 @@ a.text-primary:hover {
 
 .widget-header {
     background: #fff;
-    padding: 0.85rem 1.4rem;
+    padding: 0.8rem 1.4rem;
     position: relative;
     width: 100%;
 }
@@ -2295,7 +2155,7 @@ a.text-primary:hover {
     /* border: 0 none; */
     padding: 10px;
     color: #5d5386;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
 }
 
@@ -2304,7 +2164,7 @@ a.text-primary:hover {
     padding: 3px 10px;
     vertical-align: middle;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
@@ -2315,7 +2175,7 @@ a.text-primary:hover {
 
 .table-bordered thead tr th,
 .table-bordered tbody tr th {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     background: #f4f4f4;
 }
@@ -2421,7 +2281,8 @@ table.table-bordered.dataTable td {
 
 #qaInfoModal .dataTables_length>label,
 #member-list-table_wrapper .dataTables_length>label,
-#code_list-table_wrapper .dataTables_length>label {
+#code_list-table_wrapper .dataTables_length>label,
+#order-form-table_wrapper .dataTables_length>label {
     display: none;
 }
 
@@ -2431,7 +2292,7 @@ table.table-bordered.dataTable td {
 }
 
 .dataTables_info {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 #shop-list-table_info.dataTables_info,
@@ -2440,6 +2301,8 @@ table.table-bordered.dataTable td {
 #sorting-table_info.dataTables_info,
 #buy-sorting-table_info.dataTables_info,
 #buy-spec-table_info.dataTables_info,
+#sales-spec-table_info.dataTables_info,
+#sales-settle-table_info.dataTables_info,
 #stock-list-table_info.dataTables_info,
 #stock-period-table_info.dataTables_info,
 #stock-state-table_info.dataTables_info,
@@ -2592,7 +2455,7 @@ ul.pagination li.active .page-link {
  */
 
 .modal-body {
-    max-height: 760px;
+    min-height: 760px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -2674,7 +2537,7 @@ textarea {
 }
 
 .form-control {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.25;
     color: #2c304d;
     border: 1px solid #eee;
@@ -2683,21 +2546,21 @@ textarea {
 }
 
 .form-control::-moz-placeholder {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
     color: #aea9c3;
 }
 
 .form-control::-webkit-input-placeholder {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
     color: #aea9c3;
 }
 
 .form-control:-ms-input-placeholder {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
     color: #aea9c3;
@@ -2705,7 +2568,7 @@ textarea {
 
 select.form-control:not([size]):not([multiple]) {
     height: calc(2.2rem - 2px);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     padding-bottom: 0;
     padding-top: 0;
@@ -2713,7 +2576,7 @@ select.form-control:not([size]):not([multiple]) {
 
 select.form-control+label {
     margin-bottom: -0.2rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .form-control:focus,
@@ -2959,7 +2822,7 @@ section.forms p {
 
 section.forms form span,
 section.forms form small {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #999;
     font-weight: 300;
 }
@@ -4216,7 +4079,7 @@ nav.navbar .menu-btn.active span:last-of-type {
 
 nav.navbar .nav-item>a {
     position: relative;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 0 10px;
     text-align: center;
     line-height: 70px;
@@ -4302,7 +4165,7 @@ nav.navbar .nav-item>a {
     font-weight: 600;
     margin-left: 10px;
     color: #aea9c3;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
 }
 
@@ -4337,7 +4200,7 @@ nav.navbar .nav-item>a {
 }
 
 .default-sidebar>.side-navbar ul ul a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding-left: 40px;
     color: #aea9c3;
 }
@@ -4429,8 +4292,8 @@ nav.navbar .nav-item>a {
 
 .widget .styled-radio label,
 .widget .styled-checkbox label {
-    margin-bottom: 1rem;
-    font-size: .85rem;
+    /* margin-bottom: 1rem; */
+    font-size: 0.8rem;
 }
 
 .widget .styled-radio+.styled-radio,
@@ -4478,7 +4341,7 @@ nav.navbar .nav-item>a {
 
 .widget-13 .mem_update .heading {
     color: #98a8b4;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .widget-13 .mem_update .counter {
@@ -4524,13 +4387,13 @@ footer.main-footer p {
     font-family: "Noto Sans KR";
     color: #98a8b4;
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
 footer.main-footer .nav-link {
     padding: 0 1rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 footer.main-footer a.nav-link {
@@ -4556,13 +4419,13 @@ footer.second-footer a:hover {
 footer.second-footer p {
     color: #2c304d;
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
 footer.second-footer .nav-link {
     padding: 0 1rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 footer.second-footer a.nav-link {
@@ -4818,7 +4681,7 @@ footer.second-footer a:hover.nav-link {
 .filebox .upload-name2 {
     display: inline-block;
     margin-right: -5px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 10px;
     vertical-align: middle;
     background-color: #dedede;
@@ -4847,7 +4710,7 @@ footer.second-footer a:hover.nav-link {
 }
 
 .table td {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .table .item-name {
@@ -4955,7 +4818,7 @@ footer.second-footer a:hover.nav-link {
 }
 
 .sms-right-area .send-num-area {
-    height: 410px;
+    height: 423px;
     overflow-y: scroll;
 }
 
@@ -4965,10 +4828,21 @@ footer.second-footer a:hover.nav-link {
     resize: none;
 }
 
+.sms-right-area .sms-title a {
+    display: block;
+}
+
+.sms-right-area .sms-title a,
+.sms-right-area .sms-content td {
+    text-align: left;
+}
+
 .sms-right-area .sms-content td {
     height: 50px;
+    padding: 0.8rem;
+    font-size: 0.75rem;
     overflow-y: scroll;
-    background-color: #f4f4f4;
+    background-color: #fefefe;
 }
 
 .sms-right-area .sms-content.collapsing {
@@ -5005,6 +4879,6 @@ footer.second-footer a:hover.nav-link {
 }
 
 .default-state-table {
-    max-height: 49.5vh;
+    height: 49.5vh;
     text-align: center;
 }

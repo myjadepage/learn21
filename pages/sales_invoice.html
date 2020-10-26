@@ -7,8 +7,8 @@
                 <div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
-                        <li class="breadcrumb-item">구매 관리</li>
-                        <li class="breadcrumb-item active">매입처 원장</li>
+                        <li class="breadcrumb-item">영업 관리</li>
+                        <li class="breadcrumb-item active">매출처 원장</li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 <div class="widget-header bordered">
                     <div class="row">
                         <div class="col-sm-12">
-                            <table class="table table-bordered" summary="매입처 원장 검색하기">
+                            <table class="table table-bordered" summary="매출처 원장 검색하기">
                                 <colgroup>
                                     <col width="7%">
                                     <col width="30%">
@@ -127,7 +127,7 @@
                                         <th>대표이사</th>
                                         <td class="text-left">오성일</td>
                                         <td rowspan="2">
-                                            <button type="button" class="btn btn-danger" id="buyVendorNotePrintModal" data-toggle="modal" data-target="buyVendorNotePrintModal">매입처 원장 인쇄</button>
+                                            <button type="button" class="btn btn-danger" id="salesInvoicePrintModal" data-toggle="modal" data-target="salesInvoicePrintModal">매입처 원장 인쇄</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table class="table table-bordered" summary="매입처원장 리스트">
+                    <table class="table table-bordered" summary="매출처원장 리스트">
                         <colgroup>
                             <col width="7%">
                             <col width="5%">
@@ -153,6 +153,7 @@
                             <col width="7%">
                             <col width="10%">
                             <col width="7%">
+                            <col width="10%">
                             <col width="10%">
                             <col width="10%">
                             <col width="10%">
@@ -169,6 +170,7 @@
                                 <th>공급단가</th>
                                 <th>합계금액</th>
                                 <th>결제금액</th>
+                                <th>잔액</th>
                                 <th>비고</th>
                             </tr>
                         </thead>
@@ -177,12 +179,13 @@
                                 <td>[이월]</td>
                                 <td></td>
                                 <td></td>
-                                <td class="text-right">0</td>
-                                <td class="text-right"></td>
-                                <td class="text-right"></td>
-                                <td class="text-right">0</td>
-                                <td class="text-right">0</td>
-                                <td class="text-right">0</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                             </tr>
                         </tbody>
@@ -190,104 +193,101 @@
                         <tbody>
                             <tr>
                                 <td>2020-09-15</td>
-                                <td>매입</td>
+                                <td>매출</td>
                                 <td class="text-left">PB TOEFL JUNIOR SET</td>
                                 <td>5</td>
                                 <td class="text-right">200,500</td>
-                                <td>100%</td>
+                                <td></td>
                                 <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-left">안양평촌</td>
                             </tr>
                             <tr>
                                 <td>2020-09-15</td>
-                                <td>매입</td>
+                                <td>매출</td>
                                 <td class="text-left">PB TOEFL JUNIOR SET</td>
                                 <td>5</td>
                                 <td class="text-right">200,500</td>
-                                <td>100%</td>
+                                <td></td>
                                 <td class="text-right">50,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
                                 <td class="text-left">안양평촌</td>
-                                <tr>
-                                    <td>2020-09-15</td>
-                                    <td>매입</td>
-                                    <td class="text-left">PB TOEFL JUNIOR SET</td>
-                                    <td>5</td>
-                                    <td class="text-right">200,500</td>
-                                    <td>100%</td>
-                                    <td class="text-right">50,000</td>
-                                    <td class="text-right">1,500,000</td>
-                                    <td class="text-right">1,500,000</td>
-                                    <td class="text-left">안양평촌</td>
-                                </tr>
+                            </tr>
+                            <tr>
+                                <td>2020-09-15</td>
+                                <td>매출</td>
+                                <td class="text-left">PB TOEFL JUNIOR SET</td>
+                                <td>5</td>
+                                <td class="text-right">200,500</td>
+                                <td></td>
+                                <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-right">1,500,000</td>
+                                <td class="text-left">안양평촌</td>
+                            </tr>
 
-                                <!---- 총합    -->
-                                <tr class="table-active sum_month">
-                                    <th class="text-center">[월계]</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td>11</td>
-                                    <td class="text-right"></td>
-                                    <td class="text-right"></td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td></td>
-                                </tr>
-                                <tr class="table-active sum_total">
-                                    <th class="text-center">[누계]</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td>11</td>
-                                    <td class="text-right"></td>
-                                    <td class="text-right"></td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td class="text-right">1,650,000</td>
-                                    <td></td>
-                                </tr>
+                            <!---- 총합    -->
+                            <tr class="table-active sum_month">
+                                <th class="text-center">[월계]</th>
+                                <td></td>
+                                <td></td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="table-active sum_total">
+                                <th class="text-center">[누계]</th>
+                                <td></td>
+                                <td></td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
 
                         <tbody>
                             <tr>
                                 <td>2020-09-15</td>
-                                <td>매입</td>
+                                <td>매출</td>
                                 <td class="text-left">PB TOEFL JUNIOR SET</td>
                                 <td>5</td>
                                 <td class="text-right">200,500</td>
-                                <td>100%</td>
+                                <td></td>
                                 <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-left">안양평촌</td>
                             </tr>
                             <tr>
                                 <td>2020-09-15</td>
-                                <td>매입</td>
+                                <td>매출</td>
                                 <td class="text-left">PB TOEFL JUNIOR SET</td>
                                 <td>5</td>
                                 <td class="text-right">200,500</td>
-                                <td>100%</td>
+                                <td></td>
                                 <td class="text-right">50,000</td>
+                                <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-right">1,500,000</td>
                                 <td class="text-left">안양평촌</td>
                             </tr>
-                            <tr>
-                                <td>2020-09-15</td>
-                                <td>매입</td>
-                                <td class="text-left">PB TOEFL JUNIOR SET</td>
-                                <td>5</td>
-                                <td class="text-right">200,500</td>
-                                <td>100%</td>
-                                <td class="text-right">50,000</td>
-                                <td class="text-right">1,500,000</td>
-                                <td class="text-right">1,500,000</td>
-                                <td class="text-left">안양평촌</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -301,9 +301,9 @@
 
 
 <!------------------------------- 
-    popup 매입처원장 인쇄-------------
+    popup 매출처원장 인쇄-------------
 ---------------------------------->
-<div id="buyVendorNotePrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="salesInvoicePrintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-item">
         <div class="modal-content">
             <div class="modal-header">
@@ -324,7 +324,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-12 d-flex justify-content-center buy_title">매입처 원장</div>
+                                    <div class="col-sm-12 d-flex justify-content-center buy_title">매출처 원장</div>
                                     <div class="col-sm-12 d-flex justify-content-center buy_title_period">(조회기간 : 2020-09-01 ~ 2020-09-17)</div>
                                 </div>
                             </div>
@@ -338,7 +338,7 @@
                                                 <colgroup>
                                                     <col width="7%">
                                                     <col width="30%">
-                                                    <col width="7%">
+                                                    <col width="10%">
                                                     <col width="20%">
                                                     <col width="7%">
                                                     <col width=*>

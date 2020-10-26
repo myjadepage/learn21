@@ -35,7 +35,14 @@
                                 <th scope="row"><span class="text-primary">가맹점</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col-sm-5">
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                                <option>그룹</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
                                             <select class="form-control">
                                                                 <option>가맹점</option>
                                                                 <option>Ketchup</option>
@@ -48,11 +55,11 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-sm-5">
-                                            <select class="form-control">
-                                                                <option>거래처</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
-                                                            </select>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="거래처검색">
+                                                <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -76,13 +83,13 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-sm-12 d-flex align-items-center">
-                                            <div class="styled-radio">
-                                                <input type="radio" name="radio" id="rad-1">
-                                                <label for="rad-1">진행</label>
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="received" id="received-1">
+                                                <label for="received-1">진행</label>
                                             </div>
-                                            <div class="styled-radio">
-                                                <input type="radio" name="radio" id="rad-2">
-                                                <label for="rad-2">입고</label>
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" name="received" id="received-2">
+                                                <label for="received-2">입고</label>
                                             </div>
                                         </div>
                                     </div>
@@ -121,7 +128,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table id="buy-sorting-table" class="table table-bordered table-hover mb-0" summary="주문서보기 리스트">
+                    <table id="buy-sorting-table" class="table table-bordered" summary="주문서보기 리스트">
                         <colgroup>
                             <col width="5%">
                             <col width="7%">

@@ -34,7 +34,14 @@
                                 <th scope="row"><span class="text-primary">가맹점</span></th>
                                 <td>
                                     <div class="row">
-                                        <div class="col-sm-5">
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                                <option>그룹</option>
+                                                                <option>Ketchup</option>
+                                                                <option>Relish</option>
+                                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
                                             <select class="form-control">
                                                                 <option>가맹점</option>
                                                                 <option>Ketchup</option>
@@ -47,11 +54,11 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-sm-5">
-                                            <select class="form-control">
-                                                                <option>거래처</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
-                                                            </select>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="거래처검색">
+                                                <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -75,11 +82,11 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-sm-5">
-                                            <select class="form-control">
-                                                                <option>선택</option>
-                                                                <option>Ketchup</option>
-                                                                <option>Relish</option>
-                                                            </select>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="발주서검색">
+                                                <button type="button" class="btn btn-sm btn-secondary" id="orderFormModal" data-toggle="modal" data-target="orderFormModal"><i class="la la-search"></i></button>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -325,3 +332,145 @@
         </div>
     </div>
 </div>
+
+
+<!----발주서 팝업-->
+<div id="orderFormModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">발주서 선택</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget no-margin">
+                            <div class="widget-body">
+                                <table class="table table-bordered" summary="발주서 검색">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width=*>
+                                        <col width="10%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">조회기간</th>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                    <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                    <span class="input-group-addon">~</span>
+                                                    <input type="text" name="dates" class="form-control" placeholder="날짜선택">
+                                                    <span class="input-group-addon"><i class="la la-calendar"></i></span>
+                                                </div>
+                                            </td>
+                                            <td rowspan="3">
+                                                <button class="btn btn-primary btn-item">검색</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">가맹점/거래처</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-6">
+                                                        <select class="form-control">
+                                                                            <option>가맹점</option>
+                                                                            <option>Ketchup</option>
+                                                                            <option>Relish</option>
+                                                                        </select>
+
+                                                    </div>
+                                                    <div class="col col-sm-6">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="거래처검색">
+                                                            <button type="button" class="btn btn-sm btn-secondary" id="vendorNameModal" data-toggle="modal" data-target="vendorNameModal"><i class="la la-search"></i></button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">담당자</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col col-sm-6">
+                                                        <select class="form-control">
+                                                                            <option>홍길동</option>
+                                                                            <option>Ketchup</option>
+                                                                            <option>Relish</option>
+                                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table id="order-form-table" class="table table-bordered" summary="발주서품목">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="15%">
+                                        <col width=*>
+                                        <col width="15%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>발주일자</th>
+                                            <th>거래처</th>
+                                            <th>작성자</th>
+                                            <th>상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2020-12-12</td>
+                                            <td class="text-left">PB TOEFL JUNIOR SET (A</td>
+                                            <td>홍길동</td>
+                                            <td>입고</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2020-12-12</td>
+                                            <td class="text-left">PB TOEFL JUNIOR SET (A</td>
+                                            <td>홍길동</td>
+                                            <td><span class="text-danger">발주</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#order-form-table').DataTable({
+        "destroy": true, //intitialize
+        "dom": '<"top"li>t<"bottom"p>',
+        "searching": false,
+        "info": false,
+        "language": {
+            "paginate": {
+                "previous": "<",
+                "next": ">"
+            },
+            "infoEmpty": "검색 결과가 없습니다.",
+            "sInfoEmpty": "검색 결과가 없습니다.",
+            "sInfo": "조회건수 : _TOTAL_ 건",
+            "sLengthMenu": "_MENU_"
+        }
+    });
+</script>

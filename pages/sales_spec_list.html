@@ -4,12 +4,12 @@
     <div class="row">
         <div class="page-header">
             <div class="d-flex align-items-center">
-                <h2 class="page-header-title">매입 명세서</h2>
+                <h2 class="page-header-title">매출 명세서</h2>
                 <div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><i class="la la-home"></i></a></li>
-                        <li class="breadcrumb-item">구매 관리</li>
-                        <li class="breadcrumb-item active">매입 명세서</li>
+                        <li class="breadcrumb-item">영업 관리</li>
+                        <li class="breadcrumb-item active">매출 명세서</li>
                     </ul>
                 </div>
             </div>
@@ -23,7 +23,7 @@
             <!-- 검색영역 시작-->
             <div class="widget has-shadow">
                 <div class="widget-body">
-                    <table class="table table-bordered" summary="매입명세서 검색하기">
+                    <table class="table table-bordered" summary="매출명세서 검색하기">
                         <colgroup>
                             <col width="10%">
                             <col width="40%">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="widget-body">
-                    <table id="buy-spec-table" class="table table-bordered" summary="매입명세서 리스트">
+                    <table id="sales-spec-table" class="table table-bordered" summary="매출명세서 리스트">
                         <colgroup>
                             <col width="7%">
                             <col width="7%">
@@ -138,7 +138,7 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <th>매입일자</th>
+                                <th>매출일자</th>
                                 <th>일련번호</th>
                                 <th>거래처</th>
                                 <th>상태구분</th>
@@ -153,16 +153,16 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>20.09.15</td>
+                                <td>2020-09-15</td>
                                 <td>0001</td>
-                                <td>청담러닝</td>
+                                <td class="text-left">청담러닝</td>
                                 <td>입고</td>
                                 <td class="text-right">2,500,000</td>
                                 <td class="text-right">0</td>
                                 <td class="text-right">2,500,000</td>
                                 <td>강성육</td>
                                 <td>강성육</td>
-                                <td>아이가르텐 추가 주문서_0701</td>
+                                <td class="text-left">아이가르텐 추가 주문서_0701</td>
                                 <td>
                                     <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
                                         <button class="btn btn-sm btn-outline-dark">수정</button>
@@ -172,16 +172,16 @@
                             </tr>
 
                             <tr class="text-red">
-                                <td>20.09.15</td>
+                                <td>2020-09-15</td>
                                 <td>0001</td>
-                                <td>청담러닝</td>
+                                <td class="text-left">청담러닝</td>
                                 <td>입고</td>
                                 <td class="text-right">2,500,000</td>
                                 <td class="text-right">0</td>
                                 <td class="text-right">2,500,000</td>
                                 <td>강성육</td>
                                 <td>강성육</td>
-                                <td>아이가르텐 추가 주문서_0701</td>
+                                <td class="text-left">아이가르텐 추가 주문서_0701</td>
                                 <td>
                                     <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
                                         <button class="btn btn-sm btn-outline-dark">수정</button>
@@ -190,16 +190,16 @@
                                 </td>
                             </tr>
                             <tr class="text-blue">
-                                <td>20.09.15</td>
+                                <td>2020-09-15</td>
                                 <td>0001</td>
-                                <td>청담러닝</td>
+                                <td class="text-left">청담러닝</td>
                                 <td>입고</td>
                                 <td class="text-right">2,500,000</td>
                                 <td class="text-right">0</td>
                                 <td class="text-right">2,500,000</td>
                                 <td>강성육</td>
                                 <td>강성육</td>
-                                <td>아이가르텐 추가 주문서_0701</td>
+                                <td class="text-left">아이가르텐 추가 주문서_0701</td>
                                 <td>
                                     <div class="col-sm-12 d-flex align-items-center justify-content-md-end justify-content-center">
                                         <button class="btn btn-sm btn-outline-dark">수정</button>
@@ -227,7 +227,7 @@
     $(function() {
 
         $(".btn_excel").on("click", function() {
-            $("#buy-sorting-table").table2excel({
+            $("#sales-spec-table").table2excel({
                 exclude: ".excludeThisClass",
                 name: "Worksheet Name",
                 filename: "SomeFile.xls",
@@ -235,7 +235,7 @@
             });
         });
 
-        $('#buy-spec-table').DataTable({
+        $('#sales-spec-table').DataTable({
             "destroy": true, //intitialize
             "dom": '<"top"li>t<"bottom"p>',
             "columnDefs": [{

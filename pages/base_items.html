@@ -250,62 +250,65 @@
                         </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-12">
 
-                        <div class="widget  has-shadow">
-                            <div class="widget-header bordered">
-                                <table class="table table-bordered" summary="품목일괄등록 관리">
-                                    <colgroup>
-                                        <col width="20%">
-                                        <col width=*>
-                                        <col width="10%">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>피일선택</th>
-                                            <td><input type="file"></td>
-                                            <td><button type="button" class="btn btn-sm btn-primary input-btn-util ">파일등록</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <small class="text-info "><i class="la la-star"></i>품목 일괄 등록 양식 파일을 다운로드 받아 작성 후 첨부하여 등록 하시기 바랍니다.</small>
-                            </div>
+                <div class="widget  has-shadow">
+                    <div class="widget-header bordered">
+                        <table class="table table-bordered totla-info" summary="품목일괄등록 관리">
+                            <colgroup>
+                                <col width="20%">
+                                <col width=*>
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>피일선택</th>
+                                    <td colspan="2">
+                                        <div class="filebox">
+                                            <input type="text" class="upload-name">
+                                            <input type="file" id="fileup" name="file" style="display:none" />
+                                            <button type="button" class="btn btn-outline-primary" id="btn-upload">파일찾기</button>
+                                            <button type="button" class="btn btn-primary">파일등록</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-info "><i class="la la-star"></i>품목 일괄 등록 양식 파일을 다운로드 받아 작성 후 첨부하여 등록 하시기 바랍니다.</p>
+                    </div>
 
-                            <div class="widget-body">
-                                <h4><i class="la la-search"></i>등록결과</h4>
-                                <table class="table table-bordered" summary="품목일괄등록 결과">
-                                    <colgroup>
-                                        <col width="33%">
-                                        <col width=*>
-                                        <col width="33%">
-                                    </colgroup>
-                                    <thead>
-                                        <th>품목건수</th>
-                                        <th>정상등록</th>
-                                        <th>실패건수</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">158</td>
-                                            <td class="text-center">149</td>
-                                            <td class="text-center">9</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div class="widget-body">
+                        <h5><i class="la la-search"></i>등록결과</h5>
+                        <table class="table table-bordered" summary="품목일괄등록 결과">
+                            <colgroup>
+                                <col width="33%">
+                                <col width=*>
+                                <col width="33%">
+                            </colgroup>
+                            <thead>
+                                <th>품목건수</th>
+                                <th>정상등록</th>
+                                <th>실패건수</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">158</td>
+                                    <td class="text-center">149</td>
+                                    <td class="text-center">9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                            <div class="widget-footer">
-                                <div class="row">
-                                    <div class="col-sm-12 d-flex align-items-center justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary">품목 일괄 등록 양식 파일 다운로드</button>
-                                    </div>
-                                </div>
-
+                    <div class="widget-footer">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex align-items-center justify-content-end">
+                                <button type="button" class="btn btn-outline-primary">품목 일괄 등록 양식 파일 다운로드</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-seconday" data-dismiss="modal">닫기</button>
