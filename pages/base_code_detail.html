@@ -50,7 +50,7 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <input type="text" class="form-control" placeholder="품목대분류1">
+                                                            <input type="text" class="form-control" placeholder="품목대분류2">
                                                         </div>
                                                         <div class="col-sm-4 d-flex justify-content-end">
                                                             <button type="button" class="btn btn-sm btn-secondary"><i class="la la-arrows-alt"></i></button>
@@ -63,7 +63,7 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <input type="text" class="form-control" placeholder="품목대분류1">
+                                                            <input type="text" class="form-control" placeholder="품목대분류3">
                                                         </div>
                                                         <div class="col-sm-4 d-flex justify-content-end">
                                                             <button type="button" class="btn btn-sm btn-secondary"><i class="la la-arrows-alt"></i></button>
@@ -76,7 +76,7 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <input type="text" class="form-control" placeholder="품목대분류1">
+                                                            <input type="text" class="form-control" placeholder="품목대분류4">
                                                         </div>
                                                         <div class="col-sm-4 d-flex justify-content-end">
                                                             <button type="button" class="btn btn-sm btn-secondary"><i class="la la-arrows-alt"></i></button>
@@ -89,7 +89,7 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <input type="text" class="form-control" placeholder="품목대분류1">
+                                                            <input type="text" class="form-control" placeholder="품목대분류5">
                                                         </div>
                                                         <div class="col-sm-4 d-flex justify-content-end">
                                                             <button type="button" class="btn btn-sm btn-secondary"><i class="la la-arrows-alt"></i></button>
@@ -217,20 +217,22 @@
         border: 2px dashed #cbd5e0;
     }
     
-    .clone-list {
-        border-top: 1px solid #ccc;
+    .clone-table th {
+        border: 1px solid #dee2e6;
+        border-bottom: 2px solid #dee2e6;
+        text-align: center;
+        background: #f4f4f4;
+        vertical-align: middle;
+        padding: 10px;
+        color: #5d5386;
     }
     
-    .clone-table {
-        border-collapse: collapse;
-        border: none;
-    }
-    
-    .clone-table th,
     .clone-table td {
-        border: 1px solid #ccc;
-        border-top: none;
-        padding: 0.5rem;
+        border: 1px solid #dee2e6;
+        border-top: 0;
+        padding: 3px 10px;
+        vertical-align: middle;
+        text-align: center;
     }
     
     .dragging {
@@ -255,7 +257,6 @@
     const swap = function(nodeA, nodeB) {
         const parentA = nodeA.parentNode;
         const siblingA = nodeA.nextSibling === nodeB ? nodeA : nodeA.nextSibling;
-
         nodeB.parentNode.insertBefore(nodeA, nodeB);
 
         parentA.insertBefore(nodeB, siblingA);
@@ -269,7 +270,7 @@
     };
 
     const cloneTable = function() {
-        const rect = table.getBoundingClientRect();
+        const rect = table.getBoundingClientRect() / 2;
         const width = parseInt(window.getComputedStyle(table).width);
 
         list = document.createElement('div');
@@ -305,7 +306,8 @@
     };
 
     const mouseDownHandler = function(e) {
-        const originalRow = e.target.parentNode;
+        const originalRow = e.target.closest('tr');
+
         draggingRowIndex = [].slice.call(table.querySelectorAll('tr')).indexOf(originalRow);
 
         x = e.clientX;
@@ -385,7 +387,9 @@
         }
 
         const firstCell = row.firstElementChild;
-        firstCell.classList.add('draggable');
-        firstCell.addEventListener('mousedown', mouseDownHandler);
+        const moveBtn = firstCell.querySelector('.btn');
+        moveBtn.classList.add('draggable');
+
+        moveBtn.addEventListener('mousedown', mouseDownHandler);
     });
 </script>
